@@ -1,26 +1,318 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --color-ivory: #f7f2e9;
+  --color-beige: #ebe3d4;
+  --color-warm: #d9cbb6;
+  --color-gold: #c9a227;
+  --color-gold-soft: #e0c56a;
+  --color-brown: #5c3d2e;
+  --color-brown-deep: #3a2418;
+  --color-brown-dark: #1f140e;
+  --color-ink: #16110d;
+  --color-charcoal: #2a2420;
+  --background: var(--color-ivory);
+  --foreground: var(--color-ink);
+  --header-h: 4.5rem;
+
+  /* Typography system — unified stacks & scale */
+  --font-stack-sans: var(--font-be-vietnam), "Be Vietnam Pro",
+    "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", sans-serif;
+  --font-stack-display: var(--font-cormorant), "Cormorant Garamond", Georgia,
+    "Apple SD Gothic Neo", "Noto Serif KR", serif;
+  --leading-display: 1.15;
+  --leading-display-tight: 1.12;
+  --leading-body: 1.7;
+  --leading-ui: 1.45;
+  --tracking-eyebrow: 0.22em;
+  --tracking-label: 0.18em;
+  --tracking-display: -0.01em;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-ivory: var(--color-ivory);
+  --color-beige: var(--color-beige);
+  --color-warm: var(--color-warm);
+  --color-gold: var(--color-gold);
+  --color-gold-soft: var(--color-gold-soft);
+  --color-brown: var(--color-brown);
+  --color-brown-deep: var(--color-brown-deep);
+  --color-brown-dark: var(--color-brown-dark);
+  --color-ink: var(--color-ink);
+  --color-charcoal: var(--color-charcoal);
+  --font-sans: var(--font-stack-sans);
+  --font-display: var(--font-stack-display);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  scroll-behavior: smooth;
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-stack-sans);
+  font-weight: 400;
+  line-height: var(--leading-body);
+  font-kerning: normal;
+  font-optical-sizing: auto;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+/* Inherit site fonts for form controls & media fallbacks */
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
+
+::selection {
+  background: color-mix(in srgb, var(--color-gold) 40%, transparent);
+  color: var(--color-ink);
+}
+
+/* Display / serif role — headings, brand, numerals in editorial context */
+.font-display {
+  font-family: var(--font-stack-display);
+  font-kerning: normal;
+  font-optical-sizing: auto;
+  font-synthesis: none;
+}
+
+/* Centralized type roles — prefer these over one-off tracking/leading */
+.type-display {
+  font-family: var(--font-stack-display);
+  line-height: var(--leading-display);
+  letter-spacing: var(--tracking-display);
+  overflow-wrap: break-word;
+}
+
+.type-display-hero {
+  font-family: var(--font-stack-display);
+  line-height: var(--leading-display-tight);
+  letter-spacing: var(--tracking-display);
+  overflow-wrap: break-word;
+  /* Extra room so Vietnamese diacritics are not clipped */
+  padding-block: 0.06em;
+}
+
+.type-eyebrow {
+  font-size: 0.6875rem;
+  font-weight: 600;
+  letter-spacing: var(--tracking-eyebrow);
+  line-height: var(--leading-ui);
+  text-transform: uppercase;
+}
+
+.type-label {
+  letter-spacing: var(--tracking-label);
+  line-height: var(--leading-ui);
+}
+
+.type-body {
+  font-family: var(--font-stack-sans);
+  line-height: var(--leading-body);
+  overflow-wrap: break-word;
+}
+
+.type-quote {
+  font-family: var(--font-stack-display);
+  line-height: 1.28;
+  overflow-wrap: break-word;
+}
+
+/* Headings: room for stacked Vietnamese diacritics (Ậ, Ề, Ỗ, …) */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+  text-wrap: balance;
+}
+
+/* Numbers inherit surrounding font — no tabular/fallback substitution */
+.font-display,
+.type-display,
+.type-display-hero,
+.type-quote {
+  font-variant-numeric: normal;
+}
+
+/* Surfaces */
+.texture-paper {
+  background-color: var(--color-ivory);
+  background-image:
+    radial-gradient(ellipse at 12% 0%, rgba(201, 162, 39, 0.09), transparent 42%),
+    radial-gradient(ellipse at 88% 100%, rgba(92, 61, 46, 0.07), transparent 48%),
+    linear-gradient(180deg, #f9f5ed 0%, #efe6d6 100%);
+}
+
+.texture-dark {
+  background-color: var(--color-brown-dark);
+  background-image:
+    radial-gradient(ellipse at 20% 10%, rgba(201, 162, 39, 0.14), transparent 42%),
+    radial-gradient(ellipse at 80% 90%, rgba(0, 0, 0, 0.45), transparent 50%),
+    linear-gradient(165deg, #4a2f22 0%, #1f140e 48%, #0c0907 100%);
+}
+
+.texture-ink {
+  background:
+    radial-gradient(ellipse at 50% 0%, rgba(201, 162, 39, 0.1), transparent 55%),
+    linear-gradient(180deg, #120e0b, #0a0705);
+}
+
+.texture-sand {
+  background:
+    radial-gradient(circle at 70% 20%, rgba(201, 162, 39, 0.12), transparent 40%),
+    linear-gradient(135deg, #f3eadc, #e4d7c2 60%, #dccfb8);
+}
+
+.grain::before {
+  content: "";
+  pointer-events: none;
+  position: absolute;
+  inset: 0;
+  opacity: 0.035;
+  mix-blend-mode: multiply;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+.motif-lotus {
+  background-image: radial-gradient(
+      circle at 50% 50%,
+      transparent 38%,
+      rgba(201, 162, 39, 0.06) 39%,
+      transparent 42%
+    ),
+    repeating-linear-gradient(
+      45deg,
+      transparent,
+      transparent 18px,
+      rgba(92, 61, 46, 0.03) 18px,
+      rgba(92, 61, 46, 0.03) 19px
+    );
+}
+
+.gold-rule {
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    var(--color-gold),
+    transparent
+  );
+}
+
+.glass-panel {
+  background: rgba(247, 242, 233, 0.72);
+  backdrop-filter: blur(18px) saturate(1.2);
+  border: 1px solid rgba(201, 162, 39, 0.22);
+  box-shadow: 0 20px 60px rgba(31, 20, 14, 0.12);
+}
+
+.glass-dark {
+  background: rgba(31, 20, 14, 0.55);
+  backdrop-filter: blur(20px) saturate(1.15);
+  border: 1px solid rgba(224, 197, 106, 0.22);
+  box-shadow: 0 24px 80px rgba(0, 0, 0, 0.35);
+}
+
+.prose-catalogue p {
+  line-height: 1.85;
+  font-size: 1.05rem;
+  overflow-wrap: break-word;
+}
+
+/* Horizontal rail */
+.h-scroll {
+  display: flex;
+  gap: 1rem;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: thin;
+  scrollbar-color: var(--color-gold) transparent;
+  padding-bottom: 0.75rem;
+}
+
+.h-scroll > * {
+  scroll-snap-align: start;
+  flex: 0 0 auto;
+}
+
+/* Decorative diagonal cut */
+.clip-diagonal {
+  clip-path: polygon(0 0, 100% 0, 100% 88%, 0 100%);
+}
+
+.clip-diagonal-rev {
+  clip-path: polygon(0 0, 100% 8%, 100% 100%, 0 100%);
+}
+
+/* Soft depth */
+.lift {
+  transition:
+    transform 0.45s cubic-bezier(0.22, 1, 0.36, 1),
+    box-shadow 0.45s ease;
+}
+
+.lift:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 28px 60px rgba(31, 20, 14, 0.18);
+}
+
+.img-zoom {
+  overflow: hidden;
+}
+
+.img-zoom img,
+.img-zoom > span {
+  transition: transform 0.9s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.img-zoom:hover img,
+.img-zoom:hover > span {
+  transform: scale(1.06);
+}
+
+/* Hide scrollbar utility for clean rails */
+.no-scrollbar {
+  scrollbar-width: none;
+}
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+/* Responsive type: keep long Vietnamese lines readable on small screens */
+@media (max-width: 640px) {
+  body {
+    line-height: 1.75;
+  }
+
+  .type-eyebrow {
+    letter-spacing: 0.16em;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
 }
