@@ -1,0 +1,151 @@
+---
+title: "CHÚC MỪNG VÕ SINH, MÔN SINH PHẬT QUANG QUYỀN ĐÃ ĐẠT THÀNH TÍCH TẠI GIẢI CÚP VÔ ĐỊCH VÕ…"
+summary: "CHÚC MỪNG VÕ SINH, MÔN SINH PHẬT QUANG QUYỀN ĐÃ ĐẠT THÀNH TÍCH TẠI GIẢI CÚP VÔ ĐỊCH VÕ CỔ TRUYỀN NGHỆ AN MỞ RỘNG! VÕ ĐƯỜNG VIÊN QUANG — XUẤT SẮC ĐẠT NHẤT TOÀN ĐOÀN NỘI DUNG QUYỀN THUẬT VỚI THÀNH TÍCH VỀ THÀNH TÍCH CÁC CÂU LẠC BỘ THAM DỰ: 1. CLB Chùa Linh Quang Nội dung Quyền thuật: Nội dung Quyền thuật: Nội dung Quy…"
+date: "2026-07-22"
+category: competitions
+tags:
+  - phat-quang-quyen
+  - competitions
+facebookUrl: "https://www.facebook.com/672279411702605/posts/1366963818900824"
+facebookPostId: "2011422782420944_1366963818900824"
+engagementScore: 501
+coverImage: "/images/news/2011422782420944_1366963818900824/01.jpg"
+gallery:
+  - "/images/news/2011422782420944_1366963818900824/02.jpg"
+  - "/images/news/2011422782420944_1366963818900824/03.jpg"
+  - "/images/news/2011422782420944_1366963818900824/04.jpg"
+  - "/images/news/2011422782420944_1366963818900824/05.jpg"
+  - "/images/news/2011422782420944_1366963818900824/06.jpg"
+  - "/images/news/2011422782420944_1366963818900824/07.jpg"
+  - "/images/news/2011422782420944_1366963818900824/08.jpg"
+  - "/images/news/2011422782420944_1366963818900824/09.jpg"
+  - "/images/news/2011422782420944_1366963818900824/10.jpg"
+  - "/images/news/2011422782420944_1366963818900824/11.jpg"
+  - "/images/news/2011422782420944_1366963818900824/12.jpg"
+  - "/images/news/2011422782420944_1366963818900824/13.jpg"
+  - "/images/news/2011422782420944_1366963818900824/14.jpg"
+  - "/images/news/2011422782420944_1366963818900824/15.jpg"
+  - "/images/news/2011422782420944_1366963818900824/16.jpg"
+  - "/images/news/2011422782420944_1366963818900824/17.jpg"
+  - "/images/news/2011422782420944_1366963818900824/18.jpg"
+  - "/images/news/2011422782420944_1366963818900824/19.jpg"
+  - "/images/news/2011422782420944_1366963818900824/20.jpg"
+  - "/images/news/2011422782420944_1366963818900824/21.jpg"
+  - "/images/news/2011422782420944_1366963818900824/22.jpg"
+  - "/images/news/2011422782420944_1366963818900824/23.jpg"
+  - "/images/news/2011422782420944_1366963818900824/24.jpg"
+  - "/images/news/2011422782420944_1366963818900824/25.jpg"
+  - "/images/news/2011422782420944_1366963818900824/26.jpg"
+  - "/images/news/2011422782420944_1366963818900824/27.jpg"
+  - "/images/news/2011422782420944_1366963818900824/28.jpg"
+  - "/images/news/2011422782420944_1366963818900824/29.jpg"
+  - "/images/news/2011422782420944_1366963818900824/30.jpg"
+  - "/images/news/2011422782420944_1366963818900824/31.jpg"
+  - "/images/news/2011422782420944_1366963818900824/32.jpg"
+  - "/images/news/2011422782420944_1366963818900824/33.jpg"
+  - "/images/news/2011422782420944_1366963818900824/34.jpg"
+  - "/images/news/2011422782420944_1366963818900824/35.jpg"
+  - "/images/news/2011422782420944_1366963818900824/36.jpg"
+  - "/images/news/2011422782420944_1366963818900824/37.jpg"
+  - "/images/news/2011422782420944_1366963818900824/38.jpg"
+  - "/images/news/2011422782420944_1366963818900824/39.jpg"
+  - "/images/news/2011422782420944_1366963818900824/40.jpg"
+  - "/images/news/2011422782420944_1366963818900824/41.jpg"
+  - "/images/news/2011422782420944_1366963818900824/42.jpg"
+  - "/images/news/2011422782420944_1366963818900824/43.jpg"
+  - "/images/news/2011422782420944_1366963818900824/44.jpg"
+  - "/images/news/2011422782420944_1366963818900824/45.jpg"
+  - "/images/news/2011422782420944_1366963818900824/46.jpg"
+  - "/images/news/2011422782420944_1366963818900824/47.jpg"
+  - "/images/news/2011422782420944_1366963818900824/48.jpg"
+  - "/images/news/2011422782420944_1366963818900824/49.jpg"
+  - "/images/news/2011422782420944_1366963818900824/50.jpg"
+  - "/images/news/2011422782420944_1366963818900824/51.jpg"
+  - "/images/news/2011422782420944_1366963818900824/52.jpg"
+  - "/images/news/2011422782420944_1366963818900824/53.jpg"
+  - "/images/news/2011422782420944_1366963818900824/54.jpg"
+  - "/images/news/2011422782420944_1366963818900824/55.jpg"
+  - "/images/news/2011422782420944_1366963818900824/56.jpg"
+  - "/images/news/2011422782420944_1366963818900824/57.jpg"
+  - "/images/news/2011422782420944_1366963818900824/58.jpg"
+  - "/images/news/2011422782420944_1366963818900824/59.jpg"
+  - "/images/news/2011422782420944_1366963818900824/60.jpg"
+  - "/images/news/2011422782420944_1366963818900824/61.jpg"
+  - "/images/news/2011422782420944_1366963818900824/62.jpg"
+  - "/images/news/2011422782420944_1366963818900824/63.jpg"
+  - "/images/news/2011422782420944_1366963818900824/64.jpg"
+  - "/images/news/2011422782420944_1366963818900824/65.jpg"
+  - "/images/news/2011422782420944_1366963818900824/66.jpg"
+  - "/images/news/2011422782420944_1366963818900824/67.jpg"
+  - "/images/news/2011422782420944_1366963818900824/68.jpg"
+  - "/images/news/2011422782420944_1366963818900824/69.jpg"
+  - "/images/news/2011422782420944_1366963818900824/70.jpg"
+  - "/images/news/2011422782420944_1366963818900824/71.jpg"
+  - "/images/news/2011422782420944_1366963818900824/72.jpg"
+  - "/images/news/2011422782420944_1366963818900824/73.jpg"
+  - "/images/news/2011422782420944_1366963818900824/74.jpg"
+  - "/images/news/2011422782420944_1366963818900824/75.jpg"
+  - "/images/news/2011422782420944_1366963818900824/76.jpg"
+  - "/images/news/2011422782420944_1366963818900824/77.jpg"
+  - "/images/news/2011422782420944_1366963818900824/78.jpg"
+  - "/images/news/2011422782420944_1366963818900824/79.jpg"
+  - "/images/news/2011422782420944_1366963818900824/80.jpg"
+  - "/images/news/2011422782420944_1366963818900824/81.jpg"
+  - "/images/news/2011422782420944_1366963818900824/82.jpg"
+  - "/images/news/2011422782420944_1366963818900824/83.jpg"
+  - "/images/news/2011422782420944_1366963818900824/84.jpg"
+  - "/images/news/2011422782420944_1366963818900824/85.jpg"
+  - "/images/news/2011422782420944_1366963818900824/86.jpg"
+  - "/images/news/2011422782420944_1366963818900824/87.jpg"
+  - "/images/news/2011422782420944_1366963818900824/88.jpg"
+  - "/images/news/2011422782420944_1366963818900824/89.jpg"
+  - "/images/news/2011422782420944_1366963818900824/90.jpg"
+  - "/images/news/2011422782420944_1366963818900824/91.jpg"
+  - "/images/news/2011422782420944_1366963818900824/92.jpg"
+  - "/images/news/2011422782420944_1366963818900824/93.jpg"
+  - "/images/news/2011422782420944_1366963818900824/94.jpg"
+  - "/images/news/2011422782420944_1366963818900824/95.jpg"
+  - "/images/news/2011422782420944_1366963818900824/96.jpg"
+  - "/images/news/2011422782420944_1366963818900824/97.jpg"
+  - "/images/news/2011422782420944_1366963818900824/98.jpg"
+  - "/images/news/2011422782420944_1366963818900824/99.jpg"
+  - "/images/news/2011422782420944_1366963818900824/100.jpg"
+---
+
+CHÚC MỪNG VÕ SINH, MÔN SINH PHẬT QUANG QUYỀN ĐÃ ĐẠT THÀNH TÍCH TẠI GIẢI CÚP VÔ ĐỊCH VÕ CỔ TRUYỀN NGHỆ AN MỞ RỘNG! 
+ VÕ ĐƯỜNG VIÊN QUANG — XUẤT SẮC ĐẠT NHẤT TOÀN ĐOÀN NỘI DUNG QUYỀN THUẬT VỚI THÀNH TÍCH
+• 13 Huy chương Vàng
+• 10 Huy chương Bạc
+• 6 Huy chương Đồng
+Nội dung đối kháng:
+• 1 Huy chương Bạc
+• 9 Huy chương Đồng
+
+VỀ THÀNH TÍCH CÁC CÂU LẠC BỘ THAM DỰ:
+
+1. CLB Chùa Linh Quang 
+Nội dung Quyền thuật:
+• 5 Huy chương Vàng
+• 3 Huy chương Bạc
+• 5 Huy chương Đồng
+
+2. CLB Tiến Minh
+Nội dung Quyền thuật:
+• 2 Huy Chương Vàng
+• 1 Huy Chương Bạc
+• 2 Huy chương Đồng
+Nội dung Đối kháng:
+• 1 Huy Chương Vàng
+• 1 Huy chương Đồng
+
+3. CLB Xanh Tuệ Đức
+Nội dung Quyền thuật:
+• 1 Huy chương Vàng
+• 5 Huy chương Bạc
+• 8 Huy chương Đồng
+Nội dung Đối kháng:
+• 1 Huy chương Bạc
+• 3 Huy chương Đồng
+
+Xin nhiệt liệt chúc mừng và biểu dương tinh thần thi đấu hết mình của toàn thể các võ sinh, môn sinh Phật Quang Quyền! Xin được cảm ơn Ban Huấn luyện viên và Quý phụ huynh đã luôn đồng hành, tiếp sức cho các võ sinh, môn sinh.
+ Phật Quang Quyền Nghệ An

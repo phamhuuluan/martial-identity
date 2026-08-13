@@ -1,59 +1,29 @@
-import dynamic from "next/dynamic";
-import { Header } from "@/components/layout/Header";
+import { SiteShell } from "@/components/layout/SiteShell";
 import { Hero } from "@/components/sections/Hero";
-import { Introduction } from "@/components/sections/Introduction";
-import { History } from "@/components/sections/History";
-import { Philosophy } from "@/components/sections/Philosophy";
-import { Locations } from "@/components/sections/Locations";
-import { Contact, Footer } from "@/components/sections/Contact";
-import { ScrollProgress, DotNav } from "@/components/ui/Chrome";
+import { HomeIntro } from "@/components/home/HomeIntro";
+import { HomeValues } from "@/components/home/HomeValues";
+import { HomeActivities } from "@/components/home/HomeActivities";
+import { HomeScale } from "@/components/home/HomeScale";
+import { HomeTraining } from "@/components/home/HomeTraining";
+import { HomeExplore } from "@/components/home/HomeExplore";
+import { HomeContact } from "@/components/sections/Contact";
+import { getFeaturedNews, toDisplayEvents } from "@/data/news";
+import { selectHomepageSectionCovers } from "@/data/sectionCovers";
 
-const BeltAndCurriculum = dynamic(
-  () =>
-    import("@/components/sections/BeltAndCurriculum").then(
-      (m) => m.BeltAndCurriculum
-    ),
-  { ssr: true }
-);
+export default async function HomePage() {
+  const featured = toDisplayEvents(getFeaturedNews(6));
+  const sectionCovers = await selectHomepageSectionCovers();
 
-const Competitions = dynamic(
-  () =>
-    import("@/components/sections/Competitions").then((m) => m.Competitions),
-  { ssr: true }
-);
-
-const Volunteer = dynamic(
-  () => import("@/components/sections/Volunteer").then((m) => m.Volunteer),
-  { ssr: true }
-);
-
-const CatalogueArchive = dynamic(
-  () =>
-    import("@/components/sections/CatalogueArchive").then(
-      (m) => m.CatalogueArchive
-    ),
-  { ssr: true }
-);
-
-export default function HomePage() {
   return (
-    <>
-      <ScrollProgress />
-      <Header />
-      <DotNav />
-      <main>
-        <Hero />
-        <Introduction />
-        <History />
-        <Philosophy />
-        <Locations />
-        <BeltAndCurriculum />
-        <Competitions />
-        <Volunteer />
-        <CatalogueArchive />
-        <Contact />
-      </main>
-      <Footer />
-    </>
+    <SiteShell>
+      <Hero />
+      <HomeIntro coverImage={sectionCovers["gioi-thieu"]?.src} />
+      <HomeValues />
+      <HomeActivities events={featured} />
+      <HomeScale coverImage={sectionCovers["quy-mo"]?.src} />
+      <HomeTraining />
+      <HomeExplore />
+      <HomeContact />
+    </SiteShell>
   );
 }

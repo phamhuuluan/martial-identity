@@ -1,6 +1,6 @@
 # Phật Quang Quyền
 
-Premium responsive landing page for the Vietnamese martial arts school **Phật Quang Quyền**, built from the official catalogue PDF (`catalogue_so tay gioi thieu_27_02_2023.pdf`).
+Premium responsive landing page for the Vietnamese martial arts school **Phật Quang Quyền**, built from the official sổ tay giới thiệu PDF (`so_tay_gioi_thieu_27_02_2023.pdf`).
 
 ## Stack
 
@@ -25,13 +25,20 @@ npm run build
 npm start
 ```
 
-## Content integrity
+## Content
 
-All text, images, diagrams, belt tables, curriculum tables, addresses, oaths, competitions, and volunteer activities come from the catalogue only. See [CONTENT_COVERAGE_REPORT.md](./CONTENT_COVERAGE_REPORT.md) for the full page → section mapping and 100% coverage confirmation.
+- Nội dung môn phái (lịch sử, tôn chỉ, đai…): `src/data/content.ts`
+- Tin Fanpage (Markdown): `content/{category}/*.md`
+
+**Đồng bộ Fanpage:** nhờ Cursor Agent — *“Đồng bộ Fanpage vào website”*  
+(Facebook MCP + AI Cursor → Markdown). **Không** cần `OPENAI_API_KEY`.
+
+Optional raw dump (no AI): `npm run fetch:facebook`  
+Docs: [docs/FACEBOOK_SYNC.md](./docs/FACEBOOK_SYNC.md)
 
 ## Assets
 
-- `public/images/pages/` — 40 high-resolution page renders
-- `public/images/extracted/` — 72 embedded catalogue images
-- `src/data/content.ts` — immutable Vietnamese copy
-- `src/data/gallery.ts` — gallery inventory + filters
+- `public/images/pages/` — page renders
+- `public/images/extracted/` — extracted images from sổ tay
+- `public/images/news/` — Fanpage images
+- `content/` — synced Markdown posts

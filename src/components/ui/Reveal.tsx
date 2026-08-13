@@ -15,6 +15,14 @@ type RevealProps = {
   once?: boolean;
 };
 
+/**
+ * Reveal — fade-in + slide-up animation on scroll.
+ *
+ * Always renders a <motion.div> on both server and client to avoid
+ * hydration mismatch. When the user has prefers-reduced-motion enabled,
+ * we skip the animation by setting duration: 0 so the element appears
+ * instantly without changing the rendered element type.
+ */
 export function Reveal({
   children,
   className,
@@ -26,23 +34,25 @@ export function Reveal({
 }: RevealProps) {
   const reduce = useReducedMotion();
 
-  if (reduce) {
-    return <div className={className}>{children}</div>;
-  }
-
   return (
     <motion.div
       className={className}
-      initial={{ opacity: 0, y, x, scale: scale === 1 ? 0.98 : scale }}
+      initial={reduce ? false : { opacity: 0, y, x, scale: scale === 1 ? 0.98 : scale }}
       whileInView={{ opacity: 1, y: 0, x: 0, scale: 1 }}
       viewport={{ once, margin: "-12% 0px" }}
-      transition={{ duration: 0.85, ease, delay }}
+      transition={reduce ? { duration: 0 } : { duration: 0.85, ease, delay }}
     >
       {children}
     </motion.div>
   );
 }
 
+/**
+ * Stagger — stagger-animates children on scroll.
+ *
+ * Always renders <motion.div> to avoid hydration mismatch.
+ * With reduced motion, stagger delay is 0 so children appear instantly.
+ */
 export function Stagger({
   children,
   className,
@@ -54,10 +64,6 @@ export function Stagger({
 }) {
   const reduce = useReducedMotion();
 
-  if (reduce) {
-    return <div className={className}>{children}</div>;
-  }
-
   return (
     <motion.div
       className={className}
@@ -66,7 +72,9 @@ export function Stagger({
       viewport={{ once: true, margin: "-10% 0px" }}
       variants={{
         hidden: {},
-        show: { transition: { staggerChildren: stagger } },
+        show: {
+          transition: { staggerChildren: reduce ? 0 : stagger },
+        },
       }}
     >
       {children}
@@ -99,6 +107,12 @@ export function StaggerItem({
   );
 }
 
+/**
+ * ParallaxImage — parallax scroll effect.
+ *
+ * Always renders <motion.div> to avoid hydration mismatch.
+ * With reduced motion, y stays at 0 (no parallax movement).
+ */
 export function ParallaxImage({
   children,
   className,
@@ -110,11 +124,7 @@ export function ParallaxImage({
 }) {
   const reduce = useReducedMotion();
   const { scrollYProgress } = useScroll();
-  const y = useTransform(scrollYProgress, [0, 1], [0, speed]);
-
-  if (reduce) {
-    return <div className={className}>{children}</div>;
-  }
+  const y = useTransform(scrollYProgress, [0, 1], [0, reduce ? 0 : speed]);
 
   return (
     <motion.div style={{ y }} className={className}>

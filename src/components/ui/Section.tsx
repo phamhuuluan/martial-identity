@@ -8,6 +8,7 @@ type SectionHeadingProps = {
   tone?: "light" | "dark";
   size?: "md" | "lg" | "xl";
   children?: ReactNode;
+  rule?: boolean;
 };
 
 export function SectionHeading({
@@ -17,6 +18,7 @@ export function SectionHeading({
   align = "left",
   tone = "light",
   size = "lg",
+  rule = true,
 }: SectionHeadingProps) {
   const alignCls =
     align === "center"
@@ -25,37 +27,35 @@ export function SectionHeading({
         ? "text-right ml-auto"
         : "text-left";
   const titleColor = tone === "dark" ? "text-ivory" : "text-brown-deep";
-  const subColor = tone === "dark" ? "text-warm/85" : "text-brown/75";
-  const eyeColor = tone === "dark" ? "text-gold-soft" : "text-gold";
-  const titleSize =
-    size === "xl"
-      ? "text-4xl md:text-6xl lg:text-7xl"
-      : size === "md"
-        ? "text-2xl md:text-4xl"
-        : "text-3xl md:text-5xl";
+  const subColor = tone === "dark" ? "text-warm/80" : "text-brown/70";
+  const eyeColor = tone === "dark" ? "text-gold-soft/90" : "text-brown/55";
+  const titleCls =
+    size === "xl" ? "h1-page" : size === "md" ? "h3-block" : "h2-section";
 
   return (
-    <header className={`mb-10 max-w-4xl ${alignCls}`}>
+    <header className={`mb-8 max-w-3xl ${alignCls}`}>
       {eyebrow ? (
-        <p className={`type-eyebrow mb-4 ${eyeColor}`}>{eyebrow}</p>
+        <p className={`type-eyebrow mb-3 ${eyeColor}`}>{eyebrow}</p>
       ) : null}
-      <h2
-        className={`type-display font-semibold ${titleSize} ${titleColor}`}
-      >
-        {title}
-      </h2>
+      <h2 className={`${titleCls} ${titleColor}`}>{title}</h2>
       {subtitle ? (
         <p
-          className={`type-body mt-5 max-w-2xl text-base md:text-lg ${subColor} ${align === "center" ? "mx-auto" : ""}`}
+          className={`type-body mt-4 max-w-2xl text-[0.95rem] md:text-base ${subColor} ${align === "center" ? "mx-auto" : ""}`}
         >
           {subtitle}
         </p>
       ) : null}
-      <div
-        className={`gold-rule mt-7 ${
-          align === "center" ? "mx-auto w-28" : align === "right" ? "ml-auto w-20" : "w-20"
-        }`}
-      />
+      {rule ? (
+        <div
+          className={`gold-rule mt-6 ${
+            align === "center"
+              ? "mx-auto"
+              : align === "right"
+                ? "ml-auto"
+                : ""
+          }`}
+        />
+      ) : null}
     </header>
   );
 }
@@ -91,6 +91,12 @@ export function Section({
         ? "texture-sand"
         : "texture-paper";
 
+  const padCls = noPad
+    ? ""
+    : fullBleed
+      ? "site-section px-5 md:px-8"
+      : "site-container site-section";
+
   return (
     <section
       id={id}
@@ -99,18 +105,11 @@ export function Section({
       } ${className ?? ""}`}
     >
       <div className="grain absolute inset-0" aria-hidden />
-      <div
-        className={`relative ${
-          noPad ? "" : "px-5 py-20 md:px-8 md:py-28 lg:px-12"
-        } ${fullBleed ? "" : "mx-auto max-w-7xl"}`}
-      >
-        {children}
-      </div>
+      <div className={`relative ${padCls}`}>{children}</div>
     </section>
   );
 }
 
-/** Full-viewport chapter curtain */
 export function ChapterCurtain({
   id,
   eyebrow,
@@ -125,27 +124,17 @@ export function ChapterCurtain({
   return (
     <section
       id={id}
-      className={`relative flex min-h-[70vh] items-center justify-center overflow-hidden px-6 md:min-h-[80vh] ${
+      className={`relative flex min-h-[40vh] items-center justify-center overflow-hidden px-6 md:min-h-[48vh] ${
         dark ? "texture-ink text-ivory" : "texture-sand text-brown-deep"
       }`}
     >
       <div className="grain absolute inset-0" aria-hidden />
-      <div
-        className="pointer-events-none absolute inset-0 opacity-40"
-        style={{
-          backgroundImage:
-            "radial-gradient(circle at 50% 45%, rgba(201,162,39,0.18), transparent 55%)",
-        }}
-        aria-hidden
-      />
-      <div className="relative z-10 mx-auto max-w-5xl text-center">
+      <div className="relative z-10 mx-auto max-w-3xl text-center">
         {eyebrow ? (
-          <p className="type-eyebrow mb-6 text-gold-soft">{eyebrow}</p>
+          <p className="type-eyebrow mb-4 text-gold-soft/80">{eyebrow}</p>
         ) : null}
-        <h2 className="type-display text-4xl font-semibold md:text-6xl lg:text-7xl">
-          {title}
-        </h2>
-        <div className="gold-rule mx-auto mt-10 w-32" />
+        <h2 className="h1-page">{title}</h2>
+        <div className="gold-rule mx-auto mt-7" />
       </div>
     </section>
   );

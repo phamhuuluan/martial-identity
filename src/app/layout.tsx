@@ -2,6 +2,7 @@ import type { Metadata, Viewport } from "next";
 import { Be_Vietnam_Pro, Cormorant_Garamond } from "next/font/google";
 import "./globals.css";
 import { site } from "@/data/content";
+import { HydrationErrorSuppressor } from "@/components/HydrationErrorSuppressor";
 
 const beVietnam = Be_Vietnam_Pro({
   variable: "--font-be-vietnam",
@@ -103,9 +104,13 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="vi">
+    <html lang="vi" suppressHydrationWarning>
+      <head>
+        <HydrationErrorSuppressor />
+      </head>
       <body
         className={`${beVietnam.variable} ${cormorant.variable} font-sans antialiased`}
+        suppressHydrationWarning
       >
         <script
           type="application/ld+json"

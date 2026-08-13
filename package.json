@@ -6,9 +6,18 @@
     "dev": "next dev --turbopack",
     "build": "next build --turbopack",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "fetch:facebook": "tsx scripts/fetch-facebook.ts",
+    "generate:content": "tsx scripts/generate-content-from-facebook.ts",
+    "reclassify:content": "tsx scripts/reclassify-content.ts",
+    "report:classification": "tsx scripts/generate-classification-report.ts",
+    "audit:images": "tsx scripts/audit-images.ts",
+    "repair:images": "tsx scripts/repair-broken-images.ts",
+    "test:facebook-mcp": "tsx scripts/test-facebook-mcp.ts"
   },
   "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.30.0",
+    "dotenv": "^17.4.2",
     "framer-motion": "^12.43.0",
     "lucide-react": "^1.28.0",
     "next": "15.5.22",
@@ -24,6 +33,7 @@
     "eslint": "^9",
     "eslint-config-next": "15.5.22",
     "tailwindcss": "^4",
+    "tsx": "^4.23.7",
     "typescript": "^5"
   }
 }

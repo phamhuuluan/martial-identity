@@ -1,0 +1,6 @@
+[mcp_servers.facebook-page]
+command = "npx"
+args = [
+    "tsx",
+    "mcp/facebook-page/server.ts",
+]

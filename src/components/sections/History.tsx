@@ -9,9 +9,90 @@ import {
   sangToSu,
   thaiToSu,
 } from "@/data/content";
-import { ChapterCurtain, Section, SectionHeading } from "@/components/ui/Section";
+import { Section, SectionHeading } from "@/components/ui/Section";
 import { Reveal, Stagger, StaggerItem } from "@/components/ui/Reveal";
-import { ZoomableImage } from "@/components/ui/Lightbox";
+
+function splitLeadershipBody(body: string): { name: string; credential?: string } {
+  const parts = body.split(/\s*[-–—]\s*/).map((s) => s.trim()).filter(Boolean);
+  if (parts.length <= 1) return { name: body.trim() };
+  return { name: parts[0], credential: parts.slice(1).join(" — ") };
+}
+
+function LeadershipCard({
+  number,
+  role,
+  body,
+  featured = false,
+}: {
+  number: string;
+  role: string;
+  body: string;
+  featured?: boolean;
+}) {
+  const { name, credential } = splitLeadershipBody(body);
+
+  return (
+    <article
+      className={`leadership-card relative overflow-hidden ${
+        featured ? "leadership-card-featured" : "leadership-card-secondary"
+      }`}
+    >
+      <div className="leadership-card-accent" aria-hidden />
+      <div className="relative flex h-full flex-col p-6 md:p-7">
+        <div className="flex items-start justify-between gap-4">
+          <p
+            className={`type-eyebrow ${
+              featured ? "text-gold-soft/75" : "text-gold"
+            }`}
+          >
+            {String(number).padStart(2, "0")}
+          </p>
+          <span
+            className={`leadership-card-mark type-eyebrow ${
+              featured ? "text-gold-soft/35" : "text-brown/25"
+            }`}
+            aria-hidden
+          >
+            ●
+          </span>
+        </div>
+
+        <p
+          className={`type-eyebrow mt-5 tracking-[0.16em] ${
+            featured ? "text-ivory/55" : "text-brown/50"
+          }`}
+        >
+          {role}
+        </p>
+
+        <div
+          className={`my-4 h-px w-12 ${
+            featured ? "bg-gold/55" : "bg-gold/60"
+          }`}
+          aria-hidden
+        />
+
+        <h3
+          className={`type-display text-[clamp(1.35rem,2.4vw,1.75rem)] font-semibold leading-snug ${
+            featured ? "text-ivory" : "text-brown-deep"
+          }`}
+        >
+          {name}
+        </h3>
+
+        {credential ? (
+          <p
+            className={`type-body mt-3 text-[0.9rem] leading-relaxed md:text-[0.95rem] ${
+              featured ? "text-ivory/70" : "text-brown-deep/70"
+            }`}
+          >
+            {credential}
+          </p>
+        ) : null}
+      </div>
+    </article>
+  );
+}
 
 function StickyPortrait({
   id,
@@ -40,38 +121,33 @@ function StickyPortrait({
       className="relative scroll-mt-24 overflow-hidden texture-paper"
     >
       <div className="grain absolute inset-0" aria-hidden />
-      <div className="relative mx-auto grid max-w-7xl lg:grid-cols-12">
-        <div className="relative lg:col-span-6">
-          <div className="lg:sticky lg:top-0 lg:h-screen">
-            {/* Mobile/tablet: portrait frame + contain so the full figure is visible.
-                Desktop: sticky cover with gentle parallax. */}
-            <div className="relative mx-auto aspect-[3/4] w-full max-w-md overflow-hidden bg-[#ebe3d4] sm:max-w-lg md:max-w-xl lg:mx-0 lg:aspect-auto lg:h-full lg:max-w-none">
+      <div className="relative mx-auto grid max-w-[72rem] lg:grid-cols-12">
+        <div className="relative lg:col-span-5">
+          <div className="lg:sticky lg:top-0 lg:h-[85vh]">
+            <div className="relative mx-auto aspect-[3/4] w-full max-w-md overflow-hidden bg-[#ebe3d4] sm:max-w-lg lg:mx-0 lg:aspect-auto lg:h-full lg:max-w-none">
               <motion.div
                 style={{ y: imgY }}
-                className="absolute inset-0 lg:inset-[-8%]"
+                className="absolute inset-0 lg:inset-[-4%]"
               >
                 <Image
                   src={image}
                   alt={title}
                   fill
                   className="object-contain object-center lg:object-cover"
-                  sizes="(max-width: 1024px) 100vw, 50vw"
+                  sizes="(max-width: 1024px) 100vw, 42vw"
                   priority
                 />
               </motion.div>
-              <div className="absolute inset-0 bg-gradient-to-t from-brown-dark/25 to-transparent lg:bg-gradient-to-r lg:from-transparent lg:to-brown-dark/10" />
             </div>
           </div>
         </div>
 
-        <div className="flex items-center px-5 py-12 md:px-10 md:py-28 lg:col-span-6 lg:px-16">
+        <div className="flex items-center px-5 py-10 md:px-8 md:py-16 lg:col-span-7 lg:px-12">
           <Reveal>
-            <p className="font-display text-7xl leading-none text-gold md:text-8xl">{number}</p>
-            <h3 className="type-display mt-2 text-3xl font-semibold text-brown-deep md:text-5xl">
-              {title}
-            </h3>
-            <div className="gold-rule my-8 w-20" />
-            <div className="prose-catalogue max-w-xl text-brown-deep/90">{body}</div>
+            <p className="type-eyebrow text-brown/50">{number}</p>
+            <h3 className="h2-section mt-2 text-brown-deep">{title}</h3>
+            <div className="gold-rule my-5" />
+            <div className="prose-body measure text-brown-deep/90">{body}</div>
           </Reveal>
         </div>
       </div>
@@ -82,11 +158,15 @@ function StickyPortrait({
 export function History() {
   return (
     <>
-      <ChapterCurtain
-        id="lich-su"
-        eyebrow="Chương 01"
-        title={organization.sectionTitle}
-      />
+      <Section id="lich-su" sand>
+        <Reveal>
+          <SectionHeading
+            eyebrow="Giới thiệu"
+            title={organization.sectionTitle}
+            size="lg"
+          />
+        </Reveal>
+      </Section>
 
       <StickyPortrait
         id="thai-to-su"
@@ -102,16 +182,14 @@ export function History() {
         className="relative scroll-mt-24 overflow-hidden texture-sand"
       >
         <div className="grain absolute inset-0" aria-hidden />
-        <div className="relative mx-auto max-w-7xl px-5 py-20 md:px-8 md:py-28 lg:px-12">
-          <div className="grid items-end gap-10 lg:grid-cols-12 lg:gap-8">
-            <Reveal className="lg:col-span-5 lg:pb-10">
-              <p className="font-display text-7xl leading-none text-gold md:text-8xl">
-                {sangToSu.number}
-              </p>
-              <h3 className="type-display mt-2 text-3xl font-semibold text-brown-deep md:text-5xl">
+        <div className="site-container site-section relative">
+          <div className="grid items-end gap-10 lg:grid-cols-12 lg:gap-10">
+            <Reveal className="lg:col-span-5 lg:pb-6">
+              <p className="type-eyebrow text-brown/50">{sangToSu.number}</p>
+              <h3 className="h2-section mt-2 text-brown-deep">
                 {sangToSu.title}
               </h3>
-              <div className="gold-rule my-8 w-20" />
+              <div className="gold-rule my-5" />
               <dl className="space-y-1">
                 {sangToSu.fields.map((f) => (
                   <div
@@ -139,8 +217,8 @@ export function History() {
               </dl>
             </Reveal>
 
-            <Reveal delay={0.15} className="relative lg:col-span-7">
-              <div className="relative ml-0 overflow-hidden shadow-2xl md:ml-8 lg:-mr-12 lg:ml-0">
+            <Reveal delay={0.1} className="relative lg:col-span-7">
+              <div className="relative overflow-hidden">
                 <div className="img-zoom relative aspect-[4/5] md:aspect-[5/6]">
                   <Image
                     src={sangToSu.image}
@@ -150,8 +228,6 @@ export function History() {
                     sizes="(max-width: 1024px) 100vw, 55vw"
                   />
                 </div>
-                <div className="pointer-events-none absolute -top-4 -left-4 hidden h-24 w-24 border-t border-l border-gold/50 md:block" />
-                <div className="pointer-events-none absolute -right-4 -bottom-4 hidden h-24 w-24 border-r border-b border-gold/50 md:block" />
               </div>
             </Reveal>
           </div>
@@ -163,8 +239,8 @@ export function History() {
         <Reveal>
           <SectionHeading
             eyebrow="Hình thành môn phái"
-            title="Nhân duyên và tổ chức"
-            size="xl"
+            title="Nhân duyên"
+            size="md"
           />
         </Reveal>
 
@@ -178,159 +254,72 @@ export function History() {
           <Stagger className="space-y-10 md:space-y-16" stagger={0.12}>
             {/* Year — left */}
             <StaggerItem className="relative grid gap-6 md:grid-cols-2">
-              <article className="glass-panel relative ml-10 rounded-sm p-6 md:ml-0 md:mr-10 md:p-8">
-                <p className="font-display text-5xl leading-none text-gold">{formation.yearNumber}</p>
-                <h3 className="type-display mt-2 text-2xl font-semibold text-brown-deep md:text-3xl">
+              <article className="glass-panel relative ml-10 p-5 md:ml-0 md:mr-8 md:p-6">
+                <p className="type-eyebrow text-brown/50">{formation.yearNumber}</p>
+                <h3 className="h3-block mt-2 text-brown-deep">
                   {formation.yearTitle}
                 </h3>
-                <p className="type-body mt-4 text-brown-deep/90">
+                <p className="type-body mt-3 text-[0.95rem] text-brown-deep/90">
                   {formation.yearBody}
                 </p>
               </article>
               <div className="hidden md:block" />
-              <span className="absolute top-8 left-2 h-4 w-4 rounded-full border-2 border-gold bg-ivory md:left-1/2 md:-translate-x-1/2" />
+              <span className="absolute top-7 left-2.5 h-3 w-3 rounded-full border border-brown/30 bg-ivory md:left-1/2 md:-translate-x-1/2" />
             </StaggerItem>
 
-            {/* Tổ Đình — right */}
             <StaggerItem className="relative grid gap-6 md:grid-cols-2">
               <div className="hidden md:block" />
-              <article className="glass-panel relative ml-10 rounded-sm p-6 md:ml-10 md:p-8">
-                <p className="font-display text-5xl leading-none text-gold">
+              <article className="glass-panel relative ml-10 p-5 md:ml-8 md:p-6">
+                <p className="type-eyebrow text-brown/50">
                   {formation.toDinh.number}
                 </p>
-                <h3 className="type-display mt-2 text-2xl font-semibold text-brown-deep md:text-3xl">
+                <h3 className="h3-block mt-2 text-brown-deep">
                   {formation.toDinh.title}
                 </h3>
-                <p className="type-body mt-4 text-brown-deep/90">
+                <p className="type-body mt-3 text-[0.95rem] text-brown-deep/90">
                   {formation.toDinh.body}
                 </p>
               </article>
-              <span className="absolute top-8 left-2 h-4 w-4 rounded-full border-2 border-gold bg-ivory md:left-1/2 md:-translate-x-1/2" />
+              <span className="absolute top-7 left-2.5 h-3 w-3 rounded-full border border-brown/30 bg-ivory md:left-1/2 md:-translate-x-1/2" />
             </StaggerItem>
 
-            {/* Nhân duyên — full width feature */}
-            <StaggerItem className="relative ml-10 md:ml-0 md:px-16">
-              <article className="rounded-sm border border-gold/25 bg-brown-deep px-6 py-8 text-ivory shadow-2xl md:px-12 md:py-12">
-                <p className="font-display text-5xl leading-none text-gold-soft">
+            <StaggerItem className="relative ml-10 md:ml-0 md:px-12">
+              <article className="bg-brown-deep px-5 py-7 text-ivory md:px-8 md:py-9">
+                <p className="type-eyebrow text-gold-soft/70">
                   {formation.nhanDuyen.number}
                 </p>
-                <h3 className="type-display mt-2 text-2xl font-semibold md:text-4xl">
-                  {formation.nhanDuyen.title}
-                </h3>
-                <ul className="mt-6 space-y-5">
+                <h3 className="h3-block mt-2">{formation.nhanDuyen.title}</h3>
+                <ul className="mt-5 space-y-3">
                   {formation.nhanDuyen.bullets.map((b) => (
                     <li
                       key={b.slice(0, 40)}
-                      className="type-body text-ivory/85 before:mr-2 before:text-gold before:content-['–']"
+                      className="type-body text-[0.95rem] text-ivory/80 before:mr-2 before:text-gold/60 before:content-['–']"
                     >
                       {b}
                     </li>
                   ))}
                 </ul>
               </article>
-              <span className="absolute top-8 left-2 h-4 w-4 rounded-full border-2 border-gold bg-gold md:left-1/2 md:-translate-x-1/2" />
+              <span className="absolute top-7 left-2.5 h-3 w-3 rounded-full border border-gold/50 bg-gold/80 md:left-1/2 md:-translate-x-1/2" />
             </StaggerItem>
 
-            {/* Leadership pair */}
-            <StaggerItem className="relative grid gap-6 md:grid-cols-2 md:gap-10 md:px-8">
-              <article className="glass-panel ml-10 rounded-sm p-6 md:ml-0 md:p-8">
-                <p className="font-display text-4xl leading-none text-gold">
-                  {formation.chuongMon.number}
-                </p>
-                <h3 className="type-display mt-2 text-xl font-semibold text-brown-deep md:text-2xl">
-                  {formation.chuongMon.title}
-                </h3>
-                <p className="type-body mt-4 text-brown-deep/90">
-                  {formation.chuongMon.body}
-                </p>
-              </article>
-              <article className="glass-panel ml-10 rounded-sm p-6 md:ml-0 md:p-8">
-                <p className="font-display text-4xl leading-none text-gold">
-                  {formation.truongBan.number}
-                </p>
-                <h3 className="type-display mt-2 text-xl font-semibold text-brown-deep md:text-2xl">
-                  {formation.truongBan.title}
-                </h3>
-                <p className="type-body mt-4 text-brown-deep/90">
-                  {formation.truongBan.body}
-                </p>
-              </article>
+            <StaggerItem className="relative ml-10 md:ml-0 md:px-6">
+              <div className="grid gap-4 md:grid-cols-2 md:gap-5">
+                <LeadershipCard
+                  number={formation.chuongMon.number}
+                  role={formation.chuongMon.title}
+                  body={formation.chuongMon.body}
+                  featured
+                />
+                <LeadershipCard
+                  number={formation.truongBan.number}
+                  role={formation.truongBan.title}
+                  body={formation.truongBan.body}
+                />
+              </div>
+              <span className="absolute top-7 left-2.5 h-3 w-3 rounded-full border border-brown/30 bg-ivory md:left-1/2 md:-translate-x-1/2" />
             </StaggerItem>
           </Stagger>
-        </div>
-      </Section>
-
-      {/* Org chart — cinematic dark + floating glass meta */}
-      <Section id="to-chuc" dark fullBleed noPad>
-        <div className="mx-auto max-w-7xl px-5 py-20 md:px-8 md:py-28 lg:px-12">
-          <Reveal>
-            <SectionHeading
-              tone="dark"
-              eyebrow="Tổ chức"
-              title={organization.title}
-              subtitle="Sơ đồ tổ chức nguyên bản từ catalogue — phóng to để xem đầy đủ chi tiết."
-              size="xl"
-            />
-          </Reveal>
-
-          <Reveal>
-            <div className="overflow-hidden rounded-sm border border-gold/25 shadow-[0_40px_100px_rgba(0,0,0,0.45)]">
-              <ZoomableImage
-                src={organization.pageImage}
-                alt={organization.title}
-                sizes="(max-width: 1280px) 100vw, 1200px"
-              />
-            </div>
-          </Reveal>
-
-          <div className="mt-14 grid gap-4 md:grid-cols-3">
-            <div className="glass-dark rounded-sm p-6">
-              <h4 className="type-eyebrow mb-5 text-gold-soft">
-                Dòng truyền thừa
-              </h4>
-              <ul className="space-y-4">
-                {organization.lineage.map((l, i) => (
-                  <li key={l.role} className="flex gap-3">
-                    <span className="font-display text-gold">{i + 1}</span>
-                    <div>
-                      <p className="type-eyebrow text-gold">{l.role}</p>
-                      <p className="text-ivory/90">{l.name}</p>
-                    </div>
-                  </li>
-                ))}
-              </ul>
-            </div>
-            <div className="glass-dark rounded-sm p-6">
-              <h4 className="type-eyebrow mb-5 text-gold-soft">
-                Các ban
-              </h4>
-              <ul className="flex flex-wrap gap-2">
-                {organization.committees.map((c) => (
-                  <li
-                    key={c}
-                    className="type-label rounded-sm border border-gold/20 px-3 py-1.5 text-xs text-ivory/90"
-                  >
-                    {c}
-                  </li>
-                ))}
-              </ul>
-            </div>
-            <div className="glass-dark rounded-sm p-6">
-              <h4 className="type-eyebrow mb-5 text-gold-soft">
-                Võ đường
-              </h4>
-              <ul className="space-y-2">
-                {organization.dojos.map((d) => (
-                  <li
-                    key={d}
-                    className="border-l border-gold/40 pl-3 text-sm text-ivory/90"
-                  >
-                    {d}
-                  </li>
-                ))}
-              </ul>
-            </div>
-          </div>
         </div>
       </Section>
     </>

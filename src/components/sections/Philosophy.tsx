@@ -11,10 +11,10 @@ import {
   sixOaths,
   site,
 } from "@/data/content";
-import { ChapterCurtain, Section, SectionHeading } from "@/components/ui/Section";
+import { Section, SectionHeading } from "@/components/ui/Section";
 import { Reveal, Stagger, StaggerItem } from "@/components/ui/Reveal";
 
-export function Philosophy() {
+export function Philosophy({ coverImage }: { coverImage?: string }) {
   const spiritRef = useRef<HTMLElement>(null);
   const { scrollYProgress } = useScroll({
     target: spiritRef,
@@ -24,53 +24,38 @@ export function Philosophy() {
 
   return (
     <>
-      <ChapterCurtain
-        id="ton-chi"
-        eyebrow="Chương 02"
-        title={logoMeaning.sectionTitle}
-      />
-
       {/* Logo meaning — ceremonial centered */}
       <section
-        id="bieu-tuong"
+        id="ton-chi"
         className="relative scroll-mt-24 overflow-hidden texture-paper motif-lotus"
       >
         <div className="grain absolute inset-0" aria-hidden />
-        <div className="relative mx-auto max-w-6xl px-5 py-24 text-center md:px-8 md:py-32">
+        <div className="site-container site-section relative text-center">
           <Reveal>
-            <p className="font-display text-6xl leading-none text-gold md:text-7xl">
-              {logoMeaning.number}
-            </p>
-            <h3 className="type-display mx-auto mt-3 max-w-3xl text-3xl font-semibold text-brown-deep md:text-5xl">
+            <p className="type-eyebrow text-brown/50">{logoMeaning.number}</p>
+            <h3 className="h2-section mx-auto mt-2 max-w-2xl text-brown-deep">
               {logoMeaning.title}
             </h3>
-            <div className="gold-rule mx-auto my-10 w-28" />
+            <div className="gold-rule mx-auto my-6" />
           </Reveal>
 
-          <Reveal delay={0.1}>
-            <div className="relative mx-auto mb-14 max-w-sm">
-              <div className="absolute inset-0 scale-125 rounded-full bg-gold/10 blur-3xl" />
-              <motion.div
-                animate={{ rotate: 360 }}
-                transition={{ duration: 80, repeat: Infinity, ease: "linear" }}
-                className="pointer-events-none absolute inset-[-12%] rounded-full border border-dashed border-gold/25"
-                aria-hidden
-              />
+          <Reveal delay={0.08}>
+            <div className="relative mx-auto mb-10 max-w-[220px] md:max-w-[260px]">
               <Image
                 src={logoMeaning.logo}
                 alt={logoMeaning.title}
                 width={638}
                 height={638}
-                className="relative h-auto w-full drop-shadow-2xl"
-                sizes="(max-width: 768px) 80vw, 380px"
+                className="relative h-auto w-full"
+                sizes="(max-width: 768px) 60vw, 260px"
               />
             </div>
           </Reveal>
 
-          <Reveal delay={0.15}>
-            <div className="mx-auto max-w-3xl space-y-4 text-left text-brown-deep/90 md:text-center">
+          <Reveal delay={0.12}>
+            <div className="mx-auto max-w-2xl space-y-3 text-left text-brown-deep/90 md:text-center">
               {logoMeaning.paragraphs.map((p) => (
-                <p key={p.slice(0, 32)} className="type-body md:text-lg">
+                <p key={p.slice(0, 32)} className="type-body text-[0.95rem] md:text-base">
                   {p}
                 </p>
               ))}
@@ -78,24 +63,21 @@ export function Philosophy() {
           </Reveal>
 
           <Stagger
-            className="mx-auto mt-12 grid max-w-3xl grid-cols-2 gap-4 sm:grid-cols-4"
-            stagger={0.08}
+            className="mx-auto mt-10 grid max-w-2xl grid-cols-2 gap-3 sm:grid-cols-4"
+            stagger={0.05}
           >
             {logoMeaning.qualities.map((q, i) => (
               <StaggerItem key={q}>
-                <div className="lift rounded-sm border border-brown/10 bg-ivory/80 px-3 py-6 text-center backdrop-blur">
+                <div className="border-t border-brown/15 px-2 py-4 text-center">
                   <span
-                    className="mx-auto mb-3 block h-3 w-3 rounded-full shadow-[0_0_16px_currentColor]"
-                    style={{
-                      background: logoMeaning.colors[i].hex,
-                      color: logoMeaning.colors[i].hex,
-                    }}
+                    className="mx-auto mb-2 block h-2.5 w-2.5 rounded-full"
+                    style={{ background: logoMeaning.colors[i].hex }}
                     aria-hidden
                   />
                   <span className="block text-sm font-semibold text-brown-deep">
                     {q}
                   </span>
-                  <span className="mt-1 block text-[11px] text-brown/55">
+                  <span className="mt-1 block text-[11px] text-brown/50">
                     {logoMeaning.colors[i].name}
                   </span>
                 </div>
@@ -103,8 +85,8 @@ export function Philosophy() {
             ))}
           </Stagger>
 
-          <Reveal delay={0.2}>
-            <p className="type-body mx-auto mt-12 max-w-3xl text-brown-deep/90 md:text-lg">
+          <Reveal delay={0.15}>
+            <p className="type-body mx-auto mt-10 max-w-2xl text-[0.95rem] text-brown-deep/90 md:text-base">
               {logoMeaning.closing}
             </p>
           </Reveal>
@@ -117,34 +99,26 @@ export function Philosophy() {
         className="relative scroll-mt-24 overflow-hidden texture-ink"
       >
         <div className="grain absolute inset-0" aria-hidden />
-        <div className="relative mx-auto max-w-7xl px-5 py-20 md:px-8 md:py-28 lg:px-12">
+        <div className="site-container site-section relative">
           <Reveal>
-            <p className="font-display text-6xl leading-none text-gold-soft md:text-7xl">
-              {philosophy.number}
-            </p>
-            <h3 className="type-display mt-3 max-w-4xl text-3xl font-semibold text-ivory md:text-5xl">
+            <p className="type-eyebrow text-gold-soft/70">{philosophy.number}</p>
+            <h3 className="h2-section mt-2 max-w-3xl text-ivory">
               {philosophy.title}
             </h3>
-            <div className="gold-rule my-8 w-24" />
+            <div className="gold-rule my-6" />
           </Reveal>
 
-          <div className="mt-6 grid gap-6 lg:grid-cols-2">
+          <div className="mt-6 grid gap-5 lg:grid-cols-2">
             {philosophy.factors.map((f, i) => (
-              <Reveal key={f.label} delay={i * 0.1} x={i === 0 ? -24 : 24}>
-                <article
-                  className={`h-full rounded-sm p-7 md:p-10 ${
-                    i === 0
-                      ? "border border-gold/25 bg-gradient-to-br from-white/10 to-transparent"
-                      : "border border-ivory/10 bg-brown-deep/60"
-                  }`}
-                >
-                  <span className="font-display text-5xl text-gold/50">
+              <Reveal key={f.label} delay={i * 0.06}>
+                <article className="h-full border border-ivory/10 p-6 md:p-7">
+                  <span className="type-eyebrow text-ivory/40">
                     {String(i + 1).padStart(2, "0")}
                   </span>
-                  <h4 className="type-display mt-4 text-2xl font-semibold text-ivory md:text-3xl">
-                    {f.label}
-                  </h4>
-                  <p className="type-body mt-5 text-ivory/80">{f.body}</p>
+                  <h4 className="h3-block mt-3 text-ivory">{f.label}</h4>
+                  <p className="type-body mt-3 text-[0.95rem] text-ivory/75">
+                    {f.body}
+                  </p>
                 </article>
               </Reveal>
             ))}
@@ -155,23 +129,21 @@ export function Philosophy() {
       {/* Phương châm — large typography immersion */}
       <Section id="phuong-cham" sand>
         <Reveal>
-          <p className="font-display text-6xl leading-none text-gold md:text-7xl">
-            {phuongCham.number}
-          </p>
-          <h3 className="type-display mt-2 max-w-4xl text-4xl font-semibold text-brown-deep md:text-6xl">
+          <p className="type-eyebrow text-brown/50">{phuongCham.number}</p>
+          <h3 className="h2-section mt-2 max-w-3xl text-brown-deep">
             {phuongCham.title}
           </h3>
-          <div className="gold-rule my-10 w-24" />
+          <div className="gold-rule my-6" />
         </Reveal>
 
-        <div className="mx-auto max-w-4xl space-y-8">
+        <div className="mx-auto max-w-2xl space-y-5">
           {phuongCham.body.map((p, i) => (
-            <Reveal key={p.slice(0, 40)} delay={i * 0.06}>
+            <Reveal key={p.slice(0, 40)} delay={i * 0.04}>
               <p
                 className={`text-brown-deep/90 ${
                   i === 0
-                    ? "type-quote text-2xl md:text-3xl"
-                    : "type-body text-base md:text-lg"
+                    ? "type-quote text-xl md:text-2xl"
+                    : "type-body text-[0.95rem] md:text-base"
                 }`}
               >
                 {p}
@@ -187,39 +159,33 @@ export function Philosophy() {
         className="relative scroll-mt-24 overflow-hidden texture-dark"
       >
         <div className="grain absolute inset-0" aria-hidden />
-        <div className="relative px-5 py-20 md:px-8 md:py-28 lg:px-12">
-          <div className="mx-auto max-w-7xl">
+        <div className="relative site-section px-5 md:px-8">
+          <div className="site-container !px-0">
             <Reveal>
               <SectionHeading
                 tone="dark"
                 eyebrow="Sáu lời thề"
                 title="Sáu lời thề của môn sinh Phật Quang Quyền"
-                size="xl"
+                size="md"
               />
             </Reveal>
           </div>
 
-          <div className="h-scroll no-scrollbar mt-4 pl-5 md:pl-[max(2rem,calc((100vw-80rem)/2+2rem))]">
+          <div className="h-scroll no-scrollbar mt-2 pl-5 md:pl-[max(1.25rem,calc((100vw-72rem)/2+2rem))]">
             {sixOaths.map((oath, i) => (
               <article
                 key={oath}
-                className="lift group relative flex h-[420px] w-[min(78vw,340px)] flex-col justify-between overflow-hidden rounded-sm border border-gold/20 bg-gradient-to-b from-white/10 to-black/30 p-7 md:h-[480px] md:w-[380px] md:p-9"
+                className="relative flex h-[300px] w-[min(72vw,280px)] flex-col justify-between border border-ivory/12 p-5 md:h-[320px] md:w-[300px] md:p-6"
               >
-                <div
-                  className="pointer-events-none absolute -right-6 -bottom-10 font-display text-[10rem] leading-none text-gold/10 transition group-hover:text-gold/20"
-                  aria-hidden
-                >
-                  {String(i + 1).padStart(2, "0")}
-                </div>
-                <span className="font-display text-5xl text-gold-soft">
+                <span className="type-eyebrow text-gold-soft/70">
                   {String(i + 1).padStart(2, "0")}
                 </span>
-                <p className="type-body relative text-lg text-ivory md:text-xl">
+                <p className="type-body relative text-[0.95rem] text-ivory/90 md:text-base">
                   {oath}
                 </p>
               </article>
             ))}
-            <div className="w-8 shrink-0" aria-hidden />
+            <div className="w-6 shrink-0" aria-hidden />
           </div>
         </div>
       </section>
@@ -228,40 +194,42 @@ export function Philosophy() {
       <section
         id="vo-dao"
         ref={spiritRef}
-        className="relative min-h-[100svh] scroll-mt-24 overflow-hidden"
+        className="relative min-h-[70svh] scroll-mt-24 overflow-hidden md:min-h-[78svh]"
       >
-        <motion.div style={{ y: bgY }} className="absolute inset-[-10%]">
+        <motion.div style={{ y: bgY }} className="absolute inset-[-8%]">
           <Image
-            src={martialSpirit.groupImage}
+            src={coverImage || site.heroFallback}
             alt="Môn sinh Phật Quang Quyền"
             fill
             className="object-cover"
             sizes="100vw"
           />
         </motion.div>
-        <div className="absolute inset-0 bg-gradient-to-r from-brown-dark via-brown-dark/75 to-brown-dark/30" />
+        <div className="absolute inset-0 bg-gradient-to-r from-brown-dark via-brown-dark/78 to-brown-dark/35" />
 
-        <div className="relative z-10 flex min-h-[100svh] items-center px-5 py-24 md:px-8 lg:px-12">
-          <div className="mx-auto w-full max-w-7xl">
+        <div className="relative z-10 flex min-h-[70svh] items-center md:min-h-[78svh]">
+          <div className="site-container site-section">
             <Reveal>
-              <div className="glass-dark max-w-2xl rounded-sm p-8 md:p-12">
-                <p className="type-eyebrow text-gold-soft">
+              <div className="glass-dark max-w-xl p-7 md:p-9">
+                <p className="type-eyebrow text-gold-soft/80">
                   Tinh thần võ đạo
                 </p>
-                <h3 className="type-display mt-4 text-3xl font-semibold text-ivory md:text-5xl">
+                <h3 className="h2-section mt-3 text-ivory">
                   Giá trị đạo đức làm kim chỉ nam
                 </h3>
-                <div className="gold-rule my-8 w-20" />
-                <div className="space-y-5 text-ivory/85">
+                <div className="gold-rule my-5" />
+                <div className="space-y-3 text-ivory/80">
                   {martialSpirit.paragraphs.map((p) => (
-                    <p key={p.slice(0, 40)} className="type-body">
+                    <p key={p.slice(0, 40)} className="type-body text-[0.95rem]">
                       {p}
                     </p>
                   ))}
                 </div>
-                <p className="type-eyebrow mt-8 text-xs text-gold">
-                  {site.motto}
-                </p>
+                {site.motto && (
+                  <p className="type-eyebrow mt-6 text-xs text-gold/70">
+                    {site.motto}
+                  </p>
+                )}
               </div>
             </Reveal>
           </div>

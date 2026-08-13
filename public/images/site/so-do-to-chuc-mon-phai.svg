@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1260 1180" width="1260" height="1180" role="img" aria-labelledby="title desc">
+  <title id="title">Sơ đồ tổ chức Môn phái Phật Quang</title>
+  <desc id="desc">Dòng truyền thừa và cơ cấu tổ chức theo catalog môn phái.</desc>
+  <defs>
+    <linearGradient id="paper" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#faf3e4"/>
+      <stop offset="100%" stop-color="#e8dcc8"/>
+    </linearGradient>
+    <linearGradient id="header" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#faf3e4"/>
+      <stop offset="100%" stop-color="#f0e6d4"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1260" height="1180" fill="url(#paper)"/>
+  <rect x="24" y="24" width="1212" height="1132" fill="none" stroke="#c9a227" stroke-opacity="0.4" stroke-width="1.5"/>
+  <!-- corner glow -->
+  <circle cx="0" cy="0" r="180" fill="#c9a227" fill-opacity="0.08"/>
+  <circle cx="1260" cy="0" r="180" fill="#c9a227" fill-opacity="0.08"/>
+  <circle cx="0" cy="1180" r="180" fill="#c9a227" fill-opacity="0.08"/>
+  <circle cx="1260" cy="1180" r="180" fill="#c9a227" fill-opacity="0.08"/>
+
+  <!-- Header -->
+  <rect x="48" y="48" width="1164" height="110" fill="url(#header)" stroke="#c9a227" stroke-opacity="0.4"/>
+  <circle cx="120" cy="103" r="42" fill="none" stroke="#c9a227" stroke-width="2"/>
+  <text x="120" y="100" text-anchor="middle" font-family="Be Vietnam Pro, Arial" font-size="9" font-weight="700" fill="#3a2418">PHẬT QUANG</text>
+  <text x="120" y="112" text-anchor="middle" font-family="Be Vietnam Pro, Arial" font-size="9" font-weight="700" fill="#3a2418">QUYỀN</text>
+  <text x="670" y="108" text-anchor="middle" font-family="Cormorant Garamond, Georgia, serif" font-weight="700" font-size="28" fill="#3a2418">SƠ ĐỒ TỔ CHỨC MÔN PHÁI PHẬT QUANG</text>
+  <line x1="530" y1="128" x2="730" y2="128" stroke="#c9a227" stroke-opacity="0.6"/>
+
+  <!-- Content frame -->
+  <rect x="48" y="168" width="1164" height="964" fill="#faf6ee" fill-opacity="0.92" stroke="#c9a227" stroke-opacity="0.45"/>
+
+  <rect x="48" y="180" width="1164" height="36" fill="#1eb5c4"/>
+  <text x="630" y="203.4" text-anchor="middle" font-family="Be Vietnam Pro, Arial, sans-serif" font-weight="700" font-size="14" letter-spacing="3" fill="#ffffff">DÒNG TRUYỀN THỪA</text>
+  <rect x="48" y="216" width="419" height="40" fill="#f3ead8" stroke="#c9a227" stroke-width="1" stroke-opacity="0.55"/>
+  <text x="257.5" y="240.2" text-anchor="middle" font-family="Be Vietnam Pro, Arial, sans-serif" font-weight="700" font-size="12" fill="#3a2418">CHỨC DANH</text>
+  <rect x="467" y="216" width="745" height="40" fill="#f3ead8" stroke="#c9a227" stroke-width="1" stroke-opacity="0.55"/>
+  <text x="839.5" y="240.2" text-anchor="middle" font-family="Be Vietnam Pro, Arial, sans-serif" font-weight="700" font-size="12" fill="#3a2418">TÊN / GHI DANH</text><rect x="48" y="256" width="1164" height="44" fill="#d4b896" stroke="#c9a227" stroke-width="1" stroke-opacity="0.55"/><text x="630" y="284" text-anchor="middle" font-family="Be Vietnam Pro, Arial" font-weight="700" font-size="16" fill="#3a2418">MÔN PHÁI PHẬT QUANG</text>
+  <rect x="48" y="300" width="419" height="52" fill="#f7f2e9" stroke="#c9a227" stroke-width="1" stroke-opacity="0.55"/>
+  <text x="257.5" y="330.9" text-anchor="middle" font-family="Be Vietnam Pro, Arial, sans-serif" font-weight="700" font-size="14" fill="#3a2418">THÁI TỔ SƯ</text>
+  <rect x="467" y="300" width="745" height="52" fill="#f7f2e9" stroke="#c9a227" stroke-width="1" stroke-opacity="0.55"/>
+  <text x="839.5" y="331.95" text-anchor="middle" font-family="Be Vietnam Pro, Arial, sans-serif" font-weight="600" font-size="17" fill="#3a2418">Tôn giả Rahula (La Hầu La)</text>
+  <rect x="48" y="352" width="419" height="52" fill="#f7f2e9" stroke="#c9a227" stroke-width="1" stroke-opacity="0.55"/>
+  <text x="257.5" y="382.9" text-anchor="middle" font-family="Be Vietnam Pro, Arial, sans-serif" font-weight="700" font-size="14" fill="#3a2418">SÁNG TỔ SƯ</text>
+  <rect x="467" y="352" width="745" height="52" fill="#f7f2e9" stroke="#c9a227" stroke-width="1" stroke-opacity="0.55"/>
+  <text x="839.5" y="383.95" text-anchor="middle" font-family="Be Vietnam Pro, Arial, sans-serif" font-weight="600" font-size="17" fill="#3a2418">Thượng Tọa Thích Chân Quang</text>
+  <rect x="48" y="404" width="419" height="60" fill="#1f140e" stroke="#c9a227" stroke-width="1" stroke-opacity="0.55"/>
+  <text x="257.5" y="439.25" text-anchor="middle" font-family="Be Vietnam Pro, Arial, sans-serif" font-weight="700" font-size="15" fill="#e0c56a">CHƯỞNG MÔN</text>
+  <rect x="467" y="404" width="745" height="60" fill="#1f140e" stroke="#c9a227" stroke-width="1" stroke-opacity="0.55"/>
+  <text x="839.5" y="441.7" text-anchor="middle" font-family="Be Vietnam Pro, Arial, sans-serif" font-weight="700" font-size="22" fill="#f7f2e9">Đại Đức Thích Nghiêm Giám</text>
+  <rect x="48" y="480" width="1164" height="36" fill="#1eb5c4"/>
+  <text x="630" y="503.4" text-anchor="middle" font-family="Be Vietnam Pro, Arial, sans-serif" font-weight="700" font-size="14" letter-spacing="3" fill="#ffffff">CƠ CẤU TỔ CHỨC</text>
+  <rect x="48" y="516" width="582" height="34" fill="#c9a227"/>
+  <text x="339.0" y="538" text-anchor="middle" font-family="Be Vietnam Pro, Arial" font-weight="700" font-size="13" letter-spacing="2.5" fill="#fff">CÁC BAN</text>
+  <rect x="630" y="516" width="582" height="34" fill="#8b4d9c"/>
+  <text x="921.0" y="538" text-anchor="middle" font-family="Be Vietnam Pro, Arial" font-weight="700" font-size="13" letter-spacing="2.5" fill="#fff">HỆ THỐNG VÕ ĐƯỜNG</text>
+
+  <rect x="48" y="550" width="582" height="46" fill="#f7f2e9" stroke="#c9a227" stroke-width="1" stroke-opacity="0.55"/>
+  <text x="339.0" y="577.9" text-anchor="middle" font-family="Be Vietnam Pro, Arial, sans-serif" font-weight="700" font-size="14" fill="#3a2418">BAN VÕ ĐẠO</text>
+  <rect x="630" y="550" width="582" height="46" fill="#f7f2e9" stroke="#c9a227" stroke-width="1" stroke-opacity="0.55"/>
+  <text x="921.0" y="577.9" text-anchor="middle" font-family="Be Vietnam Pro, Arial, sans-serif" font-weight="700" font-size="14" fill="#3a2418">TỔ ĐÌNH</text>
+  <rect x="48" y="596" width="582" height="46" fill="#f7f2e9" stroke="#c9a227" stroke-width="1" stroke-opacity="0.55"/>
+  <text x="339.0" y="623.9" text-anchor="middle" font-family="Be Vietnam Pro, Arial, sans-serif" font-weight="700" font-size="14" fill="#3a2418">BAN CHUYÊN MÔN</text>
+  <rect x="630" y="596" width="582" height="46" fill="#f7f2e9" stroke="#c9a227" stroke-width="1" stroke-opacity="0.55"/>
+  <text x="921.0" y="623.375" text-anchor="middle" font-family="Be Vietnam Pro, Arial, sans-serif" font-weight="700" font-size="12.5" fill="#3a2418">TỔNG ĐƯỜNG PHÁP QUANG</text>
+  <rect x="48" y="642" width="582" height="46" fill="#f7f2e9" stroke="#c9a227" stroke-width="1" stroke-opacity="0.55"/>
+  <text x="339.0" y="669.9" text-anchor="middle" font-family="Be Vietnam Pro, Arial, sans-serif" font-weight="700" font-size="14" fill="#3a2418">BAN HUẤN LUYỆN</text>
+  <rect x="630" y="642" width="582" height="46" fill="#f7f2e9" stroke="#c9a227" stroke-width="1" stroke-opacity="0.55"/>
+  <text x="921.0" y="669.9" text-anchor="middle" font-family="Be Vietnam Pro, Arial, sans-serif" font-weight="700" font-size="14" fill="#3a2418">VÕ ĐƯỜNG TRÍ VŨ</text>
+  <rect x="48" y="688" width="582" height="46" fill="#f7f2e9" stroke="#c9a227" stroke-width="1" stroke-opacity="0.55"/>
+  <text x="339.0" y="715.9" text-anchor="middle" font-family="Be Vietnam Pro, Arial, sans-serif" font-weight="700" font-size="14" fill="#3a2418">BAN THƯ KÝ</text>
+  <rect x="630" y="688" width="582" height="46" fill="#f7f2e9" stroke="#c9a227" stroke-width="1" stroke-opacity="0.55"/>
+  <text x="921.0" y="715.375" text-anchor="middle" font-family="Be Vietnam Pro, Arial, sans-serif" font-weight="700" font-size="12.5" fill="#3a2418">VÕ ĐƯỜNG HỒNG QUANG</text>
+  <rect x="48" y="734" width="582" height="46" fill="#f7f2e9" stroke="#c9a227" stroke-width="1" stroke-opacity="0.55"/>
+  <text x="339.0" y="761.9" text-anchor="middle" font-family="Be Vietnam Pro, Arial, sans-serif" font-weight="700" font-size="14" fill="#3a2418">BAN TRUYỀN THÔNG</text>
+  <rect x="630" y="734" width="582" height="46" fill="#f7f2e9" stroke="#c9a227" stroke-width="1" stroke-opacity="0.55"/>
+  <text x="921.0" y="761.375" text-anchor="middle" font-family="Be Vietnam Pro, Arial, sans-serif" font-weight="700" font-size="12.5" fill="#3a2418">VÕ ĐƯỜNG VIÊN QUANG</text><rect x="48" y="780" width="582" height="46" fill="#f7f2e9" stroke="#c9a227" stroke-width="1" stroke-opacity="0.55"/>
+  <rect x="630" y="780" width="582" height="46" fill="#f7f2e9" stroke="#c9a227" stroke-width="1" stroke-opacity="0.55"/>
+  <text x="921.0" y="807.375" text-anchor="middle" font-family="Be Vietnam Pro, Arial, sans-serif" font-weight="700" font-size="12.5" fill="#3a2418">VÕ ĐƯỜNG THẮNG QUANG</text><rect x="48" y="826" width="582" height="46" fill="#f7f2e9" stroke="#c9a227" stroke-width="1" stroke-opacity="0.55"/>
+  <rect x="630" y="826" width="582" height="46" fill="#f7f2e9" stroke="#c9a227" stroke-width="1" stroke-opacity="0.55"/>
+  <text x="921.0" y="853.375" text-anchor="middle" font-family="Be Vietnam Pro, Arial, sans-serif" font-weight="700" font-size="12.5" fill="#3a2418">VÕ ĐƯỜNG TĨNH QUANG</text></svg>

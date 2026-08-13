@@ -1,0 +1,371 @@
+{
+  "total": 285,
+  "ok": 257,
+  "withIssues": 28,
+  "issues": [
+    {
+      "file": "content/competitions/2025-11-10-sang-ngay-7-11-2025-tai-trung-tam-huan-luyen-thi-dau-the-duc-55747539.md",
+      "cat": "competitions",
+      "date": "2025-11-10",
+      "title": "Sáng ngày 7/11/2025, tại Trung tâm Huấn luyện & Thi đấu Thể dục Thể thao TP",
+      "cover": "",
+      "gallery": [],
+      "problems": [
+        "missing_coverImage",
+        "no_images"
+      ],
+      "facebookPostId": "2011422782420944_1165163355747539"
+    },
+    {
+      "file": "content/competitions/2025-12-13-dieu-le-dai-hoi-the-thao-toan-quoc-lan-thu-x-nam-2026-da-chi-76592800.md",
+      "cat": "competitions",
+      "date": "2025-12-13",
+      "title": "Điều lệ Đại hội Thể thao toàn quốc lần thứ X năm 2026 đã chính thức ban hành",
+      "cover": "",
+      "gallery": [],
+      "problems": [
+        "missing_coverImage",
+        "no_images"
+      ],
+      "facebookPostId": "2011422782420944_1190044076592800"
+    },
+    {
+      "file": "content/competitions/2026-02-04-tin-nong-cho-the-thao-hoc-duong-2026-15986499.md",
+      "cat": "competitions",
+      "date": "2026-02-04",
+      "title": "TIN NÓNG CHO THỂ THAO HỌC ĐƯỜNG 2026",
+      "cover": "",
+      "gallery": [],
+      "problems": [
+        "missing_coverImage",
+        "no_images"
+      ],
+      "facebookPostId": "2011422782420944_1229440415986499"
+    },
+    {
+      "file": "content/competitions/2026-04-09-ngay-thi-dau-dau-tien-24132071.md",
+      "cat": "competitions",
+      "date": "2026-04-09",
+      "title": "NGÀY THI ĐẤU ĐẦU TIÊN",
+      "cover": "",
+      "gallery": [],
+      "problems": [
+        "missing_coverImage",
+        "no_images"
+      ],
+      "facebookPostId": "2011422782420944_1281318024132071"
+    },
+    {
+      "file": "content/competitions/2026-04-09-soi-noi-ngay-thi-dau-dau-tien-mon-vo-co-truyen-27492044.md",
+      "cat": "competitions",
+      "date": "2026-04-09",
+      "title": "SÔI NỔI NGÀY THI ĐẤU ĐẦU TIÊN MÔN VÕ CỔ TRUYỀN",
+      "cover": "",
+      "gallery": [],
+      "problems": [
+        "missing_coverImage",
+        "no_images"
+      ],
+      "facebookPostId": "2011422782420944_1281051627492044"
+    },
+    {
+      "file": "content/competitions/2026-04-10-ngay-thi-dau-thu-hai-40731216.md",
+      "cat": "competitions",
+      "date": "2026-04-10",
+      "title": "NGÀY THI ĐẤU THỨ HAI",
+      "cover": "",
+      "gallery": [],
+      "problems": [
+        "missing_coverImage",
+        "no_images"
+      ],
+      "facebookPostId": "2011422782420944_1281993240731216"
+    },
+    {
+      "file": "content/competitions/2026-04-11-ngay-thi-dau-thu-ba-03992493.md",
+      "cat": "competitions",
+      "date": "2026-04-11",
+      "title": "NGÀY THI ĐẤU THỨ BA",
+      "cover": "",
+      "gallery": [],
+      "problems": [
+        "missing_coverImage",
+        "no_images"
+      ],
+      "facebookPostId": "2011422782420944_1282713803992493"
+    },
+    {
+      "file": "content/competitions/2026-04-14-be-mac-hoi-thi-the-duc-the-thao-hoc-sinh-nam-hoc-2025-2026-m-93778974.md",
+      "cat": "competitions",
+      "date": "2026-04-14",
+      "title": "Bế mạc Hội thi Thể dục Thể thao Học sinh năm học 2025-2026 Môn Võ cổ truyền",
+      "cover": "",
+      "gallery": [],
+      "problems": [
+        "missing_coverImage",
+        "no_images"
+      ],
+      "facebookPostId": "2011422782420944_1284848993778974"
+    },
+    {
+      "file": "content/competitions/2026-04-15-dieu-le-giai-vo-dich-cac-cau-lac-bo-vo-co-truyen-quoc-gia-la-63704697.md",
+      "cat": "competitions",
+      "date": "2026-04-15",
+      "title": "ĐIỀU LỆ Giải Vô địch các Câu lạc bộ Võ cổ truyền quốc gia lần thứ XV năm 2026",
+      "cover": "",
+      "gallery": [],
+      "problems": [
+        "missing_coverImage",
+        "no_images"
+      ],
+      "facebookPostId": "2011422782420944_1285591763704697"
+    },
+    {
+      "file": "content/competitions/2026-04-15-dieu-le-giai-vo-dich-tre-vo-co-truyen-quoc-gia-lan-thu-xxvii-57038351.md",
+      "cat": "competitions",
+      "date": "2026-04-15",
+      "title": "Điều lệ Giải Vô địch Trẻ Võ cổ truyền quốc gia lần thứ XXVII, năm 2026",
+      "cover": "",
+      "gallery": [],
+      "problems": [
+        "missing_coverImage",
+        "no_images"
+      ],
+      "facebookPostId": "2011422782420944_1285588557038351"
+    },
+    {
+      "file": "content/competitions/2026-05-09-phuong-ba-ria-gianh-huy-chuong-vang-mon-vo-co-truyen-tai-dai-05116926.md",
+      "cat": "competitions",
+      "date": "2026-05-09",
+      "title": "PHƯỜNG BÀ RỊA GIÀNH HUY CHƯƠNG VÀNG MÔN VÕ CỔ TRUYỀN TẠI ĐẠI HỘI TDTT TP",
+      "cover": "",
+      "gallery": [],
+      "problems": [
+        "missing_coverImage",
+        "no_images"
+      ],
+      "facebookPostId": "2011422782420944_1304802805116926"
+    },
+    {
+      "file": "content/competitions/2026-05-11-chuc-mung-cac-van-dong-vien-cua-vo-duong-hong-quang-da-hoan--98288730.md",
+      "cat": "competitions",
+      "date": "2026-05-11",
+      "title": "Chúc mừng các vận động viên của VÕ ĐƯỜNG HỒNG QUANG đã hoàn thành nhiệm vụ tại ĐẠI HỘI…",
+      "cover": "",
+      "gallery": [],
+      "problems": [
+        "missing_coverImage",
+        "no_images"
+      ],
+      "facebookPostId": "2011422782420944_1306418098288730"
+    },
+    {
+      "file": "content/competitions/2026-05-11-dieu-le-giai-vo-dich-tre-vo-co-truyen-quoc-gia-lan-thu-xxvii-14937515.md",
+      "cat": "competitions",
+      "date": "2026-05-11",
+      "title": "Điều lệ Giải Vô địch Trẻ Võ cổ truyền quốc gia lần thứ XXVII, năm 2026",
+      "cover": "",
+      "gallery": [],
+      "problems": [
+        "missing_coverImage",
+        "no_images"
+      ],
+      "facebookPostId": "2011422782420944_1306596914937515"
+    },
+    {
+      "file": "content/competitions/2026-05-11-mot-tinh-than-vo-co-truyen-viet-nam-dam-sac-64944980.md",
+      "cat": "competitions",
+      "date": "2026-05-11",
+      "title": "MỘT TINH THẦN VÕ CỔ TRUYỀN VIỆT NAM ĐẬM SẮC",
+      "cover": "",
+      "gallery": [],
+      "problems": [
+        "missing_coverImage",
+        "no_images"
+      ],
+      "facebookPostId": "2011422782420944_1306522264944980"
+    },
+    {
+      "file": "content/competitions/2026-05-19-vo-viet-dat-phuong-nam-dai-vo-dat-phuong-nam-04280206.md",
+      "cat": "competitions",
+      "date": "2026-05-19",
+      "title": "VÕ VIỆT ĐẤT PHƯƠNG NAM-ĐÀI VÕ ĐẤT PHƯƠNG NAM",
+      "cover": "",
+      "gallery": [],
+      "problems": [
+        "missing_coverImage",
+        "no_images"
+      ],
+      "facebookPostId": "2011422782420944_1313170004280206"
+    },
+    {
+      "file": "content/competitions/2026-05-26-tuyen-tinh-nguyen-vien-ho-tro-giai-quoc-te-vo-co-truyen-tp-83684768.md",
+      "cat": "competitions",
+      "date": "2026-05-26",
+      "title": "TUYỂN TÌNH NGUYỆN VIÊN HỖ TRỢ GIẢI QUỐC TẾ VÕ CỔ TRUYỀN TP",
+      "cover": "",
+      "gallery": [],
+      "problems": [
+        "missing_coverImage",
+        "no_images"
+      ],
+      "facebookPostId": "2011422782420944_1319124383684768"
+    },
+    {
+      "file": "content/competitions/2026-06-25-bac-ninh-dan-dau-toan-doan-mon-vo-co-truyen-noi-dung-doi-kha-84445181.md",
+      "cat": "competitions",
+      "date": "2026-06-25",
+      "title": "BẮC NINH DẪN ĐẦU TOÀN ĐOÀN MÔN VÕ CỔ TRUYỀN NỘI DUNG ĐỐI KHÁNG TẠI GIẢI THỂ THAO HỌC SI…",
+      "cover": "",
+      "gallery": [],
+      "problems": [
+        "missing_coverImage",
+        "no_images"
+      ],
+      "facebookPostId": "2011422782420944_1344853584445181"
+    },
+    {
+      "file": "content/competitions/2026-06-30-soi-noi-khai-mac-giai-vo-co-truyen-vo-dich-tre-va-nang-khieu-84036521.md",
+      "cat": "competitions",
+      "date": "2026-06-30",
+      "title": "SÔI NỔI KHAI MẠC GIẢI VÕ CỔ TRUYỀN VÔ ĐỊCH TRẺ VÀ NĂNG KHIẾU CÁC NHÓM TUỔI THÀNH PHỐ HỒ…",
+      "cover": "",
+      "gallery": [],
+      "problems": [
+        "missing_coverImage",
+        "no_images"
+      ],
+      "facebookPostId": "2011422782420944_1348940184036521"
+    },
+    {
+      "file": "content/competitions/2026-07-03-toi-2-7-tai-phuong-quy-nhon-tinh-gia-lai-dien-ra-le-khai-mac-77103465.md",
+      "cat": "competitions",
+      "date": "2026-07-03",
+      "title": "Tối 2/7, tại phường Quy Nhơn, tỉnh Gia Lai diễn ra Lễ khai mạc Giải Võ thuật cổ truyền…",
+      "cover": "",
+      "gallery": [],
+      "problems": [
+        "missing_coverImage",
+        "no_images"
+      ],
+      "facebookPostId": "2011422782420944_1351604077103465"
+    },
+    {
+      "file": "content/competitions/2026-07-04-chuc-mung-giai-vo-co-truyen-vo-dich-tre-va-nang-khieu-cac-nh-53684694.md",
+      "cat": "competitions",
+      "date": "2026-07-04",
+      "title": "Chúc mừng Giải Võ Cổ Truyền Vô Địch Trẻ và Năng khiếu Các Nhóm Tuổi Năm 2026 thành công…",
+      "cover": "",
+      "gallery": [],
+      "problems": [
+        "missing_coverImage",
+        "no_images"
+      ],
+      "facebookPostId": "2011422782420944_1352458453684694"
+    },
+    {
+      "file": "content/competitions/2026-07-11-sang-ngay-11-7-2026-le-be-mac-dai-hoi-the-duc-the-thao-tdtt--96423943.md",
+      "cat": "competitions",
+      "date": "2026-07-11",
+      "title": "Sáng ngày 11-7-2026, Lễ bế mạc Đại hội Thể dục Thể thao (TDTT) TP",
+      "cover": "",
+      "gallery": [],
+      "problems": [
+        "missing_coverImage",
+        "no_images"
+      ],
+      "facebookPostId": "2011422782420944_1358399296423943"
+    },
+    {
+      "file": "content/competitions/2026-07-16-chao-don-cac-don-vi-ve-tham-gia-vo-viet-dat-phuong-nam-dai-v-22720497.md",
+      "cat": "competitions",
+      "date": "2026-07-16",
+      "title": "CHÀO ĐÓN CÁC ĐƠN VỊ VỀ THAM GIA 'VÕ VIỆT ĐẤT PHƯƠNG NAM - ĐÀI VÕ ĐẤT PHƯƠNG NAM ' NĂM 2026",
+      "cover": "",
+      "gallery": [],
+      "problems": [
+        "missing_coverImage",
+        "no_images"
+      ],
+      "facebookPostId": "2011422782420944_1362100422720497"
+    },
+    {
+      "file": "content/competitions/2026-07-16-chuong-trinh-hoat-dong-02720449.md",
+      "cat": "competitions",
+      "date": "2026-07-16",
+      "title": "CHƯƠNG TRÌNH HOẠT ĐỘNG",
+      "cover": "",
+      "gallery": [],
+      "problems": [
+        "missing_coverImage",
+        "no_images"
+      ],
+      "facebookPostId": "2011422782420944_1362100902720449"
+    },
+    {
+      "file": "content/competitions/2026-07-29-theo-qdnd-68350379.md",
+      "cat": "competitions",
+      "date": "2026-07-29",
+      "title": "Theo qdnd",
+      "cover": "",
+      "gallery": [],
+      "problems": [
+        "missing_coverImage",
+        "no_images"
+      ],
+      "facebookPostId": "2011422782420944_1372468268350379"
+    },
+    {
+      "file": "content/activities/2025-11-19-vo-co-truyen-viet-nam-hao-khi-ngan-nam-lan-toa-25012642.md",
+      "cat": "activities",
+      "date": "2025-11-19",
+      "title": "VÕ CỔ TRUYỀN VIỆT NAM – HÀO KHÍ NGÀN NĂM LAN TỎA",
+      "cover": "",
+      "gallery": [],
+      "problems": [
+        "missing_coverImage",
+        "no_images"
+      ],
+      "facebookPostId": "2011422782420944_1172512325012642"
+    },
+    {
+      "file": "content/activities/2025-11-21-phuc-khao-chuong-trinh-bieu-dien-lien-hoan-vo-thuat-quoc-te--44862230.md",
+      "cat": "activities",
+      "date": "2025-11-21",
+      "title": "PHÚC KHẢO CHƯƠNG TRÌNH BIỂU DIỄN LIÊN HOAN VÕ THUẬT QUỐC TẾ TP HỒ CHÍ MINH 2025",
+      "cover": "",
+      "gallery": [],
+      "problems": [
+        "missing_coverImage",
+        "no_images"
+      ],
+      "facebookPostId": "2011422782420944_1174016444862230"
+    },
+    {
+      "file": "content/activities/2026-03-16-thong-bao-ve-viec-dieu-chinh-lich-hoat-dong-nam-2026-cua-lie-59405541.md",
+      "cat": "activities",
+      "date": "2026-03-16",
+      "title": "Thông báo về việc điều chỉnh lịch hoạt động năm 2026 của Liên đoàn Võ thuật cổ truyền V…",
+      "cover": "",
+      "gallery": [],
+      "problems": [
+        "missing_coverImage",
+        "no_images"
+      ],
+      "facebookPostId": "2011422782420944_1261916659405541"
+    },
+    {
+      "file": "content/activities/2026-05-28-mot-dai-non-song-mot-hon-vo-viet-30209890.md",
+      "cat": "activities",
+      "date": "2026-05-28",
+      "title": "Một dải non sông - Một hồn Võ Việt",
+      "cover": "",
+      "gallery": [],
+      "problems": [
+        "missing_coverImage",
+        "no_images"
+      ],
+      "facebookPostId": "2011422782420944_1320539830209890"
+    }
+  ]
+}

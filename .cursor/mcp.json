@@ -1,0 +1,11 @@
+{
+  "mcpServers": {
+    "facebook-page": {
+      "command": "npx",
+      "args": [
+        "tsx",
+        "mcp/facebook-page/server.ts"
+      ]
+    }
+  }
+}
