@@ -1,54 +1,31 @@
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
+import {
+  contactDescription,
+  contactHighlights,
+  officialSocialLinks,
+  toDinh,
+} from "@/data/content";
 import { PageHeader } from "@/components/ui/PageHeader";
 import { Reveal, Stagger, StaggerItem } from "@/components/ui/Reveal";
 
-const TO_DINH_ADDRESS =
-  "Chùa Phật Quang, Núi Dinh, thôn Chu Hải, xã Tân Hải, Hồ Chí Minh";
+const [toDinhHighlight, ...networkLocations] = contactHighlights;
 
-const TO_DINH_MAP_EMBED =
-  "https://maps.google.com/maps?q=Thi%E1%BB%81n+T%C3%B4n+Ph%E1%BA%ADt+Quang,+N%C3%BAi+Dinh,+th%C3%B4n+Chu+H%E1%BA%A3i,+T%C3%A2n+H%E1%BA%A3i&hl=vi&z=14&output=embed";
-
-const TO_DINH_MAP_LINK =
-  "https://www.google.com/maps/search/?api=1&query=Thi%E1%BB%81n+T%C3%B4n+Ph%E1%BA%ADt+Quang+N%C3%BAi+Dinh+T%C3%A2n+H%E1%BA%A3i";
-
-const CONTACT_DESCRIPTION =
-  "Tổ Đình và các võ đường / CLB đại diện theo miền. Danh sách đầy đủ nằm tại trang Địa điểm.";
-
-/** Representative HQ / region dojos — full list lives on /dia-diem. */
-const contactHighlights: { region: string; address?: string }[] = [
-  {
-    region: "Tổ Đình",
-    address: TO_DINH_ADDRESS,
-  },
-  { region: "Tổng Đường Pháp Quang - Miền Nam" },
-  { region: "Võ Đường Viên Quang - Miền Trung" },
-  { region: "Võ Đường Thắng Quang - Miền Bắc" },
-  { region: "CLB Phật Quang Quyền Nhật Bản" },
-  { region: "CLB Phật Quang Quyền Đài Loan" },
-  { region: "CLB Phật Quang Quyền Singapore" },
-  { region: "Võ Đường Tĩnh Quang - Phật Quang Quyền Algeria" },
-];
-
-const [toDinh, ...networkLocations] = contactHighlights;
-
-const officialSocial = [
-  {
-    name: "TikTok",
-    href: "https://www.tiktok.com/@p.q.qtd",
-    icon: TikTokIcon,
-  },
-  {
-    name: "YouTube",
-    href: "https://www.youtube.com/@BAN_TRUY%E1%BB%80N_TH%C3%94NG_PQQ",
-    icon: YouTubeIcon,
-  },
-  {
-    name: "Facebook",
-    href: "https://www.facebook.com/todinh.pqq",
-    icon: FacebookIcon,
-  },
+const networkColumnSplit = Math.ceil(networkLocations.length / 2);
+const networkColumns = [
+  networkLocations.slice(0, networkColumnSplit),
+  networkLocations.slice(networkColumnSplit),
 ] as const;
+
+const officialSocial = officialSocialLinks.map((item) => ({
+  ...item,
+  icon:
+    item.name === "TikTok"
+      ? TikTokIcon
+      : item.name === "YouTube"
+        ? YouTubeIcon
+        : FacebookIcon,
+}));
 
 /** Compact contact strip for Home hub. */
 export function HomeContact() {
@@ -60,7 +37,7 @@ export function HomeContact() {
           <p className="type-eyebrow text-ivory/45">Liên hệ</p>
           <h2 className="h2-section mt-3 text-ivory">Bắt đầu từ Tổ Đình</h2>
           <p className="type-body mt-4 text-[0.95rem] text-ivory/65">
-            {TO_DINH_ADDRESS}
+            {toDinhHighlight.address}
           </p>
           <div className="mt-8 flex flex-wrap gap-3">
             <Link href="/lien-he" className="btn btn-accent">
@@ -82,7 +59,7 @@ export function Contact() {
       <PageHeader
         eyebrow="Liên hệ"
         title="Liên hệ"
-        description={CONTACT_DESCRIPTION}
+        description={contactDescription}
         tone="sand"
         layout="split"
         meta={
@@ -116,28 +93,38 @@ export function Contact() {
           <Reveal className="mt-12 md:mt-14">
             <aside className="contact-featured" aria-label="Tổ Đình">
               <div className="contact-featured-inner">
-                <h3 className="contact-featured-title">{toDinh.region}</h3>
-                {toDinh.address ? (
+                <h3 className="contact-featured-title">{toDinhHighlight.region}</h3>
+                {toDinhHighlight.address ? (
                   <p className="type-body mt-5 max-w-md text-[0.95rem] leading-relaxed text-brown-deep/70 md:mt-6 md:text-base">
-                    {toDinh.address}
+                    {toDinhHighlight.address}
                   </p>
                 ) : null}
               </div>
             </aside>
           </Reveal>
 
-          <Stagger className="contact-network mt-8 md:mt-10" stagger={0.03}>
-            {networkLocations.map((loc, index) => (
-              <StaggerItem key={loc.region}>
-                <article className="contact-network-row group">
-                  <span className="contact-network-index type-eyebrow">
-                    {String(index + 1).padStart(2, "0")}
-                  </span>
-                  <h3 className="contact-network-name">{loc.region}</h3>
-                </article>
-              </StaggerItem>
+          <div className="contact-network mt-8 md:mt-10">
+            {networkColumns.map((column, colIndex) => (
+              <div key={colIndex} className="contact-network-col">
+                <Stagger stagger={0.03}>
+                  {column.map((loc, index) => {
+                    const displayIndex =
+                      colIndex === 0 ? index + 1 : index + networkColumnSplit + 1;
+                    return (
+                      <StaggerItem key={loc.region}>
+                        <article className="contact-network-row group">
+                          <span className="contact-network-index type-eyebrow">
+                            {String(displayIndex).padStart(2, "0")}
+                          </span>
+                          <h3 className="contact-network-name">{loc.region}</h3>
+                        </article>
+                      </StaggerItem>
+                    );
+                  })}
+                </Stagger>
+              </div>
             ))}
-          </Stagger>
+          </div>
 
           <Reveal delay={0.06}>
             <Link
@@ -158,11 +145,11 @@ export function Contact() {
                 <p className="type-eyebrow text-brown/55">Điểm đến</p>
                 <h3 className="h3-block mt-3 text-brown-deep">Bản đồ Tổ Đình</h3>
                 <p className="type-body mt-5 max-w-xs text-sm leading-relaxed text-brown/65 md:text-[0.95rem]">
-                  {TO_DINH_ADDRESS}
+                  {toDinh.fullAddress}
                 </p>
               </div>
               <a
-                href={TO_DINH_MAP_LINK}
+                href={toDinh.mapLink}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="contact-cta type-label group mt-8 inline-flex items-center gap-2.5 text-sm font-semibold text-brown/75 md:mt-0"
@@ -177,8 +164,8 @@ export function Contact() {
 
             <div className="contact-map-frame group/map">
               <iframe
-                title="Bản đồ Tổ Đình — Thiền Tôn Phật Quang"
-                src={TO_DINH_MAP_EMBED}
+                title={`Bản đồ Tổ Đình — ${toDinh.templeName}`}
+                src={toDinh.mapEmbed}
                 className="absolute inset-0 h-full w-full border-0 transition duration-700 group-hover/map:scale-[1.015]"
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"

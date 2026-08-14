@@ -10,6 +10,8 @@ export const site = {
   federationLine: "",
   motto: "",
   title: "Phật Quang Quyền — Võ Cổ Truyền Việt Nam",
+  tagline:
+    "Môn phái võ cổ truyền — rèn luyện thân thể, đạo đức và tinh thần phụng sự Đạo pháp và dân tộc",
   description:
     "Phật Quang Quyền — lịch sử hình thành và phát triển, tôn chỉ võ đạo, hệ thống cấp đai, chương trình huấn luyện, quy mô hoạt động trong và ngoài nước, thành tích thi đấu và hoạt động xã hội thiện nguyện.",
   logo: "/images/extracted/logo-phat-quang-quyen-transparent.webp",
@@ -17,6 +19,66 @@ export const site = {
   heroFallback: "/images/site/gioiThieu_MonPhai.png",
   introImage: "/images/site/gioiThieu_MonPhai.png",
 };
+
+/** Tổ Đình — canonical address & maps (master: docs/danh-sach-clb-*.md). */
+export const toDinh = {
+  templeName: "Chùa Phật Quang",
+  address: "Núi Dinh, thôn Chu Hải, xã Tân Hải, TP. Hồ Chí Minh",
+  fullAddress:
+    "Chùa Phật Quang, Núi Dinh, thôn Chu Hải, xã Tân Hải, TP. Hồ Chí Minh",
+  mapEmbed:
+    "https://maps.google.com/maps?q=Thi%E1%BB%81n+T%C3%B4n+Ph%E1%BA%ADt+Quang,+N%C3%BAi+Dinh,+th%C3%B4n+Chu+H%E1%BA%A3i,+T%C3%A2n+H%E1%BA%A3i&hl=vi&z=14&output=embed",
+  mapLink:
+    "https://www.google.com/maps/search/?api=1&query=Thi%E1%BB%81n+T%C3%B4n+Ph%E1%BA%ADt+Quang+N%C3%BAi+Dinh+T%C3%A2n+H%E1%BA%A3i",
+} as const;
+
+export const officialSocialLinks = [
+  { name: "TikTok", href: "https://www.tiktok.com/@p.q.qtd" },
+  {
+    name: "YouTube",
+    href: "https://www.youtube.com/@BAN_TRUY%E1%BB%80N_TH%C3%94NG_PQQ",
+  },
+  { name: "Facebook", href: "https://www.facebook.com/todinh.pqq" },
+] as const;
+
+export const contactDescription =
+  "Tổ Đình và các võ đường / CLB đại diện theo miền. Danh sách đầy đủ nằm tại trang Địa điểm.";
+
+/** Representative HQ / region dojos — full list lives on /dia-diem. */
+export const contactHighlights = [
+  { region: "Tổ Đình", address: toDinh.fullAddress },
+  { region: "Tổng Đường Pháp Quang - Miền Nam" },
+  { region: "Võ Đường Viên Quang - Miền Trung" },
+  { region: "Võ Đường Thắng Quang - Miền Bắc" },
+  { region: "CLB Phật Quang Quyền Hàn Quốc" },
+  { region: "CLB Phật Quang Quyền Nhật Bản" },
+  { region: "CLB Phật Quang Quyền Đài Loan" },
+  { region: "CLB Phật Quang Quyền Singapore" },
+  { region: "Võ Đường Tĩnh Quang - Phật Quang Quyền Algeria" },
+] as const;
+
+/** Countries with active CLBs — used in structured data. */
+export const operatingCountries = [
+  "Vietnam",
+  "South Korea",
+  "Japan",
+  "Taiwan",
+  "Singapore",
+  "Algeria",
+] as const;
+
+/** Collective term — always paired: võ sinh, môn sinh (Võ sinh first). */
+export const memberTerm = {
+  lower: "võ sinh, môn sinh",
+  title: "Võ sinh, môn sinh",
+  ofSchool: "võ sinh, môn sinh Phật Quang Quyền",
+  ofSchoolTitle: "Võ sinh, môn sinh Phật Quang Quyền",
+} as const;
+
+export const sixOathsSection = {
+  homeHeading: "Sáu lời thề võ sinh",
+  sectionTitle: "Sáu lời thề của võ sinh Phật Quang Quyền",
+} as const;
 
 export const thaiToSu = {
   number: "1",
@@ -32,11 +94,12 @@ export const sangToSu = {
   fields: [
     { label: "Thế danh", value: "Vương Tấn Việt" },
     { label: "Đạo hiệu", value: "Thượng Chân hạ Quang" },
+    { label: "Pháp danh", value: "Thích Chân Quang" },
     { label: "Năm sinh", value: "1959" },
     { label: "Giáo Phẩm", value: "Thượng Tọa" },
   ],
   positions: [
-    "Viện chủ Chùa Phật Quang - tỉnh Bà Rịa Vũng Tàu",
+    "Viện chủ chùa Phật Quang - núi Dinh – thành phố Hồ Chí Minh",
     "Giảng sư Phật học",
   ],
 };
@@ -49,7 +112,7 @@ export const formation = {
   toDinh: {
     number: "4",
     title: "Tổ Đình",
-    body: "Chùa Phật Quang, Tân Hải, Tân Thành, Bà Rịa - Vũng Tàu.",
+    body: toDinh.fullAddress,
   },
   nhanDuyen: {
     number: "5",
@@ -64,7 +127,7 @@ export const formation = {
   chuongMon: {
     number: "6",
     title: "Chưởng môn Phật Quang Quyền",
-    body: "Đại Đức Thích Nghiêm Giám - Phó chủ tịch liên đoàn võ cổ truyền thành phố Hồ Chí Minh",
+    body: "Đại đức Thích Nghiêm Giám - Phó chủ tịch liên đoàn võ cổ truyền thành phố Hồ Chí Minh",
   },
   truongBan: {
     number: "7",
@@ -74,29 +137,7 @@ export const formation = {
 };
 
 export const organization = {
-  title: "SƠ ĐỒ TỔ CHỨC MÔN PHÁI",
   sectionTitle: "LỊCH SỬ HÌNH THÀNH VÀ PHÁT TRIỂN",
-  lineage: [
-    { role: "THÁI TỔ SƯ", name: "Tôn giả Rahula (La Hầu La)" },
-    { role: "SÁNG TỔ SƯ", name: "Thượng Tọa Thích Chân Quang" },
-    { role: "CHƯỞNG MÔN", name: "Đại Đức Thích Nghiêm Giám" },
-  ],
-  committees: [
-    "BAN VÕ ĐẠO",
-    "BAN CHUYÊN MÔN",
-    "BAN HUẤN LUYỆN",
-    "BAN THƯ KÝ",
-    "BAN TRUYỀN THÔNG",
-  ],
-  dojos: [
-    "TỔ ĐÌNH",
-    "TỔNG ĐƯỜNG PHÁP QUANG",
-    "VÕ ĐƯỜNG TRÍ VŨ",
-    "VÕ ĐƯỜNG HỒNG QUANG",
-    "VÕ ĐƯỜNG VIÊN QUANG",
-    "VÕ ĐƯỜNG THẮNG QUANG",
-    "VÕ ĐƯỜNG TĨNH QUANG",
-  ],
 };
 
 export const logoMeaning = {
@@ -107,11 +148,11 @@ export const logoMeaning = {
   paragraphs: [
     "Biểu tượng môn phái là hình tròn, tượng trưng cho bánh xe Chuyển Pháp Luân của Phật giáo.",
     "Nền màu vàng đất biểu trưng cho sự cao quý, thanh tịnh và tinh thần Phật giáo.",
-    "Bên trong có 8 hình elip liên kết thành bông hoa 8 cánh với 4 màu: Xanh Lam, Xanh Lục, Đỏ, Vàng, tượng trưng cho 4 phẩm chất người môn sinh Phật Quang Quyền cần rèn luyện:",
+    "Bên trong có 8 hình elip liên kết thành bông hoa 8 cánh với 4 màu: Xanh Lam, Xanh Lục, Đỏ, Vàng, tượng trưng cho 4 phẩm chất người võ sinh, môn sinh Phật Quang Quyền cần rèn luyện:",
   ],
   qualities: ["Công đức", "Đạo đức", "Khí công", "Thiền định"],
   closing:
-    "Tám hình elip còn tượng trưng cho Bát Chánh Đạo, con đường tu tập chân chính của môn sinh Phật Quang Quyền phải thực hành. Ý nghĩa biểu tượng của môn phái ý muốn nói: mỗi môn sinh Phật Quang Quyền như một bông hoa ngát hương đạo đức không ngừng tô đẹp cho đời.",
+    "Tám hình elip còn tượng trưng cho Bát Chánh Đạo, con đường tu tập chân chính của võ sinh, môn sinh Phật Quang Quyền phải thực hành. Ý nghĩa biểu tượng của môn phái ý muốn nói: mỗi võ sinh, môn sinh Phật Quang Quyền như một bông hoa ngát hương đạo đức không ngừng tô đẹp cho đời.",
   colors: [
     { name: "Xanh Lam", hex: "#2B6CB0" },
     { name: "Xanh Lục", hex: "#2F855A" },
@@ -126,11 +167,11 @@ export const philosophy = {
   factors: [
     {
       label: "Thứ nhất về mặt nội công",
-      body: "môn phái được xây dựng dựa trên nền tảng khí công Phật gia được đúc kết qua một bề dày lịch sử. Khí công Phật gia là sự kết hợp của cả triết lý âm dương, vừa mang tính cương giúp người luyện tập tăng cường khả năng chịu đựng, độ rắn chắc của cơ thể, phù hợp với chiến đấu thực tế, vừa là sự nhu nhuyễn giúp võ sinh đạt được sự linh hoạt, uyển chuyển, nhanh nhẹn trong quyền thuật.",
+      body: "môn phái được xây dựng dựa trên nền tảng khí công Phật gia được đúc kết qua một bề dày lịch sử. Khí công Phật gia là sự kết hợp của cả triết lý âm dương, vừa mang tính cương giúp người luyện tập tăng cường khả năng chịu đựng, độ rắn chắc của cơ thể, phù hợp với chiến đấu thực tế, vừa là sự nhu nhuyễn giúp võ sinh, môn sinh đạt được sự linh hoạt, uyển chuyển, nhanh nhẹn trong quyền thuật.",
     },
     {
       label: "Thứ hai về mặt võ đạo",
-      body: "môn sinh Phật Quang Quyền lấy đạo đức trong Phật giáo làm nền tảng cho sự phát triển tinh thần võ đạo của môn phái. Những khái niệm về đạo đức căn bản như luật nhân quả, sự khiêm nhu, tinh thần dũng cảm, lòng từ bi, lòng yêu nước,….., đều được các võ sư môn phái chuyển tải một cách ngắn gọn, xúc tích, sâu sắc nhất giúp các môn sinh hiểu rõ và nâng cao phẩm chất đạo đức trở thành người võ sinh, người công dân có ích cho xã hội, cho sự phát triển của đất nước",
+      body: "võ sinh, môn sinh Phật Quang Quyền lấy đạo đức trong Phật giáo làm nền tảng cho sự phát triển tinh thần võ đạo của môn phái. Những khái niệm về đạo đức căn bản như luật nhân quả, sự khiêm nhu, tinh thần dũng cảm, lòng từ bi, lòng yêu nước,….., đều được các võ sư môn phái chuyển tải một cách ngắn gọn, xúc tích, sâu sắc nhất giúp các võ sinh, môn sinh hiểu rõ và nâng cao phẩm chất đạo đức trở thành người công dân có ích cho xã hội, cho sự phát triển của đất nước",
     },
   ],
 };
@@ -142,7 +183,7 @@ export const phuongCham = {
     "Chúng tôi đã xác định mục tiêu xây dựng thế hệ thanh niên thời hiện đại dựa trên 3 tiêu chí.",
     "Một trí tuệ thông minh sáng suốt biết thế nào là đúng sai để ứng biến trong những hoàn cảnh khó khăn. Một tâm hồn hướng thượng biết cống hiến và phụng sự. Hai tiêu chí đó chỉ có thể hình thành trên khi có được một cơ thể khỏe mạnh dẻo dai qua quá trình rèn luyện võ thuật.",
     "Chúng tôi mong muốn thế hệ trẻ Việt Nam hướng đến con đường chân thiện mỹ ngày càng hoàn thiện bản thân.",
-    "Nhưng nền tảng căn bản xây để có con người toàn diện đó chính là đạo đức. Và thật may mắn thay môn phái kết hợp được hai yếu đó đó chính là những giá trị đạo đức cao đẹp trong đạo Phật và những tinh hoa trong võ thuật cổ truyền Việt Nam. Những giá trị ấy được thể hiện qua sáu lời thề của môn sinh Phật Quang Quyền.",
+    "Nhưng nền tảng căn bản xây để có con người toàn diện đó chính là đạo đức. Và thật may mắn thay môn phái kết hợp được hai yếu đó đó chính là những giá trị đạo đức cao đẹp trong đạo Phật và những tinh hoa trong võ thuật cổ truyền Việt Nam. Những giá trị ấy được thể hiện qua sáu lời thề của võ sinh Phật Quang Quyền.",
   ],
 };
 
@@ -159,15 +200,15 @@ export const sixOaths = [
 export const martialSpirit = {
   image: "/images/site/TinhThanVoDao.jpg",
   paragraphs: [
-    "Chúng tôi lấy giá trị đạo đức làm kim chỉ nam sao cho mỗi môn sinh Phật Quang Quyền phải thấm nhuần và hiểu rõ đường lối của môn phái cũng như đường lối của đạo Phật, thể hiện được tinh thần yêu nước, luôn đồng hành cùng của dân tộc như các bậc tiền bối của võ thuật cổ truyền Việt Nam đã thực hiện.",
-    "Ngoài các giá trị phương châm đạo đức cao đẹp thì khi đến tập luyện tại môn phái các võ sinh phải tập trung nhiều vào kỹ năng chiến đấu, tự vệ mang tính chất thực dụng cho người tập luyện để đạt hiệu quả cao nhất trong chiến đấu và đặc trưng là các thế đối luyện. Phải trải qua quá trình tập luyện gian khổ đạt được cấp đai Hoàng Đai Nhất Cấp (cấp 13) thì võ sinh mới chính thức được trở thành môn sinh của môn phái.",
+    "Chúng tôi lấy giá trị đạo đức làm kim chỉ nam sao cho mỗi võ sinh, môn sinh Phật Quang Quyền phải thấm nhuần và hiểu rõ đường lối của môn phái cũng như đường lối của đạo Phật, thể hiện được tinh thần yêu nước, luôn đồng hành cùng của dân tộc như các bậc tiền bối của võ thuật cổ truyền Việt Nam đã thực hiện.",
+    "Ngoài các giá trị phương châm đạo đức cao đẹp thì khi đến tập luyện tại môn phái các võ sinh, môn sinh phải tập trung nhiều vào kỹ năng chiến đấu, tự vệ mang tính chất thực dụng cho người tập luyện để đạt hiệu quả cao nhất trong chiến đấu và đặc trưng là các thế đối luyện. Phải trải qua quá trình tập luyện gian khổ đạt được cấp đai Hoàng Đai Nhất Cấp (cấp 13) thì võ sinh mới chính thức được trở thành môn sinh của môn phái.",
   ],
 };
 
 export const scaleIntro = {
   sectionTitle: "QUY MÔ HOẠT ĐỘNG TRONG VÀ NGOÀI NƯỚC",
   image: "/images/site/HoatDongTrongVaNgoaiNuoc.jpg",
-  body: "Trải qua hơn 20 năm âm thầm tập luyện, môn phái đã hình thành hệ thống võ đường và câu lạc bộ trên khắp cả nước — từ Tổ Đình, Tổng Đường Pháp Quang, Võ đường Trí Vũ, Hồng Quang (miền Nam), Viên Quang (miền Trung) đến Thắng Quang (miền Bắc) — cùng các điểm tập tại Nhật Bản, Đài Loan, Singapore và Algeria:",
+  body: "Trải qua hơn 20 năm âm thầm tập luyện, môn phái đã hình thành hệ thống võ đường và câu lạc bộ trên khắp cả nước — từ Tổ Đình, Tổng Đường Pháp Quang, Võ đường Trí Vũ, Hồng Quang (miền Nam), Viên Quang (miền Trung) đến Thắng Quang (miền Bắc) — cùng các điểm tập tại Hàn Quốc, Nhật Bản, Đài Loan, Singapore và Algeria:",
 };
 
 /**
@@ -179,6 +220,14 @@ export const locations = {
   overseas: {
     region: "IV. Nước ngoài",
     dojos: [
+      {
+        name: "CLB Phật Quang Quyền Hàn Quốc – Suwon (Gyeonggi)",
+        locations: ["Chùa 수원사, 경기도 수원시 팔달구 수원천로 300"],
+      },
+      {
+        name: "CLB Phật Quang Quyền Hàn Quốc – Changwon (Gyeongnam)",
+        locations: ["Chùa 불지사, 경상남도 창원시 성산구 상남로 172"],
+      },
       {
         name: "CLB Phật Quang Quyền Nhật Bản – Khu vực Kansai",
         locations: ["7-chōme-126 Hattorigawa, Yao, Osaka 581-0865, Nhật Bản"],
@@ -338,7 +387,7 @@ export const locations = {
     region: "II. Miền Trung",
     dojos: [
       {
-        name: "VĐ Viên Quang",
+        name: "Võ Đường Viên Quang",
         locations: ["Chùa Viên Quang, xóm Thập Thổ, xã Nam Đàn, Nghệ An"],
         schedule: "Thứ 2, 4, 7 hằng tuần, 17:30 – 19:00",
       },
@@ -379,9 +428,7 @@ export const locations = {
     dojos: [
       {
         name: "TỔ ĐÌNH",
-        locations: [
-          "Chùa Phật Quang, núi Dinh, thôn Chu Hải, xã Tân Hải, Hồ Chí Minh",
-        ],
+        locations: [toDinh.fullAddress],
       },
       {
         name: "CLB Võ Cổ Truyền Vũ Minh 1",
@@ -450,7 +497,7 @@ export const locations = {
       {
         name: "CLB Võ Cổ Truyền Đăng Quang",
         locations: [
-          "Công viên số 3, đường Nguyễn Hữu Cảnh, P. Thủ Dầu Một, TP.HCM",
+          "Công viên số 3, đường Nguyễn Hữu Cảnh, Phường Thủ Dầu Một, TP. Hồ Chí Minh",
         ],
         schedule: "19:00 – 21:00, Thứ 3, 5, 6",
       },
@@ -504,13 +551,13 @@ export const beltSystem = {
       src: "/images/site/CaoDang_ThuongDang.webp",
     },
   ],
-  note: "Bảng hệ thống đẳng cấp đầy đủ theo từng bậc: Sơ đẳng, Trung đẳng, Cao đẳng và Thượng đẳng. Chạm vào bảng để phóng to xem chi tiết màu đai, thời gian tập luyện và danh xưng.",
+  note: "Bảng hệ thống đẳng cấp đầy đủ theo từng bậc: Sơ đẳng, Trung đẳng, Cao đẳng và Thượng đẳng.",
 };
 
 export const curriculum = {
   title: "Chương trình huấn luyện môn phái",
   subtitle:
-    "Giáo trình Phật Quang Quyền (cập nhật 12/2025): kỹ thuật căn bản, đối luyện & tự vệ, đơn luyện & song luyện, lý thuyết theo từng cấp đai.",
+    "Giáo trình Phật Quang Quyền: kỹ thuật căn bản, đối luyện & tự vệ, đơn luyện & song luyện, lý thuyết theo từng cấp đai.",
   pdf: "/images/curriculum/giao-trinh-pqq-2025-12.pdf",
   pages: [
     {

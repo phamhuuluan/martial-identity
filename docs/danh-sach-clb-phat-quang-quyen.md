@@ -6,29 +6,39 @@ Tổng hợp điểm tập trong nước và nước ngoài.
 
 ## Nước ngoài
 
-### 1. CLB Phật Quang Quyền Nhật Bản – Khu vực Kansai
+### 1. CLB Phật Quang Quyền Hàn Quốc – Suwon (Gyeonggi)
+
+- **Địa chỉ:** Chùa 수원사, 경기도 수원시 팔달구 수원천로 300
+
+### 2. CLB Phật Quang Quyền Hàn Quốc – Changwon (Gyeongnam)
+
+- **Địa chỉ:** Chùa 불지사, 경상남도 창원시 성산구 상남로 172
+
+### 3. CLB Phật Quang Quyền Nhật Bản – Khu vực Kansai
 
 - **Địa điểm:** Thiền đường Phổ Nhật Quang
 - **Địa chỉ:** 7-chōme-126 Hattorigawa, Yao, Osaka 581-0865, Nhật Bản
 
-### 2. CLB Phật Quang Quyền Nhật Bản – Khu vực Kanagawa
+### 4. CLB Phật Quang Quyền Nhật Bản – Khu vực Kanagawa
 
 - **Địa điểm:** Trung tâm Thể thao Tsurumi
 - **Địa chỉ:** 神奈川県横浜市鶴見区元宮2-5-1 (2-5-1 Motomiya, Tsurumi-ku, Yokohama, Kanagawa, Nhật Bản)
 - **Gần:** Ga Tsurumi (鶴見駅) và ga Kawasaki (川崎駅)
 
-### 3. CLB Phật Quang Quyền Đài Loan
+### 5. CLB Phật Quang Quyền Đài Loan
 
 - **Địa điểm:** Baguashan Great Buddha Scenic Area (八卦山大佛風景區)
 - **Địa chỉ:** No. 31, Wenquan Rd, Guashan Village, Changhua City, Changhua County 500, Taiwan (R.O.C.)
 
-### 4. CLB Phật Quang Quyền Singapore
+### 6. CLB Phật Quang Quyền Singapore
 
 - **Địa điểm:** See Thian Foh Temple
 - **Địa chỉ:** 557 Bukit Batok Street 23, Singapore 659523
 
-### 5. Phật Quang Quyền Algeria
+### 7. Phật Quang Quyền Algeria
 
+- **Võ đường (môn phái):** Võ Đường Tĩnh Quang
+- **Tên gọi:** Phật Quang Quyền Algeria
 - **Thành phố:** Algiers (Thủ đô Algeria)
 
 ---
@@ -207,7 +217,7 @@ Tổng hợp điểm tập trong nước và nước ngoài.
 
 ## Miền Trung
 
-### 1. VĐ Viên Quang
+### 1. Võ Đường Viên Quang
 
 - **Phụ trách:** Quý Thầy Thích Pháp Bản, Nguyễn Thanh Huyền
 - **SĐT:** 086 689 8494 / 086 968 3698
@@ -259,6 +269,11 @@ Tổng hợp điểm tập trong nước và nước ngoài.
 ---
 
 ## Miền Nam
+
+### Tổ Đình
+
+- **Chùa:** Chùa Phật Quang
+- **Địa chỉ:** Núi Dinh, thôn Chu Hải, xã Tân Hải, TP. Hồ Chí Minh
 
 ### 1. CLB Võ Cổ Truyền Vũ Minh 1
 
@@ -328,7 +343,7 @@ Tổng hợp điểm tập trong nước và nước ngoài.
 
 ### 12. CLB Võ Cổ Truyền Đăng Quang
 
-- **Địa chỉ:** Công viên số 3, đường Nguyễn Hữu Cảnh, P. Thủ Dầu Một, TP.HCM
+- **Địa chỉ:** Công viên số 3, đường Nguyễn Hữu Cảnh, Phường Thủ Dầu Một, TP. Hồ Chí Minh
 - **Lịch học:** 19:00 – 21:00, Thứ 3, 5, 6
 - **Liên hệ:** Huệ Hoàng Hương: 0966 868 384; Như Hằng Phúc: 0862 511 905
 
@@ -368,8 +383,8 @@ Tổng hợp điểm tập trong nước và nước ngoài.
 
 | Khu vực | Số CLB / điểm tập |
 | --- | ---: |
-| Nước ngoài | 5 |
+| Nước ngoài | 7 |
 | Miền Bắc | 21 |
 | Miền Trung | 7 |
-| Miền Nam | 17 |
-| **Tổng** | **50** |
+| Miền Nam | 18 |
+| **Tổng** | **53** |

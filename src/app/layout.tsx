@@ -1,7 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import { Be_Vietnam_Pro, Cormorant_Garamond } from "next/font/google";
 import "./globals.css";
-import { site } from "@/data/content";
+import { operatingCountries, site } from "@/data/content";
 import { HydrationErrorSuppressor } from "@/components/HydrationErrorSuppressor";
 import { NavigationProgress } from "@/components/layout/NavigationProgress";
 
@@ -95,7 +95,7 @@ const jsonLd = {
   alternateName: site.nameUpper,
   description: site.description,
   sport: "Traditional Vietnamese Martial Arts",
-  areaServed: ["Vietnam", "South Korea"],
+  areaServed: [...operatingCountries],
   logo: site.logo,
 };
 

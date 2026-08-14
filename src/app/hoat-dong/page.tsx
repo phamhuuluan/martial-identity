@@ -53,8 +53,7 @@ export default async function HoatDongPage({
         title="Nhật ký môn phái"
         description={
           <p>
-            Toàn bộ hoạt động 6 tháng gần nhất, phân nhóm theo nội dung thực tế
-            từ Fanpage. Chọn một bài để đọc đầy đủ và xem toàn bộ hình ảnh.
+            Những hoạt động trong 6 tháng gần đây.
           </p>
         }
       />

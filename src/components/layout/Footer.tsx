@@ -1,9 +1,6 @@
 import Link from "next/link";
 import { navItems, site } from "@/data/content";
 
-const FOOTER_BLURB =
-  "Võ cổ truyền Việt Nam — rèn luyện thân tâm, phụng sự Đạo pháp và dân tộc.";
-
 const CURRENT_YEAR = new Date().getFullYear();
 
 export function Footer() {
@@ -17,7 +14,7 @@ export function Footer() {
             </p>
             <div className="gold-rule mt-5 bg-gold/45" />
             <p className="type-body mt-5 max-w-md text-[0.9375rem] leading-relaxed text-ivory/50">
-              {FOOTER_BLURB}
+              {site.tagline}
             </p>
           </div>
 
@@ -25,7 +22,6 @@ export function Footer() {
             aria-label="Điều hướng chân trang"
             className="md:col-span-5 md:justify-self-end"
           >
-            <p className="type-eyebrow text-ivory/35">Điều hướng</p>
             <ul className="mt-5 flex flex-wrap gap-x-6 gap-y-2.5 text-[0.9375rem] text-ivory/55 md:justify-end">
               {navItems.map((item) => (
                 <li key={item.href}>

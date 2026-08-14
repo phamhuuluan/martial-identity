@@ -5,7 +5,7 @@ import Link from "next/link";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
 import { ChevronDown } from "lucide-react";
-import { site } from "@/data/content";
+import { memberTerm, site } from "@/data/content";
 
 export function Hero() {
   const ref = useRef<HTMLElement>(null);
@@ -25,7 +25,7 @@ export function Hero() {
       <motion.div style={{ y }} className="absolute inset-0">
         <Image
           src={site.heroImage}
-          alt="Môn sinh Phật Quang Quyền"
+          alt={memberTerm.ofSchoolTitle}
           fill
           priority
           sizes="100vw"
@@ -63,8 +63,7 @@ export function Hero() {
             {site.nameUpper}
           </h1>
           <p className="type-body mt-5 max-w-md text-[0.95rem] text-ivory/78 md:text-base">
-            Môn phái võ cổ truyền gắn với Thiền Tôn Phật Quang — rèn luyện thân
-            thể, đạo đức và tinh thần phụng sự.
+            {site.tagline}
           </p>
 
           <div className="mt-9 flex flex-wrap items-center gap-3">

@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
-import { sixOaths, martialSpirit } from "@/data/content";
+import { sixOaths, martialSpirit, sixOathsSection } from "@/data/content";
 import { Reveal, Stagger, StaggerItem } from "@/components/ui/Reveal";
 
 export function HomeValues() {
@@ -11,7 +11,7 @@ export function HomeValues() {
         <Reveal>
           <p className="type-eyebrow text-brown/55">Tinh thần cốt lõi</p>
           <h2 className="h2-section mt-3 max-w-2xl text-brown-deep">
-            Sáu lời thề môn sinh
+            {sixOathsSection.homeHeading}
           </h2>
           <p className="type-body measure mt-4 text-[0.95rem] text-brown/70 md:text-base">
             {martialSpirit.paragraphs[0]}

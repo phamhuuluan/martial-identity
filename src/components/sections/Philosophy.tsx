@@ -9,6 +9,8 @@ import {
   philosophy,
   phuongCham,
   sixOaths,
+  sixOathsSection,
+  memberTerm,
   site,
 } from "@/data/content";
 import { Section, SectionHeading } from "@/components/ui/Section";
@@ -180,7 +182,7 @@ export function Philosophy() {
             <SectionHeading
               tone="dark"
               eyebrow="Sáu lời thề"
-              title="Sáu lời thề của môn sinh Phật Quang Quyền"
+              title={sixOathsSection.sectionTitle}
               size="md"
             />
           </Reveal>
@@ -188,7 +190,7 @@ export function Philosophy() {
           <Reveal delay={0.08}>
             <ol
               className="oath-grid"
-              aria-label="Sáu lời thề của môn sinh Phật Quang Quyền"
+              aria-label={sixOathsSection.sectionTitle}
             >
               {sixOaths.map((oath, i) => (
                 <li key={oath}>
@@ -212,7 +214,7 @@ export function Philosophy() {
         <motion.div style={{ y: bgY }} className="absolute inset-[-8%]">
           <Image
             src={martialSpirit.image}
-            alt="Môn sinh Phật Quang Quyền chào tại đài tưởng niệm Tổ quốc ghi công"
+            alt={`${memberTerm.ofSchoolTitle} chào tại đài tưởng niệm Tổ quốc ghi công`}
             fill
             className="object-cover object-[center_60%]"
             sizes="100vw"

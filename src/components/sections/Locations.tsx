@@ -3,7 +3,7 @@
 import Image from "next/image";
 import { useEffect, useMemo, useRef, useState } from "react";
 import { Search } from "lucide-react";
-import { locationStats, locations, scaleIntro, site } from "@/data/content";
+import { locationStats, locations, scaleIntro, site, toDinh } from "@/data/content";
 import { Reveal } from "@/components/ui/Reveal";
 
 const regions = [
@@ -90,28 +90,12 @@ function formatSchedule(raw: string): {
 function featuredToDinhCopy(dojo: Dojo): {
   label: string;
   temple: string;
-  place: string;
+  address: string;
 } {
-  const raw = dojo.locations[0] ?? "";
-  const parts = raw
-    .split(",")
-    .map((s) => s.trim())
-    .filter(Boolean);
-  const mountain = parts.find((p) => /núi\s+/i.test(p));
-  const city = parts[parts.length - 1];
-  const placeParts = [
-    mountain
-      ? mountain.replace(/^núi\s+/i, "Núi ")
-      : parts[1]
-        ? cleanPlaceToken(parts[1])
-        : null,
-    city && city !== mountain ? cleanPlaceToken(city) : null,
-  ].filter(Boolean) as string[];
-
   return {
     label: dojo.name,
-    temple: "Chùa Phật Quang",
-    place: placeParts.join(" · "),
+    temple: toDinh.templeName,
+    address: toDinh.address,
   };
 }
 
@@ -433,11 +417,9 @@ function FeaturedToDinh({ dojo }: { dojo: Dojo }) {
         <h2 className="type-display mt-4 text-[clamp(1.75rem,4vw,2.75rem)] font-semibold tracking-wide text-brown-deep uppercase">
           {copy.temple}
         </h2>
-        {copy.place ? (
-          <p className="type-body mt-4 text-base text-brown-deep/75 md:text-lg">
-            {copy.place}
-          </p>
-        ) : null}
+        <p className="type-body mt-4 max-w-xl text-base leading-relaxed text-brown-deep/75 md:text-lg">
+          {copy.address}
+        </p>
       </div>
     </aside>
   );

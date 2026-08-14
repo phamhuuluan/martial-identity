@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
-import { site, formation } from "@/data/content";
+import { formation, memberTerm, site } from "@/data/content";
 import { Reveal } from "@/components/ui/Reveal";
 
 export function HomeIntro() {
@@ -18,7 +18,7 @@ export function HomeIntro() {
           <div className="relative aspect-[3/2] overflow-hidden">
             <Image
               src={src}
-              alt="Môn sinh Phật Quang Quyền biểu diễn tại Tổ Đình"
+              alt={`${memberTerm.ofSchoolTitle} biểu diễn tại Tổ Đình`}
               fill
               className="object-cover"
               sizes="(max-width: 768px) 100vw, 40vw"

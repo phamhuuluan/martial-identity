@@ -612,6 +612,7 @@ h6 {
 
 .contact-network {
   display: grid;
+  grid-template-columns: 1fr;
   gap: 0;
   border-top: 1px solid var(--border-subtle);
 }
@@ -621,6 +622,10 @@ h6 {
     grid-template-columns: 1fr 1fr;
     column-gap: 2.5rem;
   }
+}
+
+.contact-network-col {
+  min-width: 0;
 }
 
 .contact-network-row {
@@ -659,6 +664,8 @@ h6 {
   letter-spacing: 0.02em;
   text-transform: uppercase;
   color: var(--color-brown-deep);
+  min-width: 0;
+  overflow-wrap: break-word;
   transition:
     color 0.3s ease,
     transform 0.3s ease;
