@@ -1,6 +1,6 @@
 "use client";
 
-import { motion, useReducedMotion, useScroll, useTransform } from "framer-motion";
+import { motion, useReducedMotion } from "framer-motion";
 import type { ReactNode } from "react";
 
 const ease = [0.22, 1, 0.36, 1] as const;
@@ -102,32 +102,6 @@ export function StaggerItem({
         },
       }}
     >
-      {children}
-    </motion.div>
-  );
-}
-
-/**
- * ParallaxImage — parallax scroll effect.
- *
- * Always renders <motion.div> to avoid hydration mismatch.
- * With reduced motion, y stays at 0 (no parallax movement).
- */
-export function ParallaxImage({
-  children,
-  className,
-  speed = 40,
-}: {
-  children: ReactNode;
-  className?: string;
-  speed?: number;
-}) {
-  const reduce = useReducedMotion();
-  const { scrollYProgress } = useScroll();
-  const y = useTransform(scrollYProgress, [0, 1], [0, reduce ? 0 : speed]);
-
-  return (
-    <motion.div style={{ y }} className={className}>
       {children}
     </motion.div>
   );

@@ -1,3 +1,4 @@
+import { cache } from "react";
 import fs from "node:fs";
 import path from "node:path";
 import {
@@ -5,24 +6,18 @@ import {
   LEGACY_NEWS_CATEGORIES,
   NEWS_CATEGORIES,
   compareNewsRecency,
+  mapToDisplayCategory,
   type AnyNewsCategory,
   type NewsCategory,
   type NewsDisplayEvent,
   type NewsItem,
 } from "@/domain/news";
-import { mapToDisplayCategory } from "@/sync/classifyPost";
 
 export type { NewsCategory, NewsDisplayEvent, NewsItem };
-export { compareNewsRecency, selectSectionCoverImages } from "@/domain/news";
 
 const CONTENT_ROOT = path.join(process.cwd(), "content");
 const PUBLIC_ROOT = path.join(process.cwd(), "public");
 const MIN_IMAGE_BYTES = 500;
-
-export interface NewsQueryOptions {
-  minEngagement?: number;
-  limit?: number;
-}
 
 const SCAN_CATEGORIES: AnyNewsCategory[] = [
   ...NEWS_CATEGORIES,
@@ -30,7 +25,7 @@ const SCAN_CATEGORIES: AnyNewsCategory[] = [
 ];
 
 /** Local public image that exists and is not a tiny corrupt placeholder. */
-export function isValidLocalImage(src: string | undefined | null): boolean {
+function isValidLocalImage(src: string | undefined | null): boolean {
   if (!src) return false;
   const s = src.trim();
   if (!s.startsWith("/")) return false;
@@ -42,13 +37,6 @@ export function isValidLocalImage(src: string | undefined | null): boolean {
   } catch {
     return false;
   }
-}
-
-/** Real synced photos only — exclude brand default placeholder. */
-export function hasDisplayableImages(images: string[]): boolean {
-  return images.some(
-    (src) => isValidLocalImage(src) && src !== DEFAULT_NEWS_IMAGE
-  );
 }
 
 /** Keep only real local photos (no brand fallback injection, no artificial cap). */
@@ -68,7 +56,7 @@ const NEWS_IMAGE_EXT = /\.(jpe?g|png|webp|gif)$/i;
  * All downloaded stills for a Fanpage post under public/images/news/{id}/.
  * Sorted by filename (01.jpg, 02.jpg, …) so gallery order matches sync.
  */
-export function listLocalNewsImages(facebookPostId: string): string[] {
+function listLocalNewsImages(facebookPostId: string): string[] {
   const id = facebookPostId.trim();
   if (!id) return [];
   const dir = path.join(PUBLIC_ROOT, "images/news", id);
@@ -91,7 +79,7 @@ export function listLocalNewsImages(facebookPostId: string): string[] {
  * Full image set for a post: prefer the on-disk news folder (complete sync),
  * then any extra valid paths from frontmatter cover/gallery.
  */
-export function resolvePostImages(options: {
+function resolvePostImages(options: {
   facebookPostId?: string;
   coverImage?: string;
   gallery?: string[];
@@ -118,9 +106,9 @@ export function resolvePostImages(options: {
 
 /**
  * Load all Markdown posts from content/{category}/*.md
- * Server-side / build-time only (uses fs).
+ * Server-side / build-time only (uses fs). Deduped per request.
  */
-export function getAllNews(): NewsItem[] {
+export const getAllNews = cache(function getAllNews(): NewsItem[] {
   if (!fs.existsSync(CONTENT_ROOT)) return [];
 
   const items: NewsItem[] = [];
@@ -142,24 +130,7 @@ export function getAllNews(): NewsItem[] {
     }
   }
   return items;
-}
-
-export function getNewsByCategories(
-  categories: NewsCategory | NewsCategory[],
-  options: NewsQueryOptions = {}
-): NewsItem[] {
-  const set = new Set(Array.isArray(categories) ? categories : [categories]);
-  const min = options.minEngagement ?? 0;
-  const limit = options.limit ?? 12;
-
-  return getAllNews()
-    .filter((item) => set.has(item.category) && item.engagementScore >= min)
-    .map((item) => ({ ...item, images: sanitizeImages(item.images) }))
-    // Không lấy được ảnh → bỏ bài, lấy bài khác cùng nhóm
-    .filter((item) => item.images.length > 0)
-    .sort(compareNewsRecency)
-    .slice(0, limit);
-}
+});
 
 export function toDisplayEvents(items: NewsItem[]): NewsDisplayEvent[] {
   return items.map((item) => ({

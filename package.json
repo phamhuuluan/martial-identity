@@ -16,8 +16,7 @@
     "test:facebook-mcp": "tsx scripts/test-facebook-mcp.ts"
   },
   "dependencies": {
-    "@modelcontextprotocol/sdk": "^1.30.0",
-    "dotenv": "^17.4.2",
+    "@bprogress/next": "^3.2.12",
     "framer-motion": "^12.43.0",
     "lucide-react": "^1.28.0",
     "next": "15.5.22",
@@ -26,10 +25,12 @@
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",
+    "@modelcontextprotocol/sdk": "^1.30.0",
     "@tailwindcss/postcss": "^4",
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
+    "dotenv": "^17.4.2",
     "eslint": "^9",
     "eslint-config-next": "15.5.22",
     "tailwindcss": "^4",

@@ -14,7 +14,7 @@ import {
 import { Section, SectionHeading } from "@/components/ui/Section";
 import { Reveal, Stagger, StaggerItem } from "@/components/ui/Reveal";
 
-export function Philosophy({ coverImage }: { coverImage?: string }) {
+export function Philosophy() {
   const spiritRef = useRef<HTMLElement>(null);
   const { scrollYProgress } = useScroll({
     target: spiritRef,
@@ -24,9 +24,25 @@ export function Philosophy({ coverImage }: { coverImage?: string }) {
 
   return (
     <>
+      <div
+        id="ton-chi"
+        className="relative scroll-mt-24 overflow-hidden texture-sand"
+        aria-hidden
+      >
+        <div className="site-container py-10 md:py-14">
+          <Reveal>
+            <div className="flex items-center justify-center gap-4 md:gap-6">
+              <span className="h-px flex-1 max-w-[8rem] bg-gradient-to-r from-transparent to-gold/50 md:max-w-[12rem]" />
+              <span className="h-1.5 w-1.5 rotate-45 border border-gold/60 bg-gold/25" />
+              <span className="h-px flex-1 max-w-[8rem] bg-gradient-to-l from-transparent to-gold/50 md:max-w-[12rem]" />
+            </div>
+          </Reveal>
+        </div>
+      </div>
+
       {/* Logo meaning — ceremonial centered */}
       <section
-        id="ton-chi"
+        id="bieu-tuong"
         className="relative scroll-mt-24 overflow-hidden texture-paper motif-lotus"
       >
         <div className="grain absolute inset-0" aria-hidden />
@@ -153,40 +169,37 @@ export function Philosophy({ coverImage }: { coverImage?: string }) {
         </div>
       </Section>
 
-      {/* Six oaths — horizontal scroll journey */}
+      {/* Six oaths — equal editorial grid */}
       <section
         id="sau-loi-the"
         className="relative scroll-mt-24 overflow-hidden texture-dark"
       >
         <div className="grain absolute inset-0" aria-hidden />
-        <div className="relative site-section px-5 md:px-8">
-          <div className="site-container !px-0">
-            <Reveal>
-              <SectionHeading
-                tone="dark"
-                eyebrow="Sáu lời thề"
-                title="Sáu lời thề của môn sinh Phật Quang Quyền"
-                size="md"
-              />
-            </Reveal>
-          </div>
+        <div className="site-container site-section relative">
+          <Reveal>
+            <SectionHeading
+              tone="dark"
+              eyebrow="Sáu lời thề"
+              title="Sáu lời thề của môn sinh Phật Quang Quyền"
+              size="md"
+            />
+          </Reveal>
 
-          <div className="h-scroll no-scrollbar mt-2 pl-5 md:pl-[max(1.25rem,calc((100vw-72rem)/2+2rem))]">
-            {sixOaths.map((oath, i) => (
-              <article
-                key={oath}
-                className="relative flex h-[300px] w-[min(72vw,280px)] flex-col justify-between border border-ivory/12 p-5 md:h-[320px] md:w-[300px] md:p-6"
-              >
-                <span className="type-eyebrow text-gold-soft/70">
-                  {String(i + 1).padStart(2, "0")}
-                </span>
-                <p className="type-body relative text-[0.95rem] text-ivory/90 md:text-base">
-                  {oath}
-                </p>
-              </article>
-            ))}
-            <div className="w-6 shrink-0" aria-hidden />
-          </div>
+          <Reveal delay={0.08}>
+            <ol
+              className="oath-grid"
+              aria-label="Sáu lời thề của môn sinh Phật Quang Quyền"
+            >
+              {sixOaths.map((oath, i) => (
+                <li key={oath}>
+                  <span className="font-display oath-index" aria-hidden>
+                    {String(i + 1).padStart(2, "0")}
+                  </span>
+                  <p className="font-display oath-text">{oath}</p>
+                </li>
+              ))}
+            </ol>
+          </Reveal>
         </div>
       </section>
 
@@ -198,10 +211,10 @@ export function Philosophy({ coverImage }: { coverImage?: string }) {
       >
         <motion.div style={{ y: bgY }} className="absolute inset-[-8%]">
           <Image
-            src={coverImage || site.heroFallback}
-            alt="Môn sinh Phật Quang Quyền"
+            src={martialSpirit.image}
+            alt="Môn sinh Phật Quang Quyền chào tại đài tưởng niệm Tổ quốc ghi công"
             fill
-            className="object-cover"
+            className="object-cover object-[center_60%]"
             sizes="100vw"
           />
         </motion.div>

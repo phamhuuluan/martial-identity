@@ -1,13 +1,11 @@
-"use client";
-
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import { site, formation } from "@/data/content";
 import { Reveal } from "@/components/ui/Reveal";
 
-export function HomeIntro({ coverImage }: { coverImage?: string }) {
-  const src = coverImage || site.introImage || site.heroFallback;
+export function HomeIntro() {
+  const src = site.introImage;
 
   return (
     <section
@@ -17,10 +15,10 @@ export function HomeIntro({ coverImage }: { coverImage?: string }) {
       <div className="grain absolute inset-0" aria-hidden />
       <div className="site-container site-section relative grid gap-10 md:grid-cols-12 md:gap-12">
         <Reveal className="md:col-span-5">
-          <div className="relative aspect-[4/5] overflow-hidden">
+          <div className="relative aspect-[3/2] overflow-hidden">
             <Image
               src={src}
-              alt="Môn sinh Phật Quang Quyền"
+              alt="Môn sinh Phật Quang Quyền biểu diễn tại Tổ Đình"
               fill
               className="object-cover"
               sizes="(max-width: 768px) 100vw, 40vw"

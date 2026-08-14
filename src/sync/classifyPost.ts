@@ -1,3 +1,10 @@
+import {
+  LEGACY_NEWS_CATEGORIES,
+  NEWS_CATEGORIES,
+  mapToDisplayCategory,
+  type NewsCategory,
+} from "../domain/news";
+
 /**
  * Phân loại bài Fanpage theo nhóm nội dung phát hiện từ dữ liệu thực tế.
  *
@@ -8,27 +15,12 @@
  * beltexams → competitions → charity → ceremonies → performances → training → activities
  */
 
-export const NEWS_CONTENT_CATEGORIES = [
-  "competitions",
-  "charity",
-  "ceremonies",
-  "beltexams",
-  "performances",
-  "training",
-  "activities",
-] as const;
-
-export type ContentCategory = (typeof NEWS_CONTENT_CATEGORIES)[number];
-
-/** Legacy folders still readable during/after migration. */
-export const LEGACY_CONTENT_CATEGORIES = [
-  "achievements",
-  "announcements",
-] as const;
-
-export type LegacyContentCategory = (typeof LEGACY_CONTENT_CATEGORIES)[number];
-
+export const NEWS_CONTENT_CATEGORIES = NEWS_CATEGORIES;
+export const LEGACY_CONTENT_CATEGORIES = LEGACY_NEWS_CATEGORIES;
+export type ContentCategory = NewsCategory;
+export type LegacyContentCategory = (typeof LEGACY_NEWS_CATEGORIES)[number];
 export type AnyContentCategory = ContentCategory | LegacyContentCategory;
+export { mapToDisplayCategory };
 
 export interface ClassifyResult {
   category: ContentCategory;
@@ -54,23 +46,23 @@ function collectMatches(re: RegExp, text: string, out: string[]): void {
 }
 
 /** Kỳ thi thăng đai / sát hạch nội bộ. */
-export const BELT_RE =
+const BELT_RE =
   /nâng\s*[–\-]?\s*đổi\s*đai|nâng\s*đai|đổi\s*đai|thăng\s*cấp\s*đai|thăng\s*đai|thi\s*lên\s*đai|kỳ\s*thi\s*(nâng|thăng|đổi)|kì\s*thi\s*(nâng|thăng|đổi)|thi\s*thăng\s*cấp|sát\s*hạch(\s*đai)?/i;
 
 /**
  * Kính mừng Đại lễ / nghi lễ Phật giáo (không khớp "lễ" / "đại lễ" võ thuật đơn thuần).
  */
-export const CEREMONY_RE =
+const CEREMONY_RE =
   /kính\s*mừng\s*(đại\s*)?lễ|đại\s*lễ\s*(phật(\s*đản)?|vu\s*lan)|phật\s*đản|vu\s*lan|thành\s*đạo|đức\s*phật\s+thành\s*đạo|kính\s*mừng\s+ngày\s+đức\s*phật|an\s*cư(\s*kiết\s*hạ)?|kiết\s*hạ|tự\s*tứ|đại\s*giới\s*đàn|lễ\s*hội\s*phật|tưởng\s*niệm\s+bồ\s*tát|bồ\s*tát\s+thích\s*quảng\s*đức|cuộc\s*đời\s+đức\s*phật|luật\s*nhân\s*quả|nghi\s*lễ\s*(phật|tâm\s*linh)|phật\s*lịch/i;
 
 const STRONG_CEREMONY_TITLE_RE =
   /kính\s*mừng\s*(đại\s*)?lễ|phật\s*đản|vu\s*lan|đức\s*phật\s+thành\s*đạo|kính\s*mừng\s+ngày\s+đức\s*phật|an\s*cư|tự\s*tứ|đại\s*giới\s*đàn|tưởng\s*niệm\s+bồ\s*tát|bồ\s*tát\s+thích\s*quảng\s*đức|cuộc\s*đời\s+đức\s*phật|luật\s*nhân\s*quả|phật\s*lịch/i;
 
 /** Tri ân / nghĩa trang — fallback activities trừ khi tiêu đề rõ thiện nguyện. */
-export const MEMORIAL_RE =
+const MEMORIAL_RE =
   /thăm\s*viếng\s*nghĩa\s*trang|viếng\s*nghĩa\s*trang|nghĩa\s*trang\s*liệt\s*sĩ|dâng\s*hương|tri\s*ân\s+(anh\s*hùng\s*)?liệt\s*sĩ|hướng\s*về\s*ngày\s*27\s*\/\s*7|ngày\s*thương\s*binh|thương\s*binh\s*liệt\s*sĩ|ngày\s*tri\s*ân|tri\s*ân\s*ngày\s*quân\s*đội|ngày\s*nhà\s*giáo|20\s*\/\s*11/i;
 
-export const CHARITY_RE =
+const CHARITY_RE =
   /thiện\s*nguyện|từ\s*thiện|công\s*tác\s*xã\s*hội|hoạt\s*động\s*xã\s*hội|phụng\s*sự\s*cộng\s*đồng|an\s*sinh(\s*xã\s*hội)?|trao\s*quà|tặng\s*quà|phát\s*quà|góp\s*quà|quyên\s*góp|gây\s*quỹ|cứu\s*trợ|ủng\s*hộ\s*(đồng\s*bào|hoàn\s*cảnh|người|trẻ\s*em|bệnh\s*nhân)|hỗ\s*trợ\s*(đồng\s*bào|hoàn\s*cảnh|sinh\s*viên|người\s*già|trẻ\s*em)|hoàn\s*cảnh\s*khó\s*khăn|người\s*khó\s*khăn|trẻ\s*em\s*(nghèo|mồ\s*côi|khó\s*khăn)|nhà\s*tình(\s*thương)?|sửa\s*chữa\s*nhà|làm\s*cầu|đắp\s*đường|làm\s*đường|trồng\s*cây|bảo\s*vệ\s*môi\s*trường|dọn\s*vệ\s*sinh|thu\s*gom\s*rác|nhặt\s*rác|hành\s*động\s*xanh|hiến\s*máu|khám\s*bệnh|phát\s*thuốc|cơm\s*từ\s*thiện|học\s*bổng|gieo\s*điều\s*tử\s*tế|mái\s*ấm|khuyết\s*tật|tặng\s*tranh\s*đạo\s*đức/i;
 
 const INTERNAL_NON_CHARITY_RE =
@@ -79,18 +71,18 @@ const INTERNAL_NON_CHARITY_RE =
 const CHARITY_FALSE_POSITIVE_RE =
   /trao\s*(huy\s*chương|giải|thưởng|bằng|chứng\s*nhận)|lễ\s*trao\s*giải|trao\s*thưởng|huy\s*chương/i;
 
-export const NAMED_TOURNAMENT_RE =
+const NAMED_TOURNAMENT_RE =
   /võ\s*việt\s*đất\s*phương\s*nam|đài\s*võ(\s*đất\s*phương\s*nam)?|cúp\s*hoàng\s*đế\s*quang\s*trung|giải\s*cúp\s*nghệ\s*an|cúp\s*nghệ\s*an|festival\s*võ\s*thuật\s*quốc\s*tế(\s*hà\s*nội)?|imac\s*20\d{2}|liên\s*hoan\s*(quốc\s*tế\s*)?võ(\s*cổ\s*truyền)?|giải\s*võ\s*(cổ\s*truyền|thuật)|giải\s*vô\s*địch(\s*trẻ)?|giải\s*thể\s*thao\s*học\s*sinh|giải\s*tths|hội\s*thi\s*thể\s*dục\s*thể\s*thao|đại\s*hội\s*(tdtt|thể\s*dục\s*thể\s*thao)|hội\s*khỏe\s*phù\s*đổng|giải\s*vocotruyen|võ\s*nhạc/i;
 
-export const TOURNAMENT_RE =
+const TOURNAMENT_RE =
   /giải\s*đấu|giải\s*võ|giải\s*vô\s*địch|giải\s*cúp|giải\s*mở\s*rộng|giải\s*quốc\s*gia|giải\s*quốc\s*tế|giải\s+(võ|vô\s*địch|mở\s*rộng|thể\s*thao|giao\s*lưu|các\s*câu\s*lạc\s*bộ|học\s*sinh|sinh\s*viên|trẻ|năng\s*khiếu)|cúp\s+(vô\s*địch|quốc\s*gia|mở\s*rộng|hoàng\s*đế)|tham\s*gia\s*giải|tham\s*dự\s*giải|thi\s*đấu(\s*võ\s*thuật)?|tranh\s*tài|đối\s*kháng|tranh\s*cúp|rước\s*cúp|chung\s*kết|bán\s*kết|vòng\s*loại|điều\s*lệ\s*giải|championship|tournament|competition|sea\s*games|asiad/i;
 
 /** Biểu diễn / tiết mục / khai mạc festival (không phải thi đấu). */
-export const PERFORMANCE_RE =
+const PERFORMANCE_RE =
   /biểu\s*diễn|tiết\s*mục|tổng\s*duyệt|tập\s*duyệt|sân\s*khấu|võ\s*nhạc|gian\s*hàng(\s*triển\s*lãm)?|triển\s*lãm|trailer\s*festival|khai\s*mạc\s*(festival|liên\s*hoan)|đêm\s*khai\s*mạc/i;
 
 /** Huấn luyện / tập luyện (chưa phải thi đấu). */
-export const TRAINING_RE =
+const TRAINING_RE =
   /tập\s*huấn|buổi\s*tập(\s*huấn)?|huấn\s*luyện|miệt\s*mài\s*tập|luyện\s*tập|tập\s*luyện|chuẩn\s*bị\s*(cho\s*)?(giải|cúp|liên\s*hoan|festival)/i;
 
 const PERFORMANCE_OR_EVENT_RE =
@@ -448,13 +440,4 @@ export function classifyPostDetailed(text: string): ClassifyResult {
 
 export function classifyPost(text: string): ContentCategory {
   return classifyPostDetailed(text).category;
-}
-
-/** Map folder/frontmatter category → nhóm hiển thị hiện tại. */
-export function mapToDisplayCategory(category: string): ContentCategory {
-  if ((NEWS_CONTENT_CATEGORIES as readonly string[]).includes(category)) {
-    return category as ContentCategory;
-  }
-  if (category === "achievements") return "competitions";
-  return "activities";
 }

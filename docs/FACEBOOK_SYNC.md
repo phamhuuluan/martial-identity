@@ -74,7 +74,7 @@ Phân loại: `src/sync/classifyPost.ts` — ưu tiên thiện nguyện → gi�
 | Lệnh | Việc |
 |------|------|
 | `npm run test:facebook-mcp` | Kiểm tra MCP |
-| `npm run fetch:facebook` | Dump thô → `data/facebook-raw.json` (tuỳ chọn) |
+| `npm run fetch:facebook` | Dump thô → `data/facebook-raw.json` (tuỳ chọn, không commit) |
 | `npm run report:classification` | Dry-run report 3 nhóm |
 | `npm run reclassify:content` | Áp dụng phân loại + chuyển thư mục |
 

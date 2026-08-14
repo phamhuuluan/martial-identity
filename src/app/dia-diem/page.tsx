@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { SiteShell } from "@/components/layout/SiteShell";
 import { Locations } from "@/components/sections/Locations";
-import { selectHomepageSectionCovers } from "@/data/sectionCovers";
 import { locationStats, site } from "@/data/content";
 
 export const metadata: Metadata = {
@@ -15,12 +14,10 @@ export const metadata: Metadata = {
   },
 };
 
-export default async function DiaDiemPage() {
-  const sectionCovers = await selectHomepageSectionCovers();
-
+export default function DiaDiemPage() {
   return (
     <SiteShell>
-      <Locations coverImage={sectionCovers["quy-mo"]?.src} />
+      <Locations />
     </SiteShell>
   );
 }

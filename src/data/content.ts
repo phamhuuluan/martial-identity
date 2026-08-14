@@ -12,49 +12,11 @@ export const site = {
   title: "Phật Quang Quyền — Võ Cổ Truyền Việt Nam",
   description:
     "Phật Quang Quyền — lịch sử hình thành và phát triển, tôn chỉ võ đạo, hệ thống cấp đai, chương trình huấn luyện, quy mô hoạt động trong và ngoài nước, thành tích thi đấu và hoạt động xã hội thiện nguyện.",
-  logo: "/images/extracted/logo-phat-quang-quyen-transparent.png",
-  heroImage: "/images/extracted/hero-home-a1.jpg",
-  heroFallback: "/images/site/gioi-thieu-mon-phai-v2.jpg",
-  introImage: "/images/site/gioi-thieu-mon-phai-v2.jpg",
+  logo: "/images/extracted/logo-phat-quang-quyen-transparent.webp",
+  heroImage: "/images/extracted/hero-home-a1.webp",
+  heroFallback: "/images/site/gioiThieu_MonPhai.png",
+  introImage: "/images/site/gioiThieu_MonPhai.png",
 };
-
-export const toc = [
-  {
-    title: "LỊCH SỬ HÌNH THÀNH VÀ PHÁT TRIỂN",
-    page: 2,
-    href: "#lich-su",
-  },
-  {
-    title: "TÔN CHỈ VÀ VÕ ĐẠO CỦA MÔN PHÁI",
-    page: 6,
-    href: "#ton-chi",
-  },
-  {
-    title: "QUY MÔ HOẠT ĐỘNG TRONG VÀ NGOÀI NƯỚC",
-    page: 10,
-    href: "#quy-mo",
-  },
-  {
-    title: "HỆ THỐNG CẤP ĐAI VÀ CHƯƠNG TRÌNH HUẤN LUYỆN MÔN PHÁI",
-    page: 14,
-    href: "#he-thong-dai",
-  },
-  {
-    title: "CÁC GIẢI ĐẤU ĐÃ THAM GIA",
-    page: 18,
-    href: "#giai-dau",
-  },
-  {
-    title: "CÁC HOẠT ĐỘNG KHÁC",
-    page: 0,
-    href: "#hoat-dong-khac",
-  },
-  {
-    title: "CÁC HOẠT ĐỘNG XÃ HỘI THIỆN NGUYỆN",
-    page: 29,
-    href: "#thien-nguyen",
-  },
-] as const;
 
 export const thaiToSu = {
   number: "1",
@@ -114,7 +76,6 @@ export const formation = {
 export const organization = {
   title: "SƠ ĐỒ TỔ CHỨC MÔN PHÁI",
   sectionTitle: "LỊCH SỬ HÌNH THÀNH VÀ PHÁT TRIỂN",
-  pageImage: "/images/pages/page-02-reference.png",
   lineage: [
     { role: "THÁI TỔ SƯ", name: "Tôn giả Rahula (La Hầu La)" },
     { role: "SÁNG TỔ SƯ", name: "Thượng Tọa Thích Chân Quang" },
@@ -142,7 +103,7 @@ export const logoMeaning = {
   sectionTitle: "TÔN CHỈ VÀ VÕ ĐẠO CỦA MÔN PHÁI",
   number: "1",
   title: "Ý nghĩa biểu tượng môn phái",
-  logo: "/images/extracted/logo-phat-quang-quyen-transparent.png",
+  logo: "/images/extracted/logo-phat-quang-quyen-transparent.webp",
   paragraphs: [
     "Biểu tượng môn phái là hình tròn, tượng trưng cho bánh xe Chuyển Pháp Luân của Phật giáo.",
     "Nền màu vàng đất biểu trưng cho sự cao quý, thanh tịnh và tinh thần Phật giáo.",
@@ -172,7 +133,6 @@ export const philosophy = {
       body: "môn sinh Phật Quang Quyền lấy đạo đức trong Phật giáo làm nền tảng cho sự phát triển tinh thần võ đạo của môn phái. Những khái niệm về đạo đức căn bản như luật nhân quả, sự khiêm nhu, tinh thần dũng cảm, lòng từ bi, lòng yêu nước,….., đều được các võ sư môn phái chuyển tải một cách ngắn gọn, xúc tích, sâu sắc nhất giúp các môn sinh hiểu rõ và nâng cao phẩm chất đạo đức trở thành người võ sinh, người công dân có ích cho xã hội, cho sự phát triển của đất nước",
     },
   ],
-  silhouettePage: "/images/pages/page-07.jpg",
 };
 
 export const phuongCham = {
@@ -197,17 +157,17 @@ export const sixOaths = [
 ] as const;
 
 export const martialSpirit = {
+  image: "/images/site/TinhThanVoDao.jpg",
   paragraphs: [
     "Chúng tôi lấy giá trị đạo đức làm kim chỉ nam sao cho mỗi môn sinh Phật Quang Quyền phải thấm nhuần và hiểu rõ đường lối của môn phái cũng như đường lối của đạo Phật, thể hiện được tinh thần yêu nước, luôn đồng hành cùng của dân tộc như các bậc tiền bối của võ thuật cổ truyền Việt Nam đã thực hiện.",
     "Ngoài các giá trị phương châm đạo đức cao đẹp thì khi đến tập luyện tại môn phái các võ sinh phải tập trung nhiều vào kỹ năng chiến đấu, tự vệ mang tính chất thực dụng cho người tập luyện để đạt hiệu quả cao nhất trong chiến đấu và đặc trưng là các thế đối luyện. Phải trải qua quá trình tập luyện gian khổ đạt được cấp đai Hoàng Đai Nhất Cấp (cấp 13) thì võ sinh mới chính thức được trở thành môn sinh của môn phái.",
   ],
-  groupImage: "/images/extracted/img-009-p09.jpeg",
 };
 
 export const scaleIntro = {
   sectionTitle: "QUY MÔ HOẠT ĐỘNG TRONG VÀ NGOÀI NƯỚC",
+  image: "/images/site/HoatDongTrongVaNgoaiNuoc.jpg",
   body: "Trải qua hơn 20 năm âm thầm tập luyện, môn phái đã hình thành hệ thống võ đường và câu lạc bộ trên khắp cả nước — từ Tổ Đình, Tổng Đường Pháp Quang, Võ đường Trí Vũ, Hồng Quang (miền Nam), Viên Quang (miền Trung) đến Thắng Quang (miền Bắc) — cùng các điểm tập tại Nhật Bản, Đài Loan, Singapore và Algeria:",
-  image: "/images/extracted/img-010-p11.jpeg",
 };
 
 /**
@@ -420,7 +380,7 @@ export const locations = {
       {
         name: "TỔ ĐÌNH",
         locations: [
-          "Chùa Thiền Tôn Phật Quang, núi Dinh, thôn Chu Hải, xã Tân Hải, Hồ Chí Minh",
+          "Chùa Phật Quang, núi Dinh, thôn Chu Hải, xã Tân Hải, Hồ Chí Minh",
         ],
       },
       {
@@ -533,15 +493,15 @@ export const beltSystem = {
   charts: [
     {
       label: "Sơ đẳng",
-      src: "/images/site/SoDang.png",
+      src: "/images/site/SoDang.webp",
     },
     {
       label: "Trung đẳng",
-      src: "/images/site/TrungDang.png",
+      src: "/images/site/TrungDang.webp",
     },
     {
       label: "Cao đẳng & Thượng đẳng",
-      src: "/images/site/CaoDang_ThuongDang.png",
+      src: "/images/site/CaoDang_ThuongDang.webp",
     },
   ],
   note: "Bảng hệ thống đẳng cấp đầy đủ theo từng bậc: Sơ đẳng, Trung đẳng, Cao đẳng và Thượng đẳng. Chạm vào bảng để phóng to xem chi tiết màu đai, thời gian tập luyện và danh xưng.",
@@ -579,138 +539,6 @@ export const curriculum = {
         "/images/curriculum/giao-trinh-p11.jpg",
         "/images/curriculum/giao-trinh-p12.jpg",
         "/images/curriculum/giao-trinh-p13.jpg",
-      ],
-    },
-  ],
-};
-
-export const competitions = {
-  sectionTitle: "CÁC GIẢI ĐẤU ĐÃ THAM GIA",
-  intro: [
-    "Trải qua hơn 20 năm âm thầm tập luyện, với sự phát triển của chùa và mong muốn quảng bá môn phái ra bên ngoài của Tăng Ni, Phật Tử thì năm 2015 môn phái đã chính thức tham gia vào liên đoàn VCTVN để xây dựng và phát triển môn phái theo hướng phát triển phong trào võ thuật trong quần chúng phù hợp với mục đích tôn chỉ của LĐVTCTVN.",
-    "Tuy mới gia nhập Liên đoàn Võ cổ truyền Việt Nam nhưng môn phái cũng đã có những đóng góp nhất định cho nền võ học nước nhà. Dưới sự chỉ dạy của Sư Phụ, thầy Chưởng Môn và quý thầy trong hội đồng chưởng quản môn phái, các võ sinh đã đạt được hàng chục huy chương vàng, bạc, đồng trong các kỳ thi của liên đoàn từ năm 2016 đến nay tiêu biểu trong đó như:",
-  ],
-  events: [
-    {
-      title: "LIÊN HOAN VÕ VIỆT ĐẤT PHƯƠNG NAM",
-      pages: [20, 21],
-      images: [
-        "/images/extracted/img-024-p20.jpeg",
-        "/images/extracted/img-025-p20.jpeg",
-        "/images/extracted/img-026-p20.jpeg",
-        "/images/extracted/img-027-p20.jpeg",
-        "/images/extracted/img-028-p20.jpeg",
-        "/images/extracted/img-029-p21.jpeg",
-        "/images/extracted/img-030-p21.jpeg",
-        "/images/extracted/img-031-p21.jpeg",
-      ],
-    },
-    {
-      title:
-        "THI LÊN ĐAI VÕ CỔ TRUYỀN TỈNH BÀ RỊA VŨNG TÀU VÀ TP.HỒ CHÍ MINH",
-      pages: [22, 23],
-      images: [
-        "/images/extracted/img-032-p22.jpeg",
-        "/images/extracted/img-033-p22.jpeg",
-        "/images/extracted/img-034-p23.jpeg",
-        "/images/extracted/img-035-p23.jpeg",
-      ],
-    },
-    {
-      title: "GIẢI ĐẠI HỘI TDTT TỈNH NGHỆ AN",
-      pages: [24],
-      images: [
-        "/images/extracted/img-036-p24.jpeg",
-        "/images/extracted/img-037-p24.jpeg",
-      ],
-    },
-    {
-      title: "GIẢI VÕ THUẬT LÀNG SEN TÌNH NGHỆ AN",
-      pages: [25],
-      images: [
-        "/images/extracted/img-038-p25.jpeg",
-        "/images/extracted/img-039-p25.jpeg",
-      ],
-    },
-    {
-      title: "GIẢI CÚP VÔ ĐỊCH VCT NGHỆ AN MỞ RỘNG",
-      pages: [26],
-      images: [
-        "/images/extracted/img-040-p26.jpeg",
-        "/images/extracted/img-041-p26.jpeg",
-      ],
-    },
-    {
-      title: "LỚP VÕ TẠI HÀN QUỐC",
-      pages: [27, 28],
-      images: [
-        "/images/extracted/img-042-p27.jpeg",
-        "/images/extracted/img-043-p27.jpeg",
-        "/images/extracted/img-044-p28.jpeg",
-        "/images/extracted/img-045-p28.jpeg",
-      ],
-    },
-  ],
-  posterImages: [
-    "/images/extracted/img-022-p18.jpeg",
-    "/images/extracted/img-023-p19.jpeg",
-  ],
-};
-
-export const otherActivities = {
-  sectionTitle: "CÁC HOẠT ĐỘNG KHÁC",
-  intro:
-    "Kỳ thi thăng cấp đai, tập huấn, biểu diễn, giao lưu, tri ân và sinh hoạt môn phái — những hoạt động nội bộ gắn kết võ đường, cập nhật từ Fanpage Tổ Đình Phật Quang Quyền.",
-};
-
-export const volunteer = {
-  sectionTitle: "CÁC HOẠT ĐỘNG XÃ HỘI THIỆN NGUYỆN",
-  intro:
-    "Ngoài việc tham gia tập luyện, các võ sinh môn phái trên cả nước luôn tích cực tham gia các hoạt động xã hội thiện nguyện theo đúng lời thề thứ 6 là Yêu thích lao động giúp đời với các hoạt động như đắp đường, nhặt rác, trồng cây, tham quan các di tích lịch sử,….",
-  activities: [
-    {
-      title: "VIẾNG NGHĨA TRANG LIỆT SĨ",
-      pages: [29, 30, 31],
-      images: [
-        "/images/extracted/img-046-p29.jpeg",
-        "/images/extracted/img-047-p30.jpeg",
-        "/images/extracted/img-048-p30.jpeg",
-        "/images/extracted/img-049-p31.jpeg",
-      ],
-    },
-    {
-      title: "THAM QUAN DI TÍCH LỊCH SỬ",
-      pages: [32, 33, 34],
-      images: [
-        "/images/extracted/img-050-p32.jpeg",
-        "/images/extracted/img-051-p32.jpeg",
-        "/images/extracted/img-052-p33.jpeg",
-        "/images/extracted/img-053-p33.jpeg",
-        "/images/extracted/img-054-p34.jpeg",
-        "/images/extracted/img-055-p34.jpeg",
-      ],
-    },
-    {
-      title: "TRỒNG CÂY VÀ NHẶT RÁC",
-      pages: [35, 36, 37, 38, 39, 40],
-      images: [
-        "/images/extracted/img-056-p35.jpeg",
-        "/images/extracted/img-057-p35.jpeg",
-        "/images/extracted/img-058-p35.jpeg",
-        "/images/extracted/img-059-p35.jpeg",
-        "/images/extracted/img-060-p36.jpeg",
-        "/images/extracted/img-061-p36.jpeg",
-        "/images/extracted/img-062-p36.jpeg",
-        "/images/extracted/img-063-p37.jpeg",
-        "/images/extracted/img-064-p37.jpeg",
-        "/images/extracted/img-065-p38.jpeg",
-        "/images/extracted/img-066-p38.jpeg",
-        "/images/extracted/img-067-p38.jpeg",
-        "/images/extracted/img-068-p39.jpeg",
-        "/images/extracted/img-069-p39.jpeg",
-        "/images/extracted/img-070-p39.jpeg",
-        "/images/extracted/img-071-p40.jpeg",
-        "/images/extracted/img-072-p40.jpeg",
       ],
     },
   ],

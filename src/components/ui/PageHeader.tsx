@@ -6,6 +6,9 @@ type PageHeaderProps = {
   description?: ReactNode;
   children?: ReactNode;
   tone?: "light" | "dark" | "sand";
+  /** Asymmetric title | description for editorial pages */
+  layout?: "stack" | "split";
+  meta?: ReactNode;
 };
 
 export function PageHeader({
@@ -14,6 +17,8 @@ export function PageHeader({
   description,
   children,
   tone = "light",
+  layout = "stack",
+  meta,
 }: PageHeaderProps) {
   const surface =
     tone === "dark"
@@ -27,19 +32,49 @@ export function PageHeader({
     tone === "dark" ? "text-ivory" : "text-brown-deep";
   const descCls =
     tone === "dark" ? "text-ivory/70" : "text-brown/70";
+  const split = layout === "split";
 
   return (
     <header className={`relative overflow-hidden ${surface}`}>
       <div className="grain absolute inset-0" aria-hidden />
-      <div className="site-container relative pt-28 pb-10 md:pt-32 md:pb-12">
-        <p className={`type-eyebrow ${eye}`}>{eyebrow}</p>
-        <h1 className={`h1-page mt-3 ${titleCls}`}>{title}</h1>
-        {description ? (
-          <div className={`type-body measure mt-4 text-[0.95rem] md:text-base ${descCls}`}>
-            {description}
+      <div className="site-container relative pt-28 pb-12 md:pt-32 md:pb-16">
+        {split ? (
+          <div className="grid gap-8 md:grid-cols-12 md:gap-10 md:items-end">
+            <div className="md:col-span-7">
+              <p className={`type-eyebrow ${eye}`}>{eyebrow}</p>
+              <h1
+                className={`mt-3 font-display font-semibold tracking-[-0.02em] ${titleCls} text-[clamp(2.25rem,5.5vw,3.5rem)] leading-[1.05]`}
+              >
+                {title}
+              </h1>
+              <div className="gold-rule mt-7 w-20 md:w-28" />
+            </div>
+            <div className="md:col-span-5 md:border-l md:border-brown/15 md:pl-8 lg:pl-10">
+              {description ? (
+                <div
+                  className={`type-body max-w-sm text-[0.95rem] md:text-base ${descCls}`}
+                >
+                  {description}
+                </div>
+              ) : null}
+              {meta ? <div className="mt-6">{meta}</div> : null}
+            </div>
           </div>
-        ) : null}
-        <div className="gold-rule mt-6" />
+        ) : (
+          <>
+            <p className={`type-eyebrow ${eye}`}>{eyebrow}</p>
+            <h1 className={`h1-page mt-3 ${titleCls}`}>{title}</h1>
+            {description ? (
+              <div
+                className={`type-body measure mt-4 text-[0.95rem] md:text-base ${descCls}`}
+              >
+                {description}
+              </div>
+            ) : null}
+            <div className="gold-rule mt-6" />
+            {meta ? <div className="mt-6">{meta}</div> : null}
+          </>
+        )}
         {children ? <div className="mt-8">{children}</div> : null}
       </div>
     </header>

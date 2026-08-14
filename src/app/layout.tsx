@@ -3,11 +3,12 @@ import { Be_Vietnam_Pro, Cormorant_Garamond } from "next/font/google";
 import "./globals.css";
 import { site } from "@/data/content";
 import { HydrationErrorSuppressor } from "@/components/HydrationErrorSuppressor";
+import { NavigationProgress } from "@/components/layout/NavigationProgress";
 
 const beVietnam = Be_Vietnam_Pro({
   variable: "--font-be-vietnam",
   subsets: ["vietnamese", "latin", "latin-ext"],
-  weight: ["300", "400", "500", "600", "700"],
+  weight: ["400", "500", "600"],
   display: "swap",
   preload: true,
   adjustFontFallback: true,
@@ -16,7 +17,7 @@ const beVietnam = Be_Vietnam_Pro({
 const cormorant = Cormorant_Garamond({
   variable: "--font-cormorant",
   subsets: ["vietnamese", "latin", "latin-ext"],
-  weight: ["400", "500", "600", "700"],
+  weight: ["400", "600"],
   display: "swap",
   preload: true,
   adjustFontFallback: true,
@@ -47,8 +48,8 @@ export const metadata: Metadata = {
     images: [
       {
         url: site.logo,
-        width: 638,
-        height: 638,
+        width: 1024,
+        height: 1024,
         alt: site.name,
       },
     ],
@@ -116,7 +117,7 @@ export default function RootLayout({
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
-        {children}
+        <NavigationProgress>{children}</NavigationProgress>
       </body>
     </html>
   );

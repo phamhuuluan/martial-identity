@@ -38,7 +38,10 @@ Docs: [docs/FACEBOOK_SYNC.md](./docs/FACEBOOK_SYNC.md)
 
 ## Assets
 
-- `public/images/pages/` — page renders
-- `public/images/extracted/` — extracted images from sổ tay
-- `public/images/news/` — Fanpage images
-- `content/` — synced Markdown posts
+- `public/images/extracted/` — logo và hero
+- `public/images/site/` — ảnh nhận diện (chân dung, bảng đai, cover)
+- `public/images/curriculum/` — giáo trình
+- `public/images/news/` — ảnh đồng bộ từ Fanpage
+- `content/` — bài Markdown đã đồng bộ
+
+File dump/audit (`data/facebook-raw.json`, `data/image-audit.json`, …) do script sinh ra và không commit.

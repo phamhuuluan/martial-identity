@@ -148,6 +148,7 @@ for (const i of issues.slice(0, 40)) {
   console.log(`${id}: dir=${exists} files=${files.join(",") || "(none)"}`);
 }
 
+fs.mkdirSync(path.join(ROOT, "data"), { recursive: true });
 fs.writeFileSync(
   path.join(ROOT, "data/image-audit.json"),
   JSON.stringify({ total, ok, withIssues: issues.length, issues }, null, 2)

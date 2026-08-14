@@ -2,7 +2,8 @@
 
 import Link from "next/link";
 import { useMemo, useState } from "react";
-import { useRouter, usePathname, useSearchParams } from "next/navigation";
+import { usePathname, useSearchParams } from "next/navigation";
+import { useRouter } from "@bprogress/next/app";
 import { Search } from "lucide-react";
 import { SafeImage } from "@/components/ui/SafeImage";
 import {

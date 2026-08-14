@@ -33,12 +33,18 @@ export const LEGACY_NEWS_CATEGORIES = [
   "announcements",
 ] as const;
 
-/** Categories shown on homepage / archive filters. */
-export const DISPLAY_NEWS_CATEGORIES = NEWS_CATEGORIES;
-
 export type NewsCategory = (typeof NEWS_CATEGORIES)[number];
 export type LegacyNewsCategory = (typeof LEGACY_NEWS_CATEGORIES)[number];
 export type AnyNewsCategory = NewsCategory | LegacyNewsCategory;
+
+/** Map folder/frontmatter category → nhóm hiển thị hiện tại. */
+export function mapToDisplayCategory(category: string): NewsCategory {
+  if ((NEWS_CATEGORIES as readonly string[]).includes(category)) {
+    return category as NewsCategory;
+  }
+  if (category === "achievements") return "competitions";
+  return "activities";
+}
 
 export interface NewsItem {
   id: string;
@@ -56,22 +62,7 @@ export interface NewsItem {
   filePath: string;
 }
 
-export const DEFAULT_NEWS_IMAGE = "/images/extracted/hero-phat-quang-quyen.jpg";
-
-/** Fallback cover when a list needs at least one image — never truncates galleries. */
-export function ensureImages(images: string[]): string[] {
-  if (images.length === 0) return [DEFAULT_NEWS_IMAGE];
-  return images;
-}
-
-/** Prefer real local news photos; treat any non-empty path as usable cover. */
-export function isUsableCoverImage(src: string | undefined | null): boolean {
-  if (!src) return false;
-  const s = src.trim();
-  if (!s) return false;
-  if (s === DEFAULT_NEWS_IMAGE) return false;
-  return true;
-}
+export const DEFAULT_NEWS_IMAGE = "/images/extracted/hero-home-a1.webp";
 
 /** Slim shape passed from Server Components into client section UIs. */
 export interface NewsDisplayEvent {
@@ -105,35 +96,4 @@ export function compareNewsRecency(
     new Date(b.publishedAt).getTime() - new Date(a.publishedAt).getTime();
   if (timeDiff !== 0) return timeDiff;
   return b.engagementScore - a.engagementScore;
-}
-
-/**
- * Pick up to `count` cover images from posts in the same category,
- * preferring newest year → usable image → newest publishedAt.
- * Client-safe (no Node APIs).
- */
-export function selectSectionCoverImages(
-  items: Array<Pick<NewsDisplayEvent, "publishedAt" | "images">>,
-  count = 2
-): string[] {
-  const ranked = [...items].sort((a, b) => {
-    const yearDiff = yearOf(b.publishedAt) - yearOf(a.publishedAt);
-    if (yearDiff !== 0) return yearDiff;
-    const aOk = a.images.some(isUsableCoverImage) ? 1 : 0;
-    const bOk = b.images.some(isUsableCoverImage) ? 1 : 0;
-    if (bOk !== aOk) return bOk - aOk;
-    return (
-      new Date(b.publishedAt).getTime() - new Date(a.publishedAt).getTime()
-    );
-  });
-
-  const covers: string[] = [];
-  for (const item of ranked) {
-    const img = item.images.find(isUsableCoverImage);
-    if (!img) continue;
-    if (covers.includes(img)) continue;
-    covers.push(img);
-    if (covers.length >= count) break;
-  }
-  return covers;
 }

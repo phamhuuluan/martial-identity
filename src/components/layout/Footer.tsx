@@ -10,41 +10,39 @@ export function Footer() {
   return (
     <footer className="site-footer relative text-ivory">
       <div className="site-container relative py-14 md:py-16">
-        <div className="max-w-xl">
-          <p className="font-display text-[1.65rem] font-semibold tracking-[-0.012em] text-ivory md:text-[1.85rem]">
-            {site.nameUpper}
-          </p>
-          <p className="type-body mt-4 text-[0.9375rem] leading-relaxed text-ivory/55">
-            {FOOTER_BLURB}
-          </p>
-        </div>
+        <div className="grid gap-12 md:grid-cols-12 md:items-end md:gap-14">
+          <div className="md:col-span-7">
+            <p className="font-display text-[1.75rem] font-semibold tracking-[-0.014em] text-ivory md:text-[2rem]">
+              {site.nameUpper}
+            </p>
+            <div className="gold-rule mt-5 bg-gold/45" />
+            <p className="type-body mt-5 max-w-md text-[0.9375rem] leading-relaxed text-ivory/50">
+              {FOOTER_BLURB}
+            </p>
+          </div>
 
-        <div className="mt-10 border-t border-ivory/[0.08] pt-8">
-          <p className="type-eyebrow text-ivory/35">Điều hướng</p>
           <nav
             aria-label="Điều hướng chân trang"
-            className="mt-4 flex flex-wrap gap-x-1 gap-y-2 text-[0.9375rem] text-ivory/60"
+            className="md:col-span-5 md:justify-self-end"
           >
-            {navItems.map((item, index) => (
-              <span key={item.href} className="inline-flex items-center">
-                {index > 0 ? (
-                  <span className="mx-2.5 text-ivory/20" aria-hidden>
-                    ·
-                  </span>
-                ) : null}
-                <Link
-                  href={item.href}
-                  className="transition-colors hover:text-ivory"
-                >
-                  {item.label}
-                </Link>
-              </span>
-            ))}
+            <p className="type-eyebrow text-ivory/35">Điều hướng</p>
+            <ul className="mt-5 flex flex-wrap gap-x-6 gap-y-2.5 text-[0.9375rem] text-ivory/55 md:justify-end">
+              {navItems.map((item) => (
+                <li key={item.href}>
+                  <Link
+                    href={item.href}
+                    className="underline-offset-[5px] transition-colors hover:text-ivory hover:underline"
+                  >
+                    {item.label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
           </nav>
         </div>
 
-        <div className="mt-10 border-t border-ivory/[0.08] pt-6">
-          <p className="text-xs tracking-wide text-ivory/35">
+        <div className="mt-12 border-t border-ivory/[0.08] pt-6">
+          <p className="text-xs tracking-wide text-ivory/30">
             © {CURRENT_YEAR} {site.name}
           </p>
         </div>

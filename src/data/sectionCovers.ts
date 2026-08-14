@@ -24,6 +24,9 @@ export interface SectionCoverPick {
   bytes: number;
 }
 
+/** Galleries can have 100 stills; scoring all of them on every GET / overflows. */
+const MAX_IMAGES_PER_POST = 4;
+
 async function rankAll(): Promise<Record<SectionCoverId, ScoredCover[]>> {
   const ranked: Record<SectionCoverId, ScoredCover[]> = {
     "gioi-thieu": [],
@@ -38,7 +41,8 @@ async function rankAll(): Promise<Record<SectionCoverId, ScoredCover[]>> {
 
   for (const post of getAllNews()) {
     if (!post.images.length) continue;
-    for (let i = 0; i < post.images.length; i += 1) {
+    const limit = Math.min(post.images.length, MAX_IMAGES_PER_POST);
+    for (let i = 0; i < limit; i += 1) {
       const src = post.images[i];
       let quality = seenQuality.get(src);
       if (quality === undefined) {
@@ -121,19 +125,4 @@ export function selectHomepageSectionCovers(): Promise<
     });
   }
   return cached;
-}
-
-/** For audits / scripts — ranking before unique assignment. */
-export async function rankHomepageSectionCovers(limit = 8) {
-  const ranked = await rankAll();
-  const assigned = assignUniqueSectionCovers(ranked);
-  return {
-    ranked,
-    assigned,
-    top: {
-      "gioi-thieu": ranked["gioi-thieu"].slice(0, limit),
-      "vo-dao": ranked["vo-dao"].slice(0, limit),
-      "quy-mo": ranked["quy-mo"].slice(0, limit),
-    },
-  };
 }

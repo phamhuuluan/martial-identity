@@ -8,19 +8,17 @@ import { HomeTraining } from "@/components/home/HomeTraining";
 import { HomeExplore } from "@/components/home/HomeExplore";
 import { HomeContact } from "@/components/sections/Contact";
 import { getFeaturedNews, toDisplayEvents } from "@/data/news";
-import { selectHomepageSectionCovers } from "@/data/sectionCovers";
 
 export default async function HomePage() {
   const featured = toDisplayEvents(getFeaturedNews(6));
-  const sectionCovers = await selectHomepageSectionCovers();
 
   return (
     <SiteShell>
       <Hero />
-      <HomeIntro coverImage={sectionCovers["gioi-thieu"]?.src} />
+      <HomeIntro />
       <HomeValues />
       <HomeActivities events={featured} />
-      <HomeScale coverImage={sectionCovers["quy-mo"]?.src} />
+      <HomeScale />
       <HomeTraining />
       <HomeExplore />
       <HomeContact />

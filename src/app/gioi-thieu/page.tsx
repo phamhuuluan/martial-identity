@@ -4,7 +4,6 @@ import { SiteShell } from "@/components/layout/SiteShell";
 import { History } from "@/components/sections/History";
 import { Philosophy } from "@/components/sections/Philosophy";
 import { PageHeader } from "@/components/ui/PageHeader";
-import { selectHomepageSectionCovers } from "@/data/sectionCovers";
 import { site } from "@/data/content";
 
 export const metadata: Metadata = {
@@ -33,9 +32,7 @@ const TOPICS = [
   },
 ] as const;
 
-export default async function GioiThieuPage() {
-  const sectionCovers = await selectHomepageSectionCovers();
-
+export default function GioiThieuPage() {
   return (
     <SiteShell>
       <PageHeader
@@ -64,7 +61,7 @@ export default async function GioiThieuPage() {
       </PageHeader>
 
       <History />
-      <Philosophy coverImage={sectionCovers["vo-dao"]?.src} />
+      <Philosophy />
     </SiteShell>
   );
 }

@@ -1,5 +1,3 @@
-"use client";
-
 import Link from "next/link";
 import { Reveal, Stagger, StaggerItem } from "@/components/ui/Reveal";
 
