@@ -451,6 +451,13 @@ export const locations = {
         schedule: "17:30 – 19:30, Thứ 3, 5, 7",
       },
       {
+        name: "CLB Võ Cổ Truyền Phong Minh",
+        locations: [
+          "Chùa Cảnh Phước, QL 1A, khu phố Ngân Sơn, xã Tuy An Bắc, tỉnh Đắk Lắk",
+        ],
+        schedule: "17:30 – 19:30, Thứ 2, 4, 6",
+      },
+      {
         name: "CLB Bửu Lâm – Võ Đường Hồng Quang",
         locations: [
           "Chùa Bửu Lâm, đường Phan Văn Hớn, Đông Hưng Thuận, TP.HCM",
