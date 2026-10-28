@@ -1,3 +1,4 @@
+import { Suspense } from "react";
 import type { Metadata } from "next";
 import { LoginForm } from "@/components/admin/LoginForm";
 
@@ -6,14 +7,10 @@ export const metadata: Metadata = {
   robots: { index: false, follow: false },
 };
 
-export default async function LoginPage({
-  searchParams,
-}: {
-  searchParams: Promise<{ next?: string }>;
-}) {
-  const { next } = await searchParams;
-  const nextPath = next?.startsWith("/admin") && !next.startsWith("//") ? next : "/admin";
+export default function LoginPage() {
   return (
-    <LoginForm configured={Boolean(process.env.ADMIN_PASSWORD?.trim())} nextPath={nextPath} />
+    <Suspense fallback={<p className="adm-muted">Đang mở trang đăng nhập…</p>}>
+      <LoginForm configured={Boolean(process.env.ADMIN_PASSWORD?.trim())} />
+    </Suspense>
   );
 }

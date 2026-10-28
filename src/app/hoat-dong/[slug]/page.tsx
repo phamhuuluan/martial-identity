@@ -12,6 +12,8 @@ import {
 import { NEWS_CATEGORY_LABELS } from "@/domain/news";
 import { site } from "@/data/content";
 
+export const dynamicParams = false;
+
 export function generateStaticParams() {
   return getAllNewsSlugs().map((slug) => ({ slug }));
 }

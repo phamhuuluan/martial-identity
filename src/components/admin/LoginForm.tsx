@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { useRouter } from "next/navigation";
+import { useRouter, useSearchParams } from "next/navigation";
 import { fieldClass } from "./ui";
 
 export function LoginForm({
@@ -9,9 +9,13 @@ export function LoginForm({
   nextPath,
 }: {
   configured: boolean;
-  nextPath: string;
+  nextPath?: string;
 }) {
   const router = useRouter();
+  const params = useSearchParams();
+  const requested = nextPath ?? params.get("next") ?? "";
+  const destination =
+    requested.startsWith("/admin") && !requested.startsWith("//") ? requested : "/admin";
   const [password, setPassword] = useState("");
   const [error, setError] = useState<string | null>(null);
   const [pending, setPending] = useState(false);
@@ -35,7 +39,7 @@ export function LoginForm({
               setError(body.error || "Không đăng nhập được");
               return;
             }
-            router.replace(nextPath);
+            router.replace(destination);
             router.refresh();
           } catch {
             setError("Không kết nối được máy chủ");

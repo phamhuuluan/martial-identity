@@ -67,7 +67,7 @@ function commitIdentity(): GitIdentity | null {
   const email = process.env.GITHUB_COMMIT_EMAIL?.trim() || "";
   if (!email) return null;
   return {
-    name: process.env.GITHUB_COMMIT_NAME?.trim() || "LuanPh",
+    name: process.env.GITHUB_COMMIT_NAME?.trim() || "luan16",
     email,
     date: new Date().toISOString(),
   };
