@@ -192,6 +192,13 @@ function yamlEscape(s: string): string {
     .trim();
 }
 
+function isLockedMarkdown(filePath: string): boolean {
+  const raw = fs.readFileSync(filePath, "utf8");
+  const fm = raw.match(/^---\r?\n([\s\S]*?)\r?\n---/);
+  if (!fm) return false;
+  return /^locked:\s*true\s*$/m.test(fm[1]);
+}
+
 function findExistingByPostId(postId: string): string | null {
   for (const cat of NEWS_CONTENT_CATEGORIES) {
     const dir = path.join(CONTENT, cat);
@@ -439,6 +446,12 @@ async function main() {
         const body = buildBody(cleaned, title);
         const tags = tagsFor(category, post.message);
 
+        const existing = findExistingByPostId(post.facebookPostId);
+        if (existing && isLockedMarkdown(existing)) {
+          skipped += 1;
+          return;
+        }
+
         const photoUrls = mediaUrlsOf(post);
         const images = await downloadImages(post.facebookPostId, photoUrls);
 
@@ -465,7 +478,6 @@ async function main() {
           body,
         });
 
-        const existing = findExistingByPostId(post.facebookPostId);
         let dest: string;
         if (existing) {
           // If category changed, move file

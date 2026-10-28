@@ -1,0 +1,45 @@
+{
+  "name": "Phật Quang Quyền",
+  "nameUpper": "PHẬT QUANG QUYỀN",
+  "federationLine": "",
+  "motto": "",
+  "title": "Phật Quang Quyền — Võ Cổ Truyền Việt Nam",
+  "tagline": "Môn phái võ cổ truyền — rèn luyện thân thể, đạo đức và tinh thần phụng sự Đạo pháp và dân tộc",
+  "description": "Phật Quang Quyền — lịch sử hình thành và phát triển, tôn chỉ võ đạo, hệ thống cấp đai, chương trình huấn luyện, quy mô hoạt động trong và ngoài nước, thành tích thi đấu và hoạt động xã hội thiện nguyện.",
+  "logo": "/images/extracted/logo-phat-quang-quyen-transparent.webp",
+  "heroImage": "/images/extracted/hero-home-a1.webp",
+  "heroFallback": "/images/site/gioiThieu_MonPhai.png",
+  "introImage": "/images/site/gioiThieu_MonPhai.png",
+  "memberTerm": {
+    "lower": "võ sinh, môn sinh",
+    "title": "Võ sinh, môn sinh",
+    "ofSchool": "võ sinh, môn sinh Phật Quang Quyền",
+    "ofSchoolTitle": "Võ sinh, môn sinh Phật Quang Quyền"
+  },
+  "navItems": [
+    {
+      "label": "Trang chủ",
+      "href": "/"
+    },
+    {
+      "label": "Giới thiệu",
+      "href": "/gioi-thieu"
+    },
+    {
+      "label": "Tập luyện",
+      "href": "/tap-luyen"
+    },
+    {
+      "label": "Hoạt động",
+      "href": "/hoat-dong"
+    },
+    {
+      "label": "Địa điểm",
+      "href": "/dia-diem"
+    },
+    {
+      "label": "Liên hệ",
+      "href": "/lien-he"
+    }
+  ]
+}

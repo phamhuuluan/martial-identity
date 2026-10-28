@@ -1,0 +1,110 @@
+{
+  "thaiToSu": {
+    "number": "1",
+    "title": "Thái Tổ Sư của môn phái",
+    "body": "Môn phái bái tôn giả Rahula (La Hầu La), một trong thập đại đệ tử của Đức Phật với danh hiệu Mật Hạnh Đệ Nhất Bảo hộ Tăng đoàn làm Thái Tổ Sư của môn phái.",
+    "image": "/images/site/thai-to-su.jpg",
+    "lifeHref": "/gioi-thieu/thai-to-su",
+    "lifeLabel": "Cuộc đời Thái Tổ Sư"
+  },
+  "sangToSu": {
+    "number": "2",
+    "title": "Sáng Tổ Sư của môn phái",
+    "image": "/images/site/sang-to-su.jpg",
+    "fields": [
+      {
+        "label": "Thế danh",
+        "value": "Vương Tấn Việt"
+      },
+      {
+        "label": "Đạo hiệu",
+        "value": "Thượng Tọa Thượng Chân Hạ Quang"
+      },
+      {
+        "label": "Pháp danh",
+        "value": "Thích Chân Quang"
+      },
+      {
+        "label": "Năm sinh",
+        "value": "1959"
+      },
+      {
+        "label": "Giáo Phẩm",
+        "value": "Thượng Tọa"
+      }
+    ],
+    "positions": [
+      "Viện chủ chùa Phật Quang - núi Dinh – thành phố Hồ Chí Minh",
+      "Giảng sư Phật học"
+    ]
+  },
+  "formation": {
+    "yearTitle": "Năm thành lập môn phái",
+    "yearNumber": "3",
+    "yearBody": "Phật Quang Quyền được thành lập: Năm 1992, trong những ngày đầu hình thành chùa Phật Quang. Môn phái do: Võ sư Thượng tọa Thượng Chân hạ Quang, Viện chủ chùa Phật Quang sáng lập nên (võ sư sáng tổ).",
+    "toDinh": {
+      "number": "4",
+      "title": "Tổ Đình",
+      "body": "Chùa Phật Quang, Núi Dinh, thôn Chu Hải, xã Tân Hải, TP. Hồ Chí Minh"
+    },
+    "nhanDuyen": {
+      "number": "5",
+      "title": "Nhân duyên thành lập",
+      "bullets": [
+        "Võ sư sáng tổ được rèn luyện võ thuật từ thời niên thiếu nhưng do nhiều yếu tố khách quan, với vai trò là một tu sĩ Phật Giáo nên võ sư sáng tổ có rất nhiều công tác Phật sự nên không có cơ hội luyện tập một môn võ xuyên suốt. Tuy nhiên Võ sư sáng tổ lại có cơ duyên được tham học nhiều bậc tiền bối về võ thuật từ đó đúc kết được những tinh hoa trong võ học.",
+        "Mong muốn phục dựng truyền thống võ học trong Thiền môn.",
+        "Giúp Tăng Ni và thanh thiếu niên rèn luyện sức khỏe, đạo đức và bản lĩnh.",
+        "Xây dựng thế hệ văn võ song toàn, phụng sự Đạo pháp và dân tộc."
+      ]
+    },
+    "chuongMon": {
+      "number": "6",
+      "title": "Chưởng môn Phật Quang Quyền",
+      "body": "Võ sư Đại Đức Thích Nghiêm Giám - Phó chủ tịch liên đoàn võ cổ truyền thành phố Hồ Chí Minh"
+    },
+    "truongBan": {
+      "number": "7",
+      "title": "Trưởng ban chuyên môn",
+      "body": "Đại đức Thích Toàn Tĩnh"
+    }
+  },
+  "organization": {
+    "sectionTitle": "LỊCH SỬ HÌNH THÀNH VÀ PHÁT TRIỂN"
+  },
+  "logoMeaning": {
+    "sectionTitle": "TÔN CHỈ VÀ VÕ ĐẠO CỦA MÔN PHÁI",
+    "number": "1",
+    "title": "Ý nghĩa biểu tượng môn phái",
+    "logo": "/images/extracted/logo-phat-quang-quyen-transparent.webp",
+    "paragraphs": [
+      "Biểu tượng môn phái là hình tròn, tượng trưng cho bánh xe Chuyển Pháp Luân của Phật giáo.",
+      "Nền màu vàng đất biểu trưng cho sự cao quý, thanh tịnh và tinh thần Phật giáo.",
+      "Bên trong có 8 hình elip liên kết thành bông hoa 8 cánh với 4 màu: Xanh Lam, Xanh Lục, Đỏ, Vàng, tượng trưng cho 4 phẩm chất người võ sinh, môn sinh Phật Quang Quyền cần rèn luyện:"
+    ],
+    "qualities": [
+      "Công đức",
+      "Đạo đức",
+      "Khí công",
+      "Thiền định"
+    ],
+    "closing": "Tám hình elip còn tượng trưng cho Bát Chánh Đạo, con đường tu tập chân chính của võ sinh, môn sinh Phật Quang Quyền phải thực hành. Ý nghĩa biểu tượng của môn phái ý muốn nói: mỗi võ sinh, môn sinh Phật Quang Quyền như một bông hoa ngát hương đạo đức không ngừng tô đẹp cho đời.",
+    "colors": [
+      {
+        "name": "Xanh Lam",
+        "hex": "#2B6CB0"
+      },
+      {
+        "name": "Xanh Lục",
+        "hex": "#2F855A"
+      },
+      {
+        "name": "Đỏ",
+        "hex": "#C53030"
+      },
+      {
+        "name": "Vàng",
+        "hex": "#D69E2E"
+      }
+    ]
+  }
+}

@@ -26,6 +26,11 @@ const TOPICS = [
     body: "Thái Tổ Sư, Sáng Tổ Sư và nhân duyên hình thành.",
   },
   {
+    href: "/gioi-thieu/thai-to-su",
+    label: "Thái Tổ Sư",
+    body: "Cuộc đời Tôn giả La Hầu La, Mật hạnh đệ nhất.",
+  },
+  {
     href: "#ton-chi",
     label: "Tinh thần",
     body: "Biểu tượng, tôn chỉ, phương châm và sáu lời thề.",
@@ -43,13 +48,13 @@ export default function GioiThieuPage() {
       >
         <nav
           aria-label="Chủ đề giới thiệu"
-          className="grid gap-0 border-t border-brown/12 sm:grid-cols-2"
+          className="grid gap-0 border-t border-brown/12 sm:grid-cols-3"
         >
           {TOPICS.map((t) => (
             <Link
               key={t.href}
               href={t.href}
-              className="group border-b border-brown/12 py-5 transition sm:border-r sm:border-b-0 sm:px-5 sm:first:pl-0 sm:last:border-r-0 sm:last:pr-0"
+              className="group border-b border-brown/12 py-5 transition last:border-b-0 sm:border-r sm:border-b-0 sm:px-5 sm:first:pl-0 sm:last:border-r-0 sm:last:pr-0"
             >
               <p className="h3-block text-brown-deep transition group-hover:text-brown">
                 {t.label}

@@ -38,7 +38,7 @@ Võ không chỉ để mạnh.
 Võ để sống đẹp.
 Võ để giữ đạo nghĩa.
 Võ để rèn thân – luyện tâm – nuôi chí lớn.
-Bước sang năm mới, chúng tôi kính chúc quý Võ phái ngày càng phát triển vững mạnh, giao lưu đoàn kết, cùng nhau làm sáng đẹp tinh thần thượng võ dân tộc, đưa võ học Việt Nam lan tỏa ra năm châu.
+Bước sang năm mới, Môn Phái kính chúc quý Võ phái ngày càng phát triển vững mạnh, giao lưu đoàn kết, cùng nhau làm sáng đẹp tinh thần thượng võ dân tộc, đưa võ học Việt Nam lan tỏa ra năm châu.
 Chúc những người yêu võ một năm đầy nội lực – mỗi buổi tập là một bước tiến, mỗi thử thách là một lần trưởng thành, mỗi thành tựu đều gắn liền với khiêm nhu và dũng cảm.
  Gửi đến toàn thể Võ sinh, Môn sinh Phật Quang Quyền:
 Hãy luôn ghi nhớ con đường võ học mình đã chọn.

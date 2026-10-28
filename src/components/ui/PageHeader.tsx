@@ -1,4 +1,6 @@
 import type { ReactNode } from "react";
+import Link from "next/link";
+import { ArrowLeft } from "lucide-react";
 
 type PageHeaderProps = {
   eyebrow: string;
@@ -9,6 +11,7 @@ type PageHeaderProps = {
   /** Asymmetric title | description for editorial pages */
   layout?: "stack" | "split";
   meta?: ReactNode;
+  back?: { href: string; label: string };
 };
 
 export function PageHeader({
@@ -19,6 +22,7 @@ export function PageHeader({
   tone = "light",
   layout = "stack",
   meta,
+  back,
 }: PageHeaderProps) {
   const surface =
     tone === "dark"
@@ -38,6 +42,19 @@ export function PageHeader({
     <header className={`relative overflow-hidden ${surface}`}>
       <div className="grain absolute inset-0" aria-hidden />
       <div className="site-container relative pt-28 pb-12 md:pt-32 md:pb-16">
+        {back ? (
+          <Link
+            href={back.href}
+            className={`type-label mb-6 inline-flex items-center gap-2 text-sm transition ${
+              tone === "dark"
+                ? "text-ivory/60 hover:text-ivory"
+                : "text-brown/55 hover:text-brown-deep"
+            }`}
+          >
+            <ArrowLeft size={15} strokeWidth={1.5} />
+            {back.label}
+          </Link>
+        ) : null}
         {split ? (
           <div className="grid gap-8 md:grid-cols-12 md:gap-10 md:items-end">
             <div className="md:col-span-7">

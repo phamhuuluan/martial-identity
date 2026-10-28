@@ -1,6 +1,6 @@
 ---
 title: "ĐẠI HỘI THỂ DỤC THỂ THAO TỈNH GIA LAI LẦN THỨ I – NĂM 2026"
-summary: "Trong khuôn khổ Đại hội Thể dục Thể thao tỉnh Gia Lai lần thứ I – năm 2026, nội dung Võ cổ truyền – Quyền thuật và Đối luyện đã hoàn thành vào sáng ngày 06/09/2026. Môn phái Phật Quang Quyền xin chúc mừng các môn sinh, võ sinh đã nỗ lực tập luyện, thi đấu và đạt thành tích 03 Huy chương Bạc: Phan Đình Khoa – Huy chư…"
+summary: "Trong khuôn khổ Đại hội Thể dục Thể thao tỉnh Gia Lai lần thứ I – năm 2026, nội dung Võ cổ truyền – Quyền thuật và Đối luyện đã hoàn thành vào sáng ngày 06/09/2026. Phật Quang Quyền xin chúc mừng các môn sinh, võ sinh đã nỗ lực tập luyện, thi đấu và đạt thành tích 03 Huy chương Bạc: Phan Đình Khoa – Huy chư…"
 date: "2026-09-07"
 category: competitions
 tags:
@@ -20,7 +20,7 @@ gallery:
 
 Trong khuôn khổ Đại hội Thể dục Thể thao tỉnh Gia Lai lần thứ I – năm 2026, nội dung Võ cổ truyền – Quyền thuật và Đối luyện đã hoàn thành vào sáng ngày 06/09/2026.
 
-Môn phái Phật Quang Quyền xin chúc mừng các môn sinh, võ sinh đã nỗ lực tập luyện, thi đấu và đạt thành tích 03 Huy chương Bạc:
+Phật Quang Quyền xin chúc mừng các môn sinh, võ sinh đã nỗ lực tập luyện, thi đấu và đạt thành tích 03 Huy chương Bạc:
 Phan Đình Khoa – Huy chương Bạc Song Tuyết Kiếm nam
 Lò Thị Lệ Trang – Huy chương Bạc Thái Sơn Côn nữ
 Nguyễn Thị Ngọc Huyền – Huy chương Bạc Thanh Long Độc Kiếm nữ

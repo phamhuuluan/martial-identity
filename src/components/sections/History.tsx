@@ -1,8 +1,10 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 import { useRef, type ReactNode } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
+import { ArrowRight } from "lucide-react";
 import {
   formation,
   organization,
@@ -100,12 +102,14 @@ function StickyPortrait({
   title,
   body,
   image,
+  cta,
 }: {
   id: string;
   number: string;
   title: string;
   body: ReactNode;
   image: string;
+  cta?: { href: string; label: string };
 }) {
   const ref = useRef<HTMLElement>(null);
   const { scrollYProgress } = useScroll({
@@ -148,6 +152,12 @@ function StickyPortrait({
             <h3 className="h2-section mt-2 text-brown-deep">{title}</h3>
             <div className="gold-rule my-5" />
             <div className="prose-body measure text-brown-deep/90">{body}</div>
+            {cta ? (
+              <Link href={cta.href} className="btn btn-outline mt-8">
+                {cta.label}
+                <ArrowRight size={15} strokeWidth={1.5} />
+              </Link>
+            ) : null}
           </Reveal>
         </div>
       </div>
@@ -174,6 +184,7 @@ export function History() {
         title={thaiToSu.title}
         image={thaiToSu.image}
         body={<p>{thaiToSu.body}</p>}
+        cta={{ href: thaiToSu.lifeHref, label: thaiToSu.lifeLabel }}
       />
 
       {/* Sáng Tổ Sư — offset magazine */}

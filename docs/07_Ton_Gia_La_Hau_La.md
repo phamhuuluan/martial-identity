@@ -1,0 +1,261 @@
+**Chủ Biên**
+
+TT. Thích Chân Quang
+
+# THÁNH ĐỘ MỆNH
+
+TÔN GIẢ LA HẦU LA
+
+(RAHULA)
+
+TÔN GIẢ LA HẦU LA
+
+(RAHULA)
+
+## ĐỆ NHẤT MẬT HẠNH - BẢO HỘ TĂNG ĐOÀN
+
+Một chiếc lá liệng qua khung cửa, mùa thu đã ghé ngang thành Ca Tỳ La Vệ (Kapilavastu). Công Nương Da Du Đà La (Yashodara) nhẹ nhàng nâng chiếc lá, bước tới bên phu quân thì thầm:
+
+-	Thần thiếp có điều đặc biệt muốn nói với Ngài. Trong một đêm nằm mộng, thiếp thấy có một vầng sáng từ trên trời sà vào bụng và bây giờ thiếp cảm thấy như mình đã hoài thai.
+
+Thái Tử mỉm cười nắm lấy tay Công Nương, dịu dàng nói:
+
+-	Một vị nào đó đã dùng Mật hạnh đệ nhất để vào thai, vừa giúp nàng toại nguyện, vừa giúp ta toại nguyện.
+
+Thái Tử Tất Đạt Đa (Siddhattha Gotama) luôn ước nguyện trở thành sa môn tu hành, đi tìm chân lý giải thoát. Nhưng đức vua Tịnh Phạn (Suddhodana) đặt ra điều kiện phải có một hoàng nhi nối dõi mới bằng lòng để cho Thái Tử xuất gia. Điều này là trở ngại lớn, vì dù trên danh nghĩa phu thê, Thái Tử và Công Nương chỉ sống với nhau như đôi bạn trong sạch thanh khiết thì làm sao có thể có con. Tuy vậy, không lúc nào Công Nương Da Du Đà La ngừng hy vọng. Công Nương thầm mong một ngày Thái Tử sẽ đạt được chí nguyện và chính mình cũng được thực hiện thiên chức làm mẹ. Mỗi đêm, Công Nương vẫn hướng về phía bầu trời bao la, thiết tha cầu nguyện. Và cuối cùng, điều nhiệm màu đã đến.
+
+Mùa xuân năm sau, một Hoàng tôn khôi ngô chào đời trong niềm hân hoan của cả hoàng tộc, vương quốc Sakya rộn rã đón mừng. Trong căn phòng tràn ngập nắng mai, Hoàng tôn yên bình nằm trọn trong vòng tay Thân phụ. Thái Tử nhìn hài nhi, giọng Người từ ái:
+
+-	Ta sẽ đặt tên con là La Hầu La (Rahula). La Hầu La với ý nghĩa là “Thần Mặt Trăng” và “chiến thắng mọi lỗi lầm”. Cảm ơn con đã đến, tiếp bước cho ta hoàn thành chí nguyện.
+
+Hoàng tôn La Hầu La ngước nhìn Thế Tôn như đón nhận tình thương yêu và niềm hy vọng được gửi gắm từ Cha. Sau này, Ngài đã dành cả cuộc đời với trọn trái tim và trí tuệ để thực hiện niềm tin yêu cao cả ấy. Ngài trở thành một vị Tôn giả vĩ đại, âm thầm thực hiện vô số Thánh hạnh cao quý, như vầng trăng lặng lẽ tỏa ánh sáng dịu dàng trong màn đêm…
+
+VỊ HOÀNG TÔN NHỎ TUỔI
+
+Hoàng tôn La Hầu La sinh được bảy ngày thì Thái Tử Tất Đạt Đa từ giã kinh thành ra đi tìm đạo giải thoát như chí nguyện đã ấp ủ bấy lâu. Hoàng tôn lớn lên trong sự giáo dưỡng và tình yêu thương đủ đầy từ Mẫu hậu Da Du Đà La, từ Tổ phụ Tịnh Phạn, từ Đức bà Ba Xà Ba Đề (Mahapajapati Gotami) và cả hoàng tộc. Thế nhưng có đôi lúc, Ngài vẫn thấy trong lòng thoáng hiện một nỗi niềm trống trải không nói thành lời…
+
+Những buổi chiều gió nhẹ, sau khi học bài với các vị thầy giáo thọ, Ngài thường chạy ra phía sau vườn thượng uyển, nhìn về dải chân trời phía xa. Ngài vẫn hay hình dung bóng hình Phụ thân ở đâu đó bên kia dãy núi, nơi những vạt nắng chiều vắt ngang qua sườn đồi, dưới những cánh rừng rì rào xanh thẳm. Hằng ngày Ngài được nghe Tổ phụ và Đức Bà kể về Phụ thân, Ngài thấy Mẫu thân ăn chay, mặc sari bạc màu và hướng đến Người với trọn niềm thương kính. Hoàng tôn La Hầu La biết rằng Phụ thân vẫn luôn hiện hữu trong trái tim mỗi người. Ngài cảm nhận được rằng Phụ thân đang bước trên một hành trình vĩ đại tìm kiếm điều tuyệt đối cao thượng. Và sẽ có một ngày, Người trở về với uy đức bao la, sáng chói hơn muôn ánh mặt trời…
+
+Cứ như vậy, Ngài luôn nghĩ về Phụ thân với lòng kính thương vời vợi.
+
+Hoàng tôn La Hầu La càng lớn càng hiện lên nhiều nét tương đồng với Thái Tử Tất Đạt Đa năm xưa. Ngài nhỏ tuổi nhưng rất thông minh, ham học hỏi, luôn khiêm cung và đầy tình thương yêu dành cho mọi người. Ngài tinh tế nhìn thấy những điều nhỏ bé mà mọi người vẫn vô tình lướt qua, rồi lại khéo léo giúp đỡ họ trong thầm lặng mà chẳng để ai biết đến. Hoàng tôn luôn mang đến một niềm an tâm và vui vẻ cho bất cứ ai ở cạnh bên. Ngài dần trở thành niềm thương yêu và hy vọng lớn lao cho Mẫu thân và cả hoàng tộc.
+
+THEO BƯỚC TỪ PHỤ
+
+Sau chín năm kể từ khi xuất gia và đắc thành quả vị Chánh Đẳng Chánh Giác, Đức Phật trở về thăm lại thành Ca Tỳ La Vệ. Cả kinh thành nao nức xôn xao, các ngôi nhà được trang hoàng với những hoa thơm và lụa mới. Trong cung điện, hoàng tộc và triều thần tề tựu trang nghiêm trong không gian sáng rực nến đèn và hương chiên đàn thơm ngát. Ai cũng cung kính một niềm xúc động trong giây phút nghinh đón Thế Tôn trở về.
+
+Hoàng tôn La Hầu La đứng với Mẫu thân nép sau tấm rèm, kín đáo hướng mắt dõi theo từng cử chỉ của Thế Tôn. Đức Thế Tôn rạng ngời với vầng hào quang tỏa ra ấm áp, Người bước đi thanh thoát mà trầm hùng, dẫn đầu hàng ngàn vị Tỳ kheo trong nếp áo nâu sòng. Cả không gian xung quanh dường như lắng đọng. Phụ Thân của Ngài vĩ đại quá, cao quý quá, Người sáng chói hơn tất cả những hình ảnh đẹp nhất Ngài có thể hình dung ra.
+
+Hoàng tôn La Hầu La muốn đến bên Thế Tôn thật nhanh, nhưng đôi chân Ngài vẫn đứng lặng. Chợt Mẫu hậu Da Du Đà La thì thầm: “Phụ Thân con về rồi, Người có một kho tàng cao quý lắm, con hãy đến xin kho tàng của Phụ Thân con đi!”. Hoàng tôn La Hầu La chưa hiểu hết được câu nói ấy, nhưng Ngài như được tiếp thêm động lực liền bước tới nơi Thế Tôn đang ngồi. Đức Thế Tôn hiền từ mà uy nghiêm, dáng hình Người giản dị và cao cả. Ngài La Hầu La ngước lên ngắm nhìn dung nhan rực rỡ. Lần đầu tiên trong đời bàn tay bé nhỏ đặt vào bàn tay Người, cảm giác thật bình an, vừa lạ lẫm vừa thân quen.
+
+-	Thưa Phụ Thân, dưới bóng mát của Người, con thật hạnh phúc!
+
+-	Thưa Phụ Thân, xin Phụ Thân hãy cho con kho tàng của Người đi!
+
+Gió đầu thu dịu dàng mang theo hương thơm của những khóm hoa nở rộ nơi góc vườn Thượng Uyển. Thế Tôn trìu mến nắm tay Hoàng tôn, giọng Người trầm ấm:
+
+-	Vậy con hãy theo Tôn giả Xá Lợi Phất (Sariputta) nhé.
+
+Cả hoàng cung lặng người chứng kiến, những giọt nước mắt xúc động khẽ lăn dài.
+
+Tôn giả Xá Lợi Phất dắt tay Ngài La Hầu La đến dưới một tàng cây cổ thụ rợp bóng trên thềm cỏ ngát xanh. Tôn giả truyền giới sa di cho vị Hoàng tôn và hướng dẫn Ngài đọc những lời thề nguyện. Rồi Tôn giả Xá Lợi Phất cạo tóc cho Hoàng tôn. Từ giây phút đó, cuộc đời Ngài La Hầu La rẽ sang một con đường mới, con đường ngập ánh dương soi, con đường theo bước Từ Phụ...
+
+VỊ SA DI ĐẦY GIỚI HẠNH
+
+Hoàng tôn La Hầu La xuất gia và là vị sa di đầu tiên trong Tăng đoàn của Đức Phật. Từ một vị Hoàng tôn trong cung vàng điện ngọc, giờ đây Ngài hoan hỷ tri túc với nếp sống xuất gia giản dị của một vị khất sĩ. Ngài hòa vào đời sống của Tăng đoàn nhẹ nhàng và tự nhiên như trở về mái ấm thân quen của mình. Ngài khiêm cung, luôn biết lắng nghe và vâng lời chỉ bảo của các vị chư Tăng. Ngài giữ giới luật tinh nghiêm và hăng hái chuyên cần tu học. Đức Phật có lần ngợi khen trước đại chúng rằng không chỉ hiện tại mà trong các tiền kiếp, Ngài La Hầu La đã có các phẩm hạnh cao quý đặc biệt như thế.
+
+Mỗi sáng tinh mơ khi sương còn đọng trên cành lá, Tôn giả La Hầu La đã dậy thật sớm, quét dọn tinh xá tinh tươm. Rồi Ngài tới phía hàng trúc nơi khóm bồ câu tím biếc đang nở rộ, đưa lên một nắm cát trên tay rồi thì thầm:
+
+-	Nguyện rằng ngày hôm nay con sẽ học được thật nhiều lời dạy của các Thầy như nắm cát này!
+
+Ngài tung nắm cát lên, hàng ngàn hạt cát lấp lánh bay trong gió cũng tinh khôi như ước nguyện và lòng quyết tâm của vị sa di nhỏ tuổi.
+
+Ngài La Hầu La luôn cảm thấy may mắn và trân trọng khi được nhận Tôn giả Xá Lợi Phất là giáo thọ sư cũng như là vị thầy tế độ. Mỗi lần được đến tinh xá Kỳ Viên (Jetavana) đảnh lễ hay khi Tôn giả Xá Lợi Phất trở về sau những chuyến Phật sự dài ngày, Ngài La Hầu La thường rất xúc động. Ngài tâm sự với Tôn giả Xá Lợi Phất rằng Ngài thật thiệt thòi vì ít có cơ hội để tham vấn Tôn giả thường xuyên. Tôn giả Xá Lợi Phất lại nở nụ cười hiền từ:
+
+-	Này La Hầu La, Ta luôn yên tâm vì con rất ngoan và được thân cận Tôn giả Nan Đà (Nanda). Ngài là một vị A La Hán trầm tĩnh nhưng luôn âm thầm tác thành những điều cao quý. Sau này con cũng vậy, con sẽ làm được nhiều điều cao quý mà ít ai biết.
+
+Năm tròn mười tám tuổi, Ngài La Hầu La được Thế Tôn cho phép Ngài trở thành vị Tỳ kheo trẻ tuổi nhất của Tăng đoàn trong sự mừng vui của cả đại chúng.
+
+MẬT HẠNH BẢO HỘ TĂNG ĐOÀN
+
+Một đêm trên gò đất phía sau tinh xá, dưới những dải sáng bàng bạc của vầng trăng. Tôn giả Nan Đà ngồi bên Ngài La Hầu La, nhẹ nhàng chỉ bảo như đang tâm sự:
+
+-	Này La Hầu La, đã đến lúc ta phải nói cho con một chuyện quan trọng. Trước kia khi còn là Thái Tử, Thế Tôn đã xây dựng một mạng lưới thám tử hùng mạnh, ngầm chi phối các nước xung quanh để bảo vệ Sakya. Sau khi Người xuất gia, Mẫu thân Da Du Đà La của con tiếp quản và chỉ huy lực lượng ngầm bảo vệ Thế Tôn trước sự chống đối của các ngoại đạo. Thế nhưng, Mẫu thân của con rồi cũng xuất gia làm Ni và sẽ phải rời bỏ lực lượng bí mật này. Thế Tôn thiếu mất một cánh tay hộ pháp đắc lực trong khi càng về sau, ngoại đạo càng chống phá dữ dội.
+
+-	Này La Hầu La, sự chống phá bắt nguồn từ những suy nghĩ sai lầm của chúng sinh, dù cho dùng thần thông cũng không thể cảm hóa được, mà ta phải thay đổi những suy nghĩ đó. Phải khoác lên mình những thân phận thích hợp để đến với chúng sinh, rồi giải thích hợp lý cho họ. Đây là nhiệm vụ vô cùng khó khăn, cần sự hiểu biết rộng, giỏi võ nghệ, ứng biến khéo léo, tinh nhạy... không phải ai cũng có thể đảm nhận.
+
+-	Ta dùng tuệ nhãn quan sát thì biết rằng, nhân duyên này thuộc về con. Con sẽ là người bí mật Hộ Pháp cho Thế Tôn và hóa độ chúng sinh theo cách vô cùng đặc biệt. Chính con sẽ thực hiện “Mật Hạnh Đệ Nhất”.
+
+Khi tinh xá Trúc Lâm (Venuvana) vào mùa an cư kiết hạ, bỗng có hai thám tử xuất hiện chạy xộc đến chỗ Ngài La Hầu La mặc cho các Tỳ kheo chặn đường lại hỏi. Thám tử quỳ xuống, báo cáo:
+
+-	Thưa Chúa Công, tại xứ Kiều Thưởng Di (Kosambi) bất ngờ có đám dân quê kéo đến bao vây chửi bới Thế Tôn suốt mấy ngày qua, làm kinh động cả kinh thành.
+
+Gương mặt Ngài La Hầu La biến sắc, Ngài lập tức lên ngựa rồi cùng các thám tử phi như bay rời khỏi tinh xá. Đoàn người băng qua hàng trăm dặm đường, vượt những đồi núi điệp trùng, những nhánh sông Hằng cuồn cuộn cắt ngang hành trình giữa hai nước Ma Kiệt Đà (Magadha) và xứ Kosambi, thế nhưng chỉ trong vài ngày đã tới nơi.
+
+Ngay lập tức, Ngài La Hầu La chỉ huy lực lượng bí mật truy tìm nguyên cớ. Đêm đó, các thám tử đã phát hiện kẻ đứng đằng sau xúi giục, hắn là kẻ thuộc hạ của hoàng phi Magandiya trong nội cung Kosambi…
+
+Ngay hôm sau, cả đám dân bỗng trở nên câm lặng và chưng hửng, bởi không còn ai đằng sau xúi giục hay trả tiền cho nữa, kẻ thuê họ đã biến mất không dấu vết. Các thám tử tiếp tục tỏa đi các nơi, họ cải trang thành những đạo sĩ, trưởng giả, người buôn lẫn và trong đám dân chúng, loan tin vua Ưu Điền (Udena) xử tử kẻ nào đã chửi bới Thế Tôn mấy ngày qua. Thám tử thâm nhập cả vào nội cung Kosambi nắm hết tin tức. Cuối cùng, đám dân kéo đi nhanh chóng, chỉ trong vài ngày, sự việc đã được lắng xuống hoàn toàn. Kinh thành trở lại với vẻ bình yên vốn có.
+
+Vẫn tại xứ Kosambi này, lần đó các vị Tỳ kheo tại tinh xá Ghoshita xảy ra một cuộc tranh cãi. Thế Tôn lặng lẽ rời đến một khu rừng sâu trong núi để an cư, nơi chỉ có chim muông và thú rừng vui ca trò chuyện.
+
+Nhưng dù ở nơi đâu, vẫn là Tôn giả La Hầu La âm thầm ẩn mình dõi theo từng bước chân của Thế Tôn...
+
+Hằng ngày, Thế Tôn tọa thiền và đi kinh hành bên những bờ suối nhỏ. Khi trở về, đồ ăn đã được chuẩn bị trên phiến đá. Thế Tôn thọ thực rồi lấy bình nước đã được sắp sẵn để rửa tay. Mỗi khi Thế Tôn rời đi, Ngài La Hầu La lại dặn dò các thám tử đến quét dọn lại chỗ nằm nghỉ, giặt sạch tấm y, thay những thảm cỏ mới trên tòa ngồi của Người. Xế chiều, các thám tử lấy nước từ những khe đá, hái thêm các lá thơm rồi nấu thành nước tắm để Thế Tôn tiện dùng.
+
+Tôn giả luôn dõi theo từng việc của Thế Tôn với lòng kính thương vô bờ bến. Mật hạnh của Ngài, đôi lúc cũng có những phút giây hạnh phúc nhẹ nhàng và thiêng liêng như thế.
+
+Hơn 45 năm Thế Tôn chuyển bánh xe Pháp, Tăng đoàn vẫn luôn là mái ấm tâm linh yên bình nhất. Mỗi sáng nắng vẫn vàng trên các mái am tranh, và tối đến bầu trời tĩnh lặng khi các vị Tỳ kheo tọa thiền. Thế nhưng, đằng sau sự bình yên đó là biết bao nỗi vất vả, sự hi sinh và cả tấm lòng của vị Hộ Pháp. Hằng đêm, trong góc rừng gần tinh xá, thấp thoáng một vị Tôn giả vẫn đang miệt mài luyện tập những thế võ hay bàn kế hoạch với các thám tử, tấm y trên người Ngài sậm màu lại vì mồ hôi đẫm ướt. Và còn biết bao giọt mồ hôi của sự vất vả, khó nhọc đã đổ xuống nhưng không một ai biết đến khi Ngài phải đương đầu với những mưu toan của ngoại đạo. Những mưu toan được nung nấu bởi đầy thị phi, gian trá và cả gươm đao. Trọng trách quá lớn lao, nặng trĩu trên vai không thể tỏ bày hay chia sẻ, chỉ có thể gánh lấy, rồi mang hết tâm sức mình mà thực hiện. Bởi Mật hạnh phải được thành tựu trong thầm lặng và chính bởi lặng thầm nên mới càng cao quý.
+
+PHÚT GIÂY CHỨNG NGỘ
+
+Thời gian trôi qua, Tôn giả La Hầu La đã trở thành một vị Tỳ kheo đĩnh đạc và đầy uy đức. Một buổi sáng, bầu trời xanh trong vời vợi, Ngài ôm bình bát đi khất thực bên cạnh Thế Tôn. Đức Bổn Sư quán sát nhân duyên của người đệ tử. Người thấy trong đôi mắt sâu thẳm dưới vầng trán sáng ngời trí tuệ kia, sự giác ngộ đang đợi chờ phút giây bừng tỏ. Vì vậy, Đức Thế Tôn liền hướng về Tôn giả, thuyết lên một bài kệ:
+
+-	Này La Hầu La, con hãy lắng lòng nghe lời ta dạy. Thân này là vô thường, tâm này là vô thường. Không có gì của ta, không có gì là ta. Này La Hầu La, cả năm uẩn cũng đều như vậy: là thân thể, là cảm giác, là tâm tưởng, là suy luận, là ý thức, tất cả là vô thường, vô ngã, không phải là ta, không phải của ta.
+
+Thế Tôn vừa ngừng lời, Tôn giả La Hầu La bỗng dừng bước, một dòng chảy mãnh liệt cuồn cuộn dâng lên chiếm trọn tâm hồn. Ngài ngước nhìn Thế Tôn với niềm xúc động khôn tả:
+
+-	Bạch Đức Thế Tôn, xin Người cho phép con trở về tinh xá.
+
+-	Này La Hầu La, vì sao con không đi khất thực nữa? - Thế Tôn hỏi.
+
+Bạch Đức Thế Tôn, sau khi nghe đạo lý của Người, con không còn có thể nghĩ đến chuyện nào khác nữa.
+
+Thế Tôn im lặng đồng ý. Tôn giả La Hầu La lập tức quay trở lại tinh xá Kỳ Viên.
+
+Trong mái am giản dị được lợp bằng cỏ tranh, Ngài tọa thiền lặng lẽ miên mật từ sáng tới chiều. Bên ngoài am, từng cơn gió khẽ cuốn xào xạc lá khô trên đất, nắng chiều ngả màu nhạt dần…
+
+Khi hoàng hôn phủ xuống, Đức Thế Tôn thấy bóng người đệ tử vẫn đang tịch lặng trong thiền định, Người thuyết thêm bài pháp về hơi thở:
+
+-	Này La Hầu La, hãy biết rõ hơi thở, biết rõ hơi thở vào, hơi thở ra. Hơi thở vào dài, biết hơi thở vào dài. Hơi thở vào ngắn, biết hơi thở vào ngắn. Hơi thở ra dài, biết hơi thở ra dài. Hơi thở ra ngắn, biết hơi thở ra ngắn. Này La Hầu La hãy quán niệm hơi thở như thế sẽ được lợi ích lớn.
+
+Tôn giả La Hầu La vâng theo lời Thế Tôn chỉ bảo. Ngài nhẹ nhàng nhiếp tâm tiến sâu dần vào trong các tầng mức thiền định. Ngay trong đêm, Ngài hoát nhiên chứng ngộ Thánh quả A La Hán. Mái am nhỏ bừng sáng, ngoài trời trăng đã lên cao...
+
+TÌNH CẢM THIÊNG LIÊNG
+
+Ngay từ giây phút vị Bồ Tát trên cung trời Đâu Suất vào thai của thân mẫu Da Du Đà La, giữa Ngài và Thái Tử Tất Đạt Đa, sau này là Đức Thế Tôn, đã hình thành một mối liên hệ đặc biệt, không thể diễn tả bằng lời. Đó là tình cha con gần gũi ấm áp, cũng là nghĩa ân sư vời vợi thiêng liêng. Đức Thế Tôn là người cha của muôn vạn loài chúng sinh, lòng từ bi của Người rải ban cho tất cả. Còn Ngài La Hầu La thì đón nhận tình thương bao la ấy, hạnh phúc trong tình thương ấy như cây rừng nương mình bên ngọn cao sơn. Trái tim của Ngài lúc nào cũng hướng về Thế Tôn, thiết tha, thương kính.
+
+Mùa mưa vừa đi qua, nắng đầu đông cùng làn gió se lạnh kéo về, đám đỗ quyên ửng hồng khoe sắc. Tinh xá Kỳ Viên như bừng tỉnh sau những tháng mưa dài. Hôm ấy, tinh xá từ sớm đã tấp nập khách Tăng từ các nơi đổ về thăm viếng và đảnh lễ Thế Tôn. Chiều tà buông xuống, tinh xá được thắp sáng bởi những ánh nến đèn. Đêm ấy, những mái am được ưu tiên dành cho các vị Tăng khách Tỳ kheo cao hạ, các vị Tỳ kheo trong tinh xá nhường lại chỗ của mình và chia nhau ra nghỉ dưới những tàng cây. Dù đông người nhưng không khí vẫn vô cùng yên ắng.
+
+Tới nửa đêm, Tôn giả La Hầu La xuất định sau thời công phu khuya, Ngài đến trải tấm tọa cụ và ngả lưng dưới mái hiên trước hương thất của Đức Phật. Hương thất nhỏ nhưng thoáng đãng, trang nghiêm trong ánh nến và mùi hương trầm tỏa. Ngài La Hầu La nằm đó, sương đêm rơi thấm qua từng lớp y. Thế nhưng trong lòng Ngài cảm thấy thật an lành, ấm áp.
+
+Giữa khung cảnh tĩnh mịch, chợt một trận cuồng phong nổi lên, Ma Vương xuất hiện. Ma Vương Vasavatti vẫn không thôi đố kỵ với Thế Tôn, luôn canh chừng từng giờ khắc để tìm cơ hội nhiễu loạn tâm Người. Thoáng thấy Tôn giả La Hầu La đang nằm trước hương thất, Vasavatti đinh ninh rằng thẳm sâu trong lòng mỗi con người, tình phụ tử luôn dạt dào sâu nặng, thân thể người con là máu thịt của đấng sinh thành và nếu người con có mệnh hệ gì thì sẽ làm người cha vô cùng buồn khổ. Vì vậy, Ma Vương quyết định tấn công Ngài La Hầu La để khiến Thế Tôn phải động lòng. Và khi đó, dã tâm của Ma Vương sẽ thành công.
+
+Nghĩ vậy rồi Ma Vương Vasavatti hóa hiện một con voi dữ khổng lồ, đội ngà sắc bén cong lên như lưỡi kiếm. Con voi hung hãn với cặp mắt đỏ ngầu lao đến, mặt đất ầm ầm rung chuyển, hất lên những đám bụi mịt mù, giương chân định dẫm đạp Tôn giả La Hầu La.
+
+Thế Tôn đang tọa thiền trong hương thất, Người nhìn thấu suy nghĩ của Vasavatti ngay từ khi Vasavatti mới động niệm. Thấy Vasavatti sắp gây nghiệp bất thiện, Thế Tôn liền trải tâm từ hướng đến, Người nói vọng ra ngoài, từng chữ xoáy sâu vào tâm thức của Ma Vương. Giọng người trầm hùng mà nghiêm nghị:
+
+-	Này Vasavatti, dù trăm ngàn Ma Vương như ngươi cũng không thể làm kinh sợ được La Hầu La, một bậc đại hùng, đại trí tuệ đã hoàn toàn giải thoát.
+
+Voi dữ chợt khựng lại bởi tiếng Pháp âm rền vang đầy thần lực. Toàn thân mất hết đi vẻ cuồng uy ban đầu, hai chân sau khụy xuống, nó phủ phục ngay trước Tôn giả. Ma Vương Vasavatti gầm lên một tiếng vang trời, rồi biến mất trong làm khói xám mờ đục.
+
+Dưới mái hiên đơn sơ, Tôn giả La Hầu La vẫn nằm an yên, từng hơi thở vào ra trong bình lặng, sương mai đã trĩu trên đầu ngọn cỏ…
+
+KẾT LUẬN
+
+Đức Thế Tôn đã ngợi khen Tôn giả La Hầu La là vị Thánh đệ tử với “Mật Hạnh Đệ Nhất”. Bởi vì là “mật hạnh” nên vô cùng khó thấy, khó hiểu, khó cảm nhận được nhưng lại chứa đựng vô lượng công đức. Ngài chính là vị Hộ Pháp vĩ đại đời đời của chánh Đạo.
+
+Ngày hôm nay, thế giới đang trên đường kiếm tìm một lối đi tâm linh chung cho tất cả nhân loại. Trên hành trình đó, Phật Pháp vẫn hàng ngày đối mặt với nhiều khó khăn thử thách. Hình ảnh của Ngài chính là biểu tượng cho tinh thần hộ pháp đầy dũng lực và đức hạnh cho những người con Phật.
+
+Ngưỡng mong tất cả đệ tử Phật sẽ phát nguyện trung thành, đoàn kết, kiên cường dấn thân bảo vệ chánh Pháp trường tồn.
+
+Ý NGHĨA ĐỘ MỆNH
+
+Tôn giả La Hầu La là vị A La Hán với Mật Hạnh Đệ Nhất vĩ đại, luôn âm thầm, bí mật bảo vệ Thế Tôn và Tăng đoàn trước những thế lực chống phá, mở đường cho bước chân giáo hóa của Thế Tôn tới mọi nơi, bảo vệ và giữ cho Tăng chúng sống hòa hợp, phát triển, yên tâm tu hành, làm cho chúng sinh có đước nhiều lợi ích quý báu. Quý Phật tử khởi tâm thành thờ kính Ngài sẽ thành tựu:
+
+-	Sự dũng cảm, ý chí vượt qua những khó khăn thử thách trong cuộc sống. Từ đó, đời sống dần ổn định, gặp nhiều thuận lợi hơn.
+
+-	Trí tuệ nhạy bén, sáng suốt giúp giải quyết công việc linh hoạt, nhanh chóng. Từ đó công việc hanh thông, có nhiều cơ hội thăng tiến, tạo ra nhiều giá trị tốt đẹp cho xã hội.
+
+-	Dần thành tựu sự khiêm cung kín đáo và lòng tôn kính đối với Bậc thánh. Từ đó, đời sống an vui, được mọi người yêu mến và được giúp đỡ khi gặp khó khăn. Sự tu tập có nhiều tiến bộ, củng cố niềm tin sâu sắc vàok con đường giác ngộ giải thoát mà Phật đã chỉ dạy.
+
+THƠ TỤNG
+
+Thành tâm xin đảnh lễ Ngài
+
+Với lòng tôn kính ngập tràn vô biên
+
+Bậc A La Hán uy nghiêm
+
+Bảo vệ chân lý cho nghìn đời sau
+
+Dẹp tan cạm bẫy gươm đao
+
+Âm mưu hiếm độc phá tàn Đạo thiêng
+
+Dấu chân Ngài khắp mọi miền
+
+Dấn thân dũng mãnh giữ yên Tăng Đoàn
+
+Âm thầm chi phối lân bang
+
+Giữ gìn hòa khí làm an dân tình
+
+Đẹp hơn muôn ánh bình minh
+
+Trí tuệ ngời sáng chúng sinh hướng về
+
+Một lòng son sắt lời thề
+
+Hộ trì chánh Pháp vững bền mai sau
+
+Trời đêm tỏa rạng trăng sao
+
+Mật Hạnh Đệ Nhất thanh cao không lời
+
+Hiểm nguy gian khó chẳng ngơi
+
+Trung thành tuyệt đối muôn đời không phai
+
+Lời Phật như ánh nắng mai
+
+Soi vào khắp chốn vạn loài chúng sinh
+
+Kiếp người tăm tối điêu linh
+
+Bởi do ích kỷ vô minh đắm chìm
+
+Đường đời vất vả kiếm tìm
+
+Lợi danh phù phiếm, ái tình khổ đau
+
+Vô thường nào có đợi đâu
+
+Một mai rồi cũng bạc đầu xác xơ
+
+Thân tâm một thoáng sương mờ
+
+Trở về cát bụi hư vô trong chiều
+
+Phật cho con biết bao điều
+
+Hy sinh phụng sự thương yêu muôn loài
+
+Tin nhân quả, biết đúng sai
+
+Tu hành thúc liễm đường dài chẳng lui
+
+Bến bờ hạnh phúc an vui
+
+Ngập tràn tia nắng tinh khôi đẹp ngời
+
+Trải lòng rộng lớn vô bờ
+
+Trái tim ôm hết đất trời bao la
+
+Nguyện lòng sống rất vị tha
+
+Khiêm cung, kín đáo, chan hòa, bao dung
+
+Tìm về chân lý không cùng
+
+Con đường thiền định muôn trùng gian nan
+
+Lòng con xin quyết vững vàng
+
+Xiển dương chánh Pháp huy hoàng nghìn sau
+
+Thế giới tìm đến bên nhau
+
+Vui trong ánh sáng Đạo màu thiêng liêng...
+
+Nam Mô La Hầu La Tôn Giả (3 lần)

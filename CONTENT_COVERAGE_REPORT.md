@@ -14,7 +14,7 @@ Generated: đã áp dụng reclassify — chỉ còn 3 thư mục `competitions`
 ## Ảnh cover đề xuất (ưu tiên 2026)
 
 ### Các giải đấu đã tham gia
-- 2026-08-11 — CHÚC MỪNG CÁC MÔN SINH VÀ VÕ SINH MÔN PHÁI PHẬT QUANG QUYỀN — `/images/news/2011422782420944_1383683550562184/01.jpg` (post 2011422782420944_1383683550562184)
+- 2026-08-11 — CHÚC MỪNG CÁC MÔN SINH VÀ VÕ SINH PHẬT QUANG QUYỀN — `/images/news/2011422782420944_1383683550562184/01.jpg` (post 2011422782420944_1383683550562184)
 - 2026-08-04 — KHOẢNH KHẮC CỦA CÁC VÕ SINH, MÔN SINH PHẬT QUANG QUYỀN TẠI LỄ TRAO GIẢI LIÊN HOAN VÕ VI… — `/images/news/2011422782420944_1377550321175507/01.jpg` (post 2011422782420944_1377550321175507)
 
 ### Các hoạt động thiện nguyện
@@ -55,7 +55,7 @@ Generated: đã áp dụng reclassify — chỉ còn 3 thư mục `competitions`
 ## Bài 2026 (chi tiết)
 
 - 2026-08-11 | BIỂU DIỄN | activities → **activities** | Biểu diễn / festival / sự kiện không có ngữ cảnh thi đấu
-- 2026-08-11 | CHÚC MỪNG CÁC MÔN SINH VÀ VÕ SINH MÔN PHÁI PHẬT QUANG QUYỀN | competitions → **competitions** | Nội dung chính là tham gia giải đấu / thi đấu / thành tích tại giải
+- 2026-08-11 | CHÚC MỪNG CÁC MÔN SINH VÀ VÕ SINH PHẬT QUANG QUYỀN | competitions → **competitions** | Nội dung chính là tham gia giải đấu / thi đấu / thành tích tại giải
 - 2026-08-10 | Xin gửi lại nơi đây những kỷ niệm | activities → **activities** | Không thuộc thiện nguyện hay giải đấu — xếp hoạt động khác
 - 2026-08-09 | GIAN HÀNG TRIỂN LÃM - NƠI GẮN KẾT MỌI NGƯỜI | activities → **activities** | Biểu diễn / festival / sự kiện không có ngữ cảnh thi đấu
 - 2026-08-08 | KHAI MẠC FESTIVAL VÕ THUẬT QUỐC TẾ HÀ NỘI NĂM 2026: TÌM HIỂU HÀNH TRÌNH LỊCH SỬ VÀ VĂN… | activities → **activities** | Biểu diễn / festival / sự kiện không có ngữ cảnh thi đấu
@@ -144,7 +144,7 @@ Generated: đã áp dụng reclassify — chỉ còn 3 thư mục `competitions`
 - 2026-05-18 | 🇰🇷 THÔNG BÁO CHIÊU SINH LỚP VÕ CỔ TRUYỀN VIỆT NAM | activities → **activities** | Sinh hoạt / huấn luyện / thông báo / hoạt động nội bộ
 - 2026-05-18 | TRỒNG CÂY LẠI NHỚ ĐẾN NGƯỜI | charity → **charity** | Nội dung chính là thiện nguyện / hỗ trợ cộng đồng / môi trường
 - 2026-05-14 | ĐẠI HỘI THỂ DỤC THỂ THAO TỈNH NGHỆ AN LẦN THỨ X NĂM 2026 - SÔI NỔI GIẢI THI ĐẤU VÕ CỔ T… | competitions → **competitions** | Nội dung chính là tham gia giải đấu / thi đấu / thành tích tại giải
-- 2026-05-13 | CHÚC MỪNG CÁC MÔN SINH VÀ VÕ SINH MÔN PHÁI PHẬT QUANG QUYỀN | competitions → **competitions** | Nội dung chính là tham gia giải đấu / thi đấu / thành tích tại giải
+- 2026-05-13 | CHÚC MỪNG CÁC MÔN SINH VÀ VÕ SINH PHẬT QUANG QUYỀN | competitions → **competitions** | Nội dung chính là tham gia giải đấu / thi đấu / thành tích tại giải
 - 2026-05-12 | VÕ CỔ TRUYỀN VIỆT NAM – NGỌN LỬA DÂN TỘC ĐANG BÙNG CHÁY MẠNH MẼ TẠI THÀNH PHỐ HỒ CHÍ MINH | competitions → **competitions** | Nội dung chính là tham gia giải đấu / thi đấu / thành tích tại giải
 - 2026-05-11 | Chúc mừng các vận động viên của VÕ ĐƯỜNG HỒNG QUANG đã hoàn thành nhiệm vụ tại ĐẠI HỘI… | competitions → **competitions** | Nội dung chính là tham gia giải đấu / thi đấu / thành tích tại giải
 - 2026-05-11 | Điều lệ Giải Vô địch Trẻ Võ cổ truyền quốc gia lần thứ XXVII, năm 2026 | competitions → **competitions** | Nội dung chính là tham gia giải đấu / thi đấu / thành tích tại giải
@@ -161,7 +161,7 @@ Generated: đã áp dụng reclassify — chỉ còn 3 thư mục `competitions`
 - 2026-04-15 | ĐIỀU LỆ Giải Vô địch các Câu lạc bộ Võ cổ truyền quốc gia lần thứ XV năm 2026 | competitions → **competitions** | Nội dung chính là tham gia giải đấu / thi đấu / thành tích tại giải
 - 2026-04-15 | Điều lệ Giải Vô địch Trẻ Võ cổ truyền quốc gia lần thứ XXVII, năm 2026 | competitions → **competitions** | Nội dung chính là tham gia giải đấu / thi đấu / thành tích tại giải
 - 2026-04-14 | Bế mạc Hội thi Thể dục Thể thao Học sinh năm học 2025-2026 Môn Võ cổ truyền | competitions → **competitions** | Nội dung chính là tham gia giải đấu / thi đấu / thành tích tại giải
-- 2026-04-14 | CHÚC MỪNG CÁC VÕ SINH MÔN PHÁI PHẬT QUANG QUYỀN | competitions → **competitions** | Nội dung chính là tham gia giải đấu / thi đấu / thành tích tại giải
+- 2026-04-14 | CHÚC MỪNG CÁC VÕ SINH PHẬT QUANG QUYỀN | competitions → **competitions** | Nội dung chính là tham gia giải đấu / thi đấu / thành tích tại giải
 - 2026-04-11 | NGÀY THI ĐẤU THỨ BA | competitions → **competitions** | Nội dung chính là tham gia giải đấu / thi đấu / thành tích tại giải
 - 2026-04-10 | NGÀY THI ĐẤU THỨ HAI | competitions → **competitions** | Nội dung chính là tham gia giải đấu / thi đấu / thành tích tại giải
 - 2026-04-09 | CHI TIẾT CHƯƠNG TRÌNH THI ĐẤU MÔN VÕ CỔ TRUYỀN | competitions → **competitions** | Nội dung chính là tham gia giải đấu / thi đấu / thành tích tại giải

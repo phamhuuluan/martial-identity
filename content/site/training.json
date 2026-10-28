@@ -1,0 +1,56 @@
+{
+  "beltSystem": {
+    "sectionTitle": "HỆ THỐNG CẤP ĐAI VÀ CHƯƠNG TRÌNH HUẤN LUYỆN MÔN PHÁI",
+    "chartTitle": "HỆ THỐNG ĐẲNG CẤP MÔN PHÁI",
+    "charts": [
+      {
+        "label": "Sơ đẳng",
+        "src": "/images/site/SoDang.webp"
+      },
+      {
+        "label": "Trung đẳng",
+        "src": "/images/site/TrungDang.webp"
+      },
+      {
+        "label": "Cao đẳng & Thượng đẳng",
+        "src": "/images/site/CaoDang_ThuongDang.webp"
+      }
+    ],
+    "note": "Bảng hệ thống đẳng cấp đầy đủ theo từng bậc: Sơ đẳng, Trung đẳng, Cao đẳng và Thượng đẳng."
+  },
+  "curriculum": {
+    "title": "Chương trình huấn luyện môn phái",
+    "subtitle": "Giáo trình Phật Quang Quyền: kỹ thuật căn bản, đối luyện & tự vệ, đơn luyện & song luyện, lý thuyết theo từng cấp đai.",
+    "pdf": "/images/curriculum/giao-trinh-pqq-2025-12.pdf",
+    "pages": [
+      {
+        "label": "Sơ đẳng — Tự vệ, Lam & Lục đai",
+        "images": [
+          "/images/curriculum/giao-trinh-p01.jpg",
+          "/images/curriculum/giao-trinh-p02.jpg",
+          "/images/curriculum/giao-trinh-p03.jpg",
+          "/images/curriculum/giao-trinh-p04.jpg",
+          "/images/curriculum/giao-trinh-p05.jpg"
+        ]
+      },
+      {
+        "label": "Trung đẳng — Hồng & Hoàng đai",
+        "images": [
+          "/images/curriculum/giao-trinh-p06.jpg",
+          "/images/curriculum/giao-trinh-p07.jpg",
+          "/images/curriculum/giao-trinh-p08.jpg",
+          "/images/curriculum/giao-trinh-p09.jpg"
+        ]
+      },
+      {
+        "label": "Cao đẳng & Thượng đẳng",
+        "images": [
+          "/images/curriculum/giao-trinh-p10.jpg",
+          "/images/curriculum/giao-trinh-p11.jpg",
+          "/images/curriculum/giao-trinh-p12.jpg",
+          "/images/curriculum/giao-trinh-p13.jpg"
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "philosophy": {
+    "number": "2",
+    "title": "Môn phái được xây dựng trên 2 yếu tố",
+    "factors": [
+      {
+        "label": "Thứ nhất về mặt nội công",
+        "body": "môn phái được xây dựng dựa trên nền tảng khí công Phật gia được đúc kết qua một bề dày lịch sử. Khí công Phật gia là sự kết hợp của cả triết lý âm dương, vừa mang tính cương giúp người luyện tập tăng cường khả năng chịu đựng, độ rắn chắc của cơ thể, phù hợp với chiến đấu thực tế, vừa là sự nhu nhuyễn giúp võ sinh, môn sinh đạt được sự linh hoạt, uyển chuyển, nhanh nhẹn trong quyền thuật."
+      },
+      {
+        "label": "Thứ hai về mặt võ đạo",
+        "body": "võ sinh, môn sinh Phật Quang Quyền lấy đạo đức trong Phật giáo làm nền tảng cho sự phát triển tinh thần võ đạo của môn phái. Những khái niệm về đạo đức căn bản như luật nhân quả, sự khiêm nhu, tinh thần dũng cảm, lòng từ bi, lòng yêu nước,….., đều được các võ sư môn phái chuyển tải một cách ngắn gọn, xúc tích, sâu sắc nhất giúp các võ sinh, môn sinh hiểu rõ và nâng cao phẩm chất đạo đức trở thành người công dân có ích cho xã hội, cho sự phát triển của đất nước"
+      }
+    ]
+  },
+  "phuongCham": {
+    "number": "3",
+    "title": "Phương châm môn phái",
+    "body": [
+      "Môn Phái đã xác định mục tiêu xây dựng thế hệ thanh niên thời hiện đại dựa trên 3 tiêu chí.",
+      "Một trí tuệ thông minh sáng suốt biết thế nào là đúng sai để ứng biến trong những hoàn cảnh khó khăn. Một tâm hồn hướng thượng biết cống hiến và phụng sự. Hai tiêu chí đó chỉ có thể hình thành trên khi có được một cơ thể khỏe mạnh dẻo dai qua quá trình rèn luyện võ thuật.",
+      "Môn Phái mong muốn thế hệ trẻ Việt Nam hướng đến con đường chân thiện mỹ ngày càng hoàn thiện bản thân.",
+      "Nhưng nền tảng căn bản xây để có con người toàn diện đó chính là đạo đức. Và thật may mắn thay môn phái kết hợp được hai yếu đó đó chính là những giá trị đạo đức cao đẹp trong đạo Phật và những tinh hoa trong võ thuật cổ truyền Việt Nam. Những giá trị ấy được thể hiện qua sáu lời thề của võ sinh Phật Quang Quyền."
+    ]
+  },
+  "sixOathsSection": {
+    "homeHeading": "Sáu lời thề võ sinh",
+    "sectionTitle": "Sáu lời thề của võ sinh Phật Quang Quyền"
+  },
+  "sixOaths": [
+    "Tập võ để chiến thắng sự sợ hãi trong lòng mình và đạt được hạnh nhẫn nhục tận cùng.",
+    "Tập võ để bênh vực kẻ vô tội bị ức hiếp.",
+    "Tập võ để bảo vệ Chánh pháp.",
+    "Tập võ để bảo vệ đất nước.",
+    "Rất trung thành với Thầy Tổ, rất tín nghĩa với huynh đệ.",
+    "Yêu thích lao động giúp đời."
+  ],
+  "martialSpirit": {
+    "image": "/images/site/TinhThanVoDao.jpg",
+    "paragraphs": [
+      "Môn Phái lấy giá trị đạo đức làm kim chỉ nam sao cho mỗi võ sinh, môn sinh Phật Quang Quyền phải thấm nhuần và hiểu rõ đường lối của môn phái cũng như đường lối của đạo Phật, thể hiện được tinh thần yêu nước, luôn đồng hành cùng của dân tộc như các bậc tiền bối của võ thuật cổ truyền Việt Nam đã thực hiện.",
+      "Ngoài các giá trị phương châm đạo đức cao đẹp thì khi đến tập luyện tại môn phái các võ sinh, môn sinh phải tập trung nhiều vào kỹ năng chiến đấu, tự vệ mang tính chất thực dụng cho người tập luyện để đạt hiệu quả cao nhất trong chiến đấu và đặc trưng là các thế đối luyện. Phải trải qua quá trình tập luyện gian khổ đạt được cấp đai Hoàng Đai Nhất Cấp (cấp 13) thì võ sinh mới chính thức được trở thành môn sinh của môn phái."
+    ]
+  }
+}

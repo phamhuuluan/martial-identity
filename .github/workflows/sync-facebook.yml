@@ -1,0 +1,51 @@
+name: Sync Facebook
+
+on:
+  workflow_dispatch:
+    inputs:
+      lookbackMonths:
+        description: Số tháng lấy bài từ Fanpage
+        required: false
+        default: "4"
+
+permissions:
+  contents: write
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - run: npm ci
+
+      - name: Fetch Fanpage posts
+        env:
+          FACEBOOK_FORCE_GRAPH: "1"
+          FACEBOOK_PAGE_ID: ${{ secrets.FACEBOOK_PAGE_ID }}
+          FACEBOOK_ACCESS_TOKEN: ${{ secrets.FACEBOOK_ACCESS_TOKEN }}
+          FACEBOOK_LOOKBACK_MONTHS: ${{ inputs.lookbackMonths || '4' }}
+        run: npm run fetch:facebook
+
+      - name: Prepare generate input
+        run: cp data/facebook-raw.json data/facebook-sync-input.json
+
+      - name: Write Markdown and download photos
+        run: npm run generate:content
+
+      - name: Commit content
+        run: |
+          git config user.name "pqq-admin"
+          git config user.email "admin@phatquangquyen.com"
+          git add content public/images/news
+          if git diff --cached --quiet; then
+            echo "No content changes"
+            exit 0
+          fi
+          git commit -m "Đồng bộ Fanpage"
+          git push

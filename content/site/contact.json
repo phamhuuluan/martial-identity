@@ -1,0 +1,62 @@
+{
+  "toDinh": {
+    "templeName": "Chùa Phật Quang",
+    "address": "Núi Dinh, thôn Chu Hải, xã Tân Hải, TP. Hồ Chí Minh",
+    "fullAddress": "Chùa Phật Quang, Núi Dinh, thôn Chu Hải, xã Tân Hải, TP. Hồ Chí Minh",
+    "mapEmbed": "https://maps.google.com/maps?q=Thi%E1%BB%81n+T%C3%B4n+Ph%E1%BA%ADt+Quang,+N%C3%BAi+Dinh,+th%C3%B4n+Chu+H%E1%BA%A3i,+T%C3%A2n+H%E1%BA%A3i&hl=vi&z=14&output=embed",
+    "mapLink": "https://www.google.com/maps/search/?api=1&query=Thi%E1%BB%81n+T%C3%B4n+Ph%E1%BA%ADt+Quang+N%C3%BAi+Dinh+T%C3%A2n+H%E1%BA%A3i"
+  },
+  "officialSocialLinks": [
+    {
+      "name": "TikTok",
+      "href": "https://www.tiktok.com/@p.q.qtd"
+    },
+    {
+      "name": "YouTube",
+      "href": "https://www.youtube.com/@BAN_TRUY%E1%BB%80N_TH%C3%94NG_PQQ"
+    },
+    {
+      "name": "Facebook",
+      "href": "https://www.facebook.com/todinh.pqq"
+    }
+  ],
+  "contactDescription": "Tổ Đình và các võ đường / CLB đại diện theo miền. Danh sách đầy đủ nằm tại trang Địa điểm.",
+  "contactHighlights": [
+    {
+      "region": "Tổ Đình",
+      "address": "Chùa Phật Quang, Núi Dinh, thôn Chu Hải, xã Tân Hải, TP. Hồ Chí Minh"
+    },
+    {
+      "region": "Tổng Đường Pháp Quang - Miền Nam"
+    },
+    {
+      "region": "Võ Đường Viên Quang - Miền Trung"
+    },
+    {
+      "region": "Võ Đường Thắng Quang - Miền Bắc"
+    },
+    {
+      "region": "CLB Phật Quang Quyền Hàn Quốc"
+    },
+    {
+      "region": "CLB Phật Quang Quyền Nhật Bản"
+    },
+    {
+      "region": "CLB Phật Quang Quyền Đài Loan"
+    },
+    {
+      "region": "CLB Phật Quang Quyền Singapore"
+    },
+    {
+      "region": "Võ Đường Tĩnh Quang - Phật Quang Quyền Algeria"
+    }
+  ],
+  "operatingCountries": [
+    "Vietnam",
+    "South Korea",
+    "Japan",
+    "Taiwan",
+    "Singapore",
+    "Algeria"
+  ]
+}

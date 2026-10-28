@@ -1,0 +1,44 @@
+---
+description: Giọng thiết kế editorial của site Phật Quang Quyền — màu, chữ, layout, chuyển động
+globs: src/**/*.{tsx,css}
+alwaysApply: false
+---
+
+# Thiết kế giao diện
+
+Site là ấn phẩm editorial của môn phái, không phải landing thương mại hay dashboard. Giữ khoảng trắng rộng, vàng chỉ làm điểm nhấn, bo góc gần như vuông.
+
+## Token
+
+Lấy màu, chữ, khoảng cách từ `src/app/globals.css`. Không thêm hex, `shadow-*` đậm, hay `rounded-xl` trong component.
+
+- Nền sáng: `texture-paper`, `texture-sand`. Nền tối: `texture-dark`, `texture-ink`.
+- Chữ sáng: `text-brown-deep` / `text-ink`. Chữ tối: `text-ivory`. Phụ: `text-brown/70` hoặc `text-warm/80`.
+- Vàng (`gold`, `gold-soft`) chỉ cho gạch, eyebrow trên nền tối, focus, progress. Không tô cả khối bằng vàng.
+- Khung: `site-container` + `site-section`. Bài dài: `measure` (68ch).
+
+## Cấu trúc trang
+
+- Trang trong: `PageHeader` (eyebrow + `h1-page` + `gold-rule`). Section: `Section` + `SectionHeading`.
+- Eyebrow: class `type-eyebrow`, chữ hoa, tracking rộng, ngắn.
+- Tiêu đề: `font-display` (Cormorant). Thân bài và UI: `font-sans` (Be Vietnam Pro).
+- Nút: `.btn` + `btn-primary` / `btn-accent` / `btn-ghost` / `btn-outline`. Icon: `lucide-react`, nét mảnh.
+- Danh sách tin, địa điểm, liên hệ: hàng có gạch dưới (`archive-item`, `directory-row`), không phải card bóng đổ.
+
+```tsx
+// Đúng
+<Section>
+  <SectionHeading eyebrow="Hoạt động" title="Lịch sử môn phái" />
+</Section>
+
+// Sai — card thương mại, màu ngoài palette
+<div className="rounded-2xl bg-white shadow-xl p-6">
+  <h2 className="text-2xl font-bold text-amber-500">Lịch sử</h2>
+</div>
+```
+
+## Chuyển động
+
+- Vào khung hình: `Reveal` / `Stagger`. Hover ảnh: `img-zoom` (scale ~1.04). Hover khối: nâng tối đa 3px.
+- Ease: `cubic-bezier(0.22, 1, 0.36, 1)`, khoảng 0.2–0.85s.
+- Tôn trọng `prefers-reduced-motion`. Không parallax mạnh, không bounce, không blur lớn.

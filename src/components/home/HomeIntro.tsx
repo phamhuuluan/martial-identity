@@ -43,7 +43,7 @@ export function HomeIntro() {
             href="/gioi-thieu"
             className="type-label group mt-8 inline-flex items-center gap-2 text-sm font-semibold text-brown-deep transition hover:text-brown"
           >
-            Tìm hiểu thêm về chúng tôi
+            Tìm hiểu thêm về Môn Phái
             <ArrowRight
               size={15}
               className="transition group-hover:translate-x-0.5"
