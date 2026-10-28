@@ -46,6 +46,12 @@ type GitHubConfig = {
   branch: string;
 };
 
+type GitIdentity = {
+  name: string;
+  email: string;
+  date: string;
+};
+
 function githubConfig(): GitHubConfig | null {
   const token = process.env.GITHUB_ADMIN_TOKEN?.trim() || "";
   if (!token) return null;
@@ -53,6 +59,17 @@ function githubConfig(): GitHubConfig | null {
     token,
     repo: process.env.GITHUB_REPO?.trim() || "phamhuuluan/martial-identity",
     branch: process.env.GITHUB_BRANCH?.trim() || "main",
+  };
+}
+
+/** Author Vercel đối chiếu với tài khoản Hobby. Email phải đã xác minh trên GitHub. */
+function commitIdentity(): GitIdentity | null {
+  const email = process.env.GITHUB_COMMIT_EMAIL?.trim() || "";
+  if (!email) return null;
+  return {
+    name: process.env.GITHUB_COMMIT_NAME?.trim() || "LuanPh",
+    email,
+    date: new Date().toISOString(),
   };
 }
 
@@ -261,9 +278,15 @@ async function commitGitHub(
   const nextTree = (await treeRes.json()) as { sha?: string };
   if (!nextTree.sha) throw new Error("Cây git thiếu sha");
 
+  const identity = commitIdentity();
   const newCommitRes = await githubFetch(`/repos/${config.repo}/git/commits`, {
     method: "POST",
-    body: JSON.stringify({ message, tree: nextTree.sha, parents: [parentSha] }),
+    body: JSON.stringify({
+      message,
+      tree: nextTree.sha,
+      parents: [parentSha],
+      ...(identity ? { author: identity, committer: identity } : {}),
+    }),
   });
   if (!newCommitRes.ok) throw new Error("Không tạo được commit");
   const newCommit = (await newCommitRes.json()) as { sha?: string; html_url?: string };

@@ -40,8 +40,8 @@ jobs:
 
       - name: Commit content
         run: |
-          git config user.name "pqq-admin"
-          git config user.email "admin@phatquangquyen.com"
+          git config user.name "LuanPh"
+          git config user.email "luanphamm15@gmail.com"
           git add content public/images/news
           if git diff --cached --quiet; then
             echo "No content changes"
