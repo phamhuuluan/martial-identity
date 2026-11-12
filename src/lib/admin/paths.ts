@@ -30,8 +30,3 @@ export function isUploadImagePath(path: string): boolean {
 export function isAllowedRepoPath(path: string): boolean {
   return isSiteJsonPath(path) || isNewsMarkdownPath(path) || isUploadImagePath(path);
 }
-
-export function newsCategoryFromPath(path: string): string | null {
-  const match = path.match(/^content\/([a-z]+)\//);
-  return match?.[1] ?? null;
-}

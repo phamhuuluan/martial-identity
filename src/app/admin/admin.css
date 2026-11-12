@@ -649,10 +649,6 @@
   color: #912018;
 }
 
-.adm-preview.is-loading .adm-preview-state {
-  color: var(--adm-text-secondary);
-}
-
 .adm-preview img.is-pending {
   position: absolute;
   width: 1px;

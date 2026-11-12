@@ -10,7 +10,7 @@ import { HomeContact } from "@/components/sections/Contact";
 import { getFeaturedNews, toDisplayEvents } from "@/data/news";
 
 export default async function HomePage() {
-  const featured = toDisplayEvents(getFeaturedNews(6));
+  const featured = toDisplayEvents(getFeaturedNews(6), { coverOnly: true });
 
   return (
     <SiteShell>

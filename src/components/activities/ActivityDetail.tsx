@@ -1,28 +1,19 @@
-"use client";
-
-import { useMemo, useState } from "react";
 import Link from "next/link";
 import { ArrowLeft } from "lucide-react";
 import { SafeImage } from "@/components/ui/SafeImage";
-import { Lightbox, type GalleryImage } from "@/components/ui/Lightbox";
 import { RichText } from "@/components/ui/RichText";
-import { ActivityCard } from "@/components/activities/ActivitiesArchive";
+import { ActivityCard } from "@/components/activities/ActivityCard";
+import {
+  ActivityLightbox,
+  GalleryOpenButton,
+} from "@/components/activities/ActivityLightbox";
+import { formatNewsDate } from "@/components/activities/formatDate";
 import {
   NEWS_CATEGORY_LABELS,
   type NewsCategory,
   type NewsDisplayEvent,
 } from "@/domain/news";
-
-function formatDate(iso: string): string {
-  if (!iso || iso.startsWith("1970")) return "";
-  const d = new Date(iso);
-  if (Number.isNaN(d.getTime())) return iso.slice(0, 10);
-  return d.toLocaleDateString("vi-VN", {
-    day: "2-digit",
-    month: "long",
-    year: "numeric",
-  });
-}
+import type { GalleryImage } from "@/components/ui/Lightbox";
 
 export function ActivityDetail({
   title,
@@ -39,19 +30,14 @@ export function ActivityDetail({
   images: string[];
   related?: NewsDisplayEvent[];
 }) {
-  const galleryImages: GalleryImage[] = useMemo(
-    () =>
-      images.map((src, i) => ({
-        src,
-        alt: i === 0 ? title : `${title} — hình ${i + 1}`,
-      })),
-    [images, title]
-  );
-
-  const [lightboxIndex, setLightboxIndex] = useState<number | null>(null);
+  const galleryImages: GalleryImage[] = images.map((src, index) => ({
+    src,
+    alt: index === 0 ? title : `${title} — hình ${index + 1}`,
+  }));
   const cover = galleryImages[0];
+  const date = formatNewsDate(publishedAt, "long");
 
-  return (
+  const article = (
     <article>
       <div className="site-container pt-28 md:pt-32">
         <Link
@@ -67,12 +53,12 @@ export function ActivityDetail({
             {NEWS_CATEGORY_LABELS[category]}
           </p>
           <h1 className="h1-page mt-3 text-brown-deep">{title}</h1>
-          {formatDate(publishedAt) ? (
+          {date ? (
             <time
               dateTime={publishedAt}
               className="mt-4 block text-sm text-brown/45"
             >
-              {formatDate(publishedAt)}
+              {date}
             </time>
           ) : null}
           <div className="gold-rule mt-6" />
@@ -80,11 +66,10 @@ export function ActivityDetail({
       </div>
 
       {cover ? (
-        <button
-          type="button"
+        <GalleryOpenButton
+          index={0}
           className="group relative mt-8 block w-full overflow-hidden bg-brown-dark/10 md:mt-10"
-          onClick={() => setLightboxIndex(0)}
-          aria-label={`Xem ảnh ${title}`}
+          label={`Xem ảnh ${title}`}
         >
           <div className="relative mx-auto flex min-h-[40vh] max-h-[70vh] w-full items-center justify-center md:min-h-[48vh]">
             <SafeImage
@@ -97,7 +82,7 @@ export function ActivityDetail({
               priority
             />
           </div>
-        </button>
+        </GalleryOpenButton>
       ) : null}
 
       {content.trim() ? (
@@ -122,13 +107,12 @@ export function ActivityDetail({
               </p>
             </div>
             <div className="mt-6 grid grid-cols-2 gap-2 sm:gap-2.5 md:grid-cols-3 lg:grid-cols-4">
-              {galleryImages.map((img, i) => (
-                <button
-                  key={`${img.src}-${i}`}
-                  type="button"
+              {galleryImages.map((img, index) => (
+                <GalleryOpenButton
+                  key={`${img.src}-${index}`}
+                  index={index}
                   className="group relative aspect-[4/3] overflow-hidden bg-brown-dark/8 focus:outline-none focus-visible:ring-2 focus-visible:ring-gold"
-                  onClick={() => setLightboxIndex(i)}
-                  aria-label={`Xem phóng to: ${img.alt}`}
+                  label={`Xem phóng to: ${img.alt}`}
                 >
                   <SafeImage
                     src={img.src}
@@ -136,9 +120,9 @@ export function ActivityDetail({
                     fill
                     className="object-cover transition duration-500 group-hover:scale-[1.03]"
                     sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 25vw"
-                    loading={i < 4 ? undefined : "lazy"}
+                    loading={index < 4 ? undefined : "lazy"}
                   />
-                </button>
+                </GalleryOpenButton>
               ))}
             </div>
           </div>
@@ -157,14 +141,9 @@ export function ActivityDetail({
           </div>
         </section>
       ) : null}
-
-      <Lightbox
-        images={galleryImages}
-        index={lightboxIndex ?? 0}
-        open={lightboxIndex !== null}
-        onClose={() => setLightboxIndex(null)}
-        onIndexChange={setLightboxIndex}
-      />
     </article>
   );
+
+  if (galleryImages.length === 0) return article;
+  return <ActivityLightbox images={galleryImages}>{article}</ActivityLightbox>;
 }

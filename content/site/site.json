@@ -8,8 +8,8 @@
   "description": "Phật Quang Quyền — lịch sử hình thành và phát triển, tôn chỉ võ đạo, hệ thống cấp đai, chương trình huấn luyện, quy mô hoạt động trong và ngoài nước, thành tích thi đấu và hoạt động xã hội thiện nguyện.",
   "logo": "/images/extracted/logo-phat-quang-quyen-transparent.webp",
   "heroImage": "/images/extracted/hero-home-a1.webp",
-  "heroFallback": "/images/site/gioiThieu_MonPhai.png",
-  "introImage": "/images/site/gioiThieu_MonPhai.png",
+  "heroFallback": "/images/site/gioiThieu_MonPhai.webp",
+  "introImage": "/images/site/gioiThieu_MonPhai.webp",
   "memberTerm": {
     "lower": "võ sinh, môn sinh",
     "title": "Võ sinh, môn sinh",

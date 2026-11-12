@@ -1,18 +1,7 @@
 import Link from "next/link";
 import { listNewsIndex } from "@/lib/admin/newsIndex";
 import { latestCommit, latestFacebookWorkflowRun, storageMode } from "@/lib/admin/github";
-
-const SECTIONS = [
-  ["/admin/trang", "Cấu hình trang web", "Tên, ảnh, menu"],
-  ["/admin/lien-he", "Thông tin liên hệ", "Tổ Đình, mạng xã hội"],
-  ["/admin/gioi-thieu", "Giới thiệu", "Thành lập, biểu tượng"],
-  ["/admin/ton-chi", "Tôn chỉ", "Lời thề, võ đạo"],
-  ["/admin/thai-to-su", "Thái Tổ Sư", "Tiểu sử từng chương"],
-  ["/admin/dia-diem", "Địa điểm", "Câu lạc bộ theo miền"],
-  ["/admin/tap-luyen", "Tập luyện", "Đai và giáo trình"],
-  ["/admin/hoat-dong", "Hoạt động", "Danh sách bài Markdown"],
-  ["/admin/dong-bo", "Đồng bộ Fanpage", "Kích hoạt workflow hiện có"],
-] as const;
+import { adminDashboardCards } from "@/lib/admin/routes";
 
 function workflowLabel(status: string, conclusion: string | null): string {
   if (status === "in_progress") return "Đang chạy";
@@ -101,10 +90,10 @@ export default async function AdminHomePage() {
         </div>
       </div>
       <div className="adm-cards">
-        {SECTIONS.map(([href, title, detail]) => (
-          <Link key={href} href={href} className="adm-card">
-            <strong>{title}</strong>
-            <span>{detail}</span>
+        {adminDashboardCards().map((card) => (
+          <Link key={card.href} href={card.href} className="adm-card">
+            <strong>{card.title}</strong>
+            <span>{card.detail}</span>
           </Link>
         ))}
       </div>

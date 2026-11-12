@@ -12,6 +12,7 @@ import {
   type NewsDisplayEvent,
   type NewsItem,
 } from "@/domain/news";
+import { parseSimpleYaml } from "@/domain/newsFrontmatter";
 
 export type { NewsCategory, NewsDisplayEvent, NewsItem };
 
@@ -104,12 +105,51 @@ function resolvePostImages(options: {
   return [...fromDisk, ...extras];
 }
 
-/**
- * Load all Markdown posts from content/{category}/*.md
- * Server-side / build-time only (uses fs). Deduped per request.
- */
-export const getAllNews = cache(function getAllNews(): NewsItem[] {
-  if (!fs.existsSync(CONTENT_ROOT)) return [];
+const searchTextByItem = new WeakMap<NewsItem, string>();
+let corpusCache: { stamp: string; items: NewsItem[] } | null = null;
+
+function touchStamp(target: string, into: { count: number; sum: number }) {
+  try {
+    into.sum += fs.statSync(target).mtimeMs;
+    into.count += 1;
+  } catch {
+    /* missing path */
+  }
+}
+
+/** Changes when a post file or a news image folder changes. */
+function corpusStamp(): string {
+  const into = { count: 0, sum: 0 };
+  for (const category of SCAN_CATEGORIES) {
+    const dir = path.join(CONTENT_ROOT, category);
+    let names: string[] = [];
+    try {
+      names = fs.readdirSync(dir);
+    } catch {
+      continue;
+    }
+    for (const name of names) {
+      if (name.endsWith(".md")) touchStamp(path.join(dir, name), into);
+    }
+  }
+  const newsRoot = path.join(PUBLIC_ROOT, "images/news");
+  let folders: string[] = [];
+  try {
+    folders = fs.readdirSync(newsRoot);
+  } catch {
+    folders = [];
+  }
+  for (const name of folders) touchStamp(path.join(newsRoot, name), into);
+  return `${into.count}:${into.sum}`;
+}
+
+function readAllNews(): NewsItem[] {
+  const stamp = corpusStamp();
+  if (corpusCache?.stamp === stamp) return corpusCache.items;
+  if (!fs.existsSync(CONTENT_ROOT)) {
+    corpusCache = { stamp, items: [] };
+    return corpusCache.items;
+  }
 
   const items: NewsItem[] = [];
   const seen = new Set<string>();
@@ -129,16 +169,28 @@ export const getAllNews = cache(function getAllNews(): NewsItem[] {
       items.push(parsed);
     }
   }
-  return items;
-});
 
-export function toDisplayEvents(items: NewsItem[]): NewsDisplayEvent[] {
+  corpusCache = { stamp, items };
+  return items;
+}
+
+/**
+ * Load all Markdown posts from content/{category}/*.md
+ * Server-side / build-time only (uses fs). Deduped per request,
+ * and reused across requests until a post or image folder changes.
+ */
+export const getAllNews = cache(readAllNews);
+
+export function toDisplayEvents(
+  items: NewsItem[],
+  options?: { coverOnly?: boolean }
+): NewsDisplayEvent[] {
   return items.map((item) => ({
     id: item.id,
     slug: item.slug,
     title: item.title,
     summary: item.summary,
-    images: sanitizeImages(item.images),
+    images: options?.coverOnly ? item.images.slice(0, 1) : item.images,
     facebookUrl: item.facebookUrl,
     publishedAt: item.publishedAt,
     engagementScore: item.engagementScore,
@@ -149,9 +201,7 @@ export function toDisplayEvents(items: NewsItem[]): NewsDisplayEvent[] {
 export function getNewsBySlug(slug: string): NewsItem | null {
   const normalized = slug.trim();
   if (!normalized) return null;
-  const found = getAllNews().find((item) => item.slug === normalized);
-  if (!found) return null;
-  return { ...found, images: sanitizeImages(found.images) };
+  return getAllNews().find((item) => item.slug === normalized) ?? null;
 }
 
 /** Same-category recent items for detail “related” rail. */
@@ -204,9 +254,9 @@ export function queryNewsArchive(
   const requireImages = options.requireImages ?? true;
   const sinceMonths = options.sinceMonths;
 
-  let items = getAllNews()
-    .map((item) => ({ ...item, images: sanitizeImages(item.images) }))
-    .filter((item) => (requireImages ? item.images.length > 0 : true));
+  let items = getAllNews().filter((item) =>
+    requireImages ? item.images.length > 0 : true
+  );
 
   if (typeof sinceMonths === "number" && sinceMonths > 0) {
     const cutoff = new Date();
@@ -223,10 +273,9 @@ export function queryNewsArchive(
   }
 
   if (q) {
-    items = items.filter((item) => {
-      const hay = `${item.title} ${item.summary} ${item.content}`.toLowerCase();
-      return hay.includes(q);
-    });
+    items = items.filter((item) =>
+      (searchTextByItem.get(item) ?? "").includes(q)
+    );
   }
 
   items.sort(compareNewsRecency);
@@ -283,11 +332,13 @@ function parseMarkdownPost(
   const facebookUrl = String(fm.facebookUrl ?? "").trim();
   const facebookPostId = String(fm.facebookPostId ?? "").trim() || undefined;
 
-  const uniqueImages = resolvePostImages({
-    facebookPostId,
-    coverImage,
-    gallery,
-  });
+  const uniqueImages = sanitizeImages(
+    resolvePostImages({
+      facebookPostId,
+      coverImage,
+      gallery,
+    })
+  );
 
   const tags = Array.isArray(fm.tags)
     ? fm.tags.map(String)
@@ -295,7 +346,7 @@ function parseMarkdownPost(
       ? fm.tags.split(",").map((t) => t.trim())
       : [];
 
-  return {
+  const item: NewsItem = {
     id: facebookPostId || `md-${category}-${slug}`,
     slug,
     facebookPostId,
@@ -310,64 +361,9 @@ function parseMarkdownPost(
     engagementScore: Number(fm.engagementScore ?? 0) || 0,
     filePath: path.relative(process.cwd(), filePath),
   };
-}
-
-/** Minimal YAML subset for our frontmatter (no external deps). */
-function parseSimpleYaml(src: string): Record<string, unknown> {
-  const result: Record<string, unknown> = {};
-  const lines = src.split(/\r?\n/);
-  let i = 0;
-  while (i < lines.length) {
-    const line = lines[i];
-    const kv = line.match(/^([A-Za-z0-9_]+):\s*(.*)$/);
-    if (!kv) {
-      i += 1;
-      continue;
-    }
-    const key = kv[1];
-    const rest = kv[2].trim();
-    if (rest === "" || rest === "|" || rest === ">") {
-      const list: string[] = [];
-      i += 1;
-      while (i < lines.length) {
-        const item = lines[i].match(/^\s+-\s+(.*)$/);
-        if (!item) break;
-        list.push(stripQuotes(item[1].trim()));
-        i += 1;
-      }
-      result[key] = list;
-      continue;
-    }
-    if (rest.startsWith("[")) {
-      result[key] = parseInlineList(rest);
-      i += 1;
-      continue;
-    }
-    result[key] = coerceScalar(stripQuotes(rest));
-    i += 1;
-  }
-  return result;
-}
-
-function parseInlineList(raw: string): string[] {
-  const inner = raw.replace(/^\[/, "").replace(/\]$/, "");
-  if (!inner.trim()) return [];
-  return inner.split(",").map((s) => stripQuotes(s.trim()));
-}
-
-function stripQuotes(s: string): string {
-  if (
-    (s.startsWith('"') && s.endsWith('"')) ||
-    (s.startsWith("'") && s.endsWith("'"))
-  ) {
-    return s.slice(1, -1);
-  }
-  return s;
-}
-
-function coerceScalar(s: string): string | number | boolean {
-  if (s === "true") return true;
-  if (s === "false") return false;
-  if (/^-?\d+(\.\d+)?$/.test(s)) return Number(s);
-  return s;
+  searchTextByItem.set(
+    item,
+    `${item.title} ${item.summary} ${item.content}`.toLowerCase()
+  );
+  return item;
 }

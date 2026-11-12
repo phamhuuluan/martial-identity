@@ -11,6 +11,22 @@ import TrainingAdmin from "../tap-luyen/view";
 import ThaiToSuAdmin from "../thai-to-su/view";
 import PhilosophyAdmin from "../ton-chi/view";
 import SiteAdmin from "../trang/view";
+import { isAdminSlug, type AdminSlug } from "@/lib/admin/routes";
+
+const IMPLEMENTED = {
+  "": true,
+  trang: true,
+  "lien-he": true,
+  "gioi-thieu": true,
+  "ton-chi": true,
+  "thai-to-su": true,
+  "dia-diem": true,
+  "tap-luyen": true,
+  "hoat-dong": true,
+  "hoat-dong/moi": true,
+  "hoat-dong/sua": true,
+  "dong-bo": true,
+} as const satisfies Record<AdminSlug, true>;
 
 export default async function AdminPage({
   params,
@@ -21,6 +37,7 @@ export default async function AdminPage({
 }) {
   const { slug = [] } = await params;
   const key = slug.join("/");
+  if (!isAdminSlug(key) || !IMPLEMENTED[key]) notFound();
 
   if (key === "") return <AdminHome />;
   if (key === "trang") return <SiteAdmin />;

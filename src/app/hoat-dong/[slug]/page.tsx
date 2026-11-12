@@ -6,7 +6,6 @@ import {
   getAllNewsSlugs,
   getNewsBySlug,
   getRelatedNews,
-  sanitizeImages,
   toDisplayEvents,
 } from "@/data/news";
 import { NEWS_CATEGORY_LABELS } from "@/domain/news";
@@ -29,7 +28,6 @@ export async function generateMetadata({
     return { title: "Không tìm thấy hoạt động" };
   }
 
-  const images = sanitizeImages(item.images);
   const description =
     item.summary ||
     `${NEWS_CATEGORY_LABELS[item.category]} — ${site.name}`;
@@ -44,8 +42,8 @@ export async function generateMetadata({
       url: `/hoat-dong/${item.slug}`,
       type: "article",
       publishedTime: item.publishedAt,
-      images: images.length
-        ? [{ url: images[0], alt: item.title }]
+      images: item.images.length
+        ? [{ url: item.images[0], alt: item.title }]
         : undefined,
     },
   };
@@ -60,8 +58,9 @@ export default async function HoatDongDetailPage({
   const item = getNewsBySlug(slug);
   if (!item) notFound();
 
-  const images = sanitizeImages(item.images);
-  const related = toDisplayEvents(getRelatedNews(item.slug, 3));
+  const related = toDisplayEvents(getRelatedNews(item.slug, 3), {
+    coverOnly: true,
+  });
 
   return (
     <SiteShell>
@@ -73,7 +72,7 @@ export default async function HoatDongDetailPage({
             content={item.content}
             category={item.category}
             publishedAt={item.publishedAt}
-            images={images}
+            images={item.images}
             related={related}
           />
         </div>

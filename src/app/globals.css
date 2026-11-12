@@ -240,6 +240,8 @@ h6 {
   opacity: 0.022;
   mix-blend-mode: multiply;
   background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  background-size: 200px 200px;
+  background-repeat: repeat;
 }
 
 .motif-lotus {
@@ -255,16 +257,6 @@ h6 {
   height: 1px;
   width: 3.5rem;
   background: color-mix(in srgb, var(--color-gold) 70%, transparent);
-}
-
-.gold-rule-wide {
-  height: 1px;
-  background: linear-gradient(
-    90deg,
-    transparent,
-    color-mix(in srgb, var(--color-gold) 55%, transparent),
-    transparent
-  );
 }
 
 .glass-panel {
@@ -482,6 +474,11 @@ h6 {
   aspect-ratio: 16 / 10;
   overflow: hidden;
   background: color-mix(in srgb, var(--color-brown-dark) 8%, transparent);
+}
+
+.archive-grid > * {
+  content-visibility: auto;
+  contain-intrinsic-size: auto 360px;
 }
 
 /* Editorial location directory — rows, not cards */
@@ -875,24 +872,6 @@ h6 {
   transform: translateX(0.25rem);
 }
 
-/* Horizontal rail */
-.h-scroll {
-  display: flex;
-  gap: 0.85rem;
-  overflow-x: auto;
-  scroll-snap-type: x mandatory;
-  -webkit-overflow-scrolling: touch;
-  scrollbar-width: thin;
-  scrollbar-color: color-mix(in srgb, var(--color-gold) 50%, transparent)
-    transparent;
-  padding-bottom: 0.5rem;
-}
-
-.h-scroll > * {
-  scroll-snap-align: start;
-  flex: 0 0 auto;
-}
-
 /* Six oaths — one framed system, equal cells */
 .oath-grid {
   --oath-line: color-mix(in srgb, var(--color-ivory) 14%, transparent);
@@ -1020,18 +999,6 @@ h6 {
   clip-path: polygon(0 0, 100% 0, 100% 92%, 0 100%);
 }
 
-.clip-diagonal-rev {
-  clip-path: polygon(0 0, 100% 6%, 100% 100%, 0 100%);
-}
-
-.lift {
-  transition: transform 0.35s cubic-bezier(0.22, 1, 0.36, 1);
-}
-
-.lift:hover {
-  transform: translateY(-3px);
-}
-
 .img-zoom {
   overflow: hidden;
 }
@@ -1044,13 +1011,6 @@ h6 {
 .img-zoom:hover img,
 .img-zoom:hover > span {
   transform: scale(1.04);
-}
-
-.no-scrollbar {
-  scrollbar-width: none;
-}
-.no-scrollbar::-webkit-scrollbar {
-  display: none;
 }
 
 /* Site footer — quiet close, not a second content dump */

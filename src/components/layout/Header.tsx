@@ -45,7 +45,6 @@ export function Header() {
             width={40}
             height={40}
             className="h-9 w-9 rounded-full object-cover ring-1 ring-gold/40 md:h-10 md:w-10"
-            priority
           />
           <span className="type-display text-base md:text-lg">
             {site.nameUpper}

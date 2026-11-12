@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Suspense } from "react";
 import { SiteShell } from "@/components/layout/SiteShell";
+import { ActivityCard } from "@/components/activities/ActivityCard";
 import { ActivitiesArchive } from "@/components/activities/ActivitiesArchive";
 import { PageHeader } from "@/components/ui/PageHeader";
 import { queryNewsArchive, toDisplayEvents } from "@/data/news";
@@ -68,13 +69,26 @@ export default async function HoatDongPage({
           >
             <ActivitiesArchive
               key={`${category}-${q}-${page}`}
-              events={toDisplayEvents(result.items)}
               total={result.total}
               page={result.page}
               totalPages={result.totalPages}
               initialCategory={category}
               initialQuery={q}
-            />
+            >
+              {result.total === 0 ? (
+                <p className="type-body mt-14 text-center text-brown/55">
+                  Không tìm thấy hoạt động phù hợp.
+                </p>
+              ) : (
+                <div className="archive-grid mt-8 grid gap-x-6 gap-y-9 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+                  {toDisplayEvents(result.items, { coverOnly: true }).map(
+                    (event) => (
+                      <ActivityCard key={event.id} event={event} />
+                    )
+                  )}
+                </div>
+              )}
+            </ActivitiesArchive>
           </Suspense>
         </div>
       </section>

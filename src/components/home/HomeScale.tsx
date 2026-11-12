@@ -12,13 +12,13 @@ const STATS = [
   { label: "Nước ngoài", value: locationStats.overseas },
 ] as const;
 
-export function HomeScale({ coverImage }: { coverImage?: string }) {
+export function HomeScale() {
   return (
     <section className="relative overflow-hidden texture-dark">
       <div className="grain absolute inset-0" aria-hidden />
       <div className="absolute inset-0 opacity-25" aria-hidden>
         <Image
-          src={coverImage || scaleIntro.image || site.heroFallback}
+          src={scaleIntro.image || site.heroFallback}
           alt=""
           fill
           className="object-cover"

@@ -6,17 +6,7 @@ import {
   NEWS_CATEGORY_LABELS,
   type NewsDisplayEvent,
 } from "@/domain/news";
-
-function formatDate(iso: string): string {
-  if (!iso || iso.startsWith("1970")) return "";
-  const d = new Date(iso);
-  if (Number.isNaN(d.getTime())) return iso.slice(0, 10);
-  return d.toLocaleDateString("vi-VN", {
-    day: "2-digit",
-    month: "2-digit",
-    year: "numeric",
-  });
-}
+import { formatNewsDate } from "@/components/activities/formatDate";
 
 export function HomeActivities({
   events,
@@ -78,9 +68,9 @@ export function HomeActivities({
                         <span className="type-eyebrow text-brown/50">
                           {NEWS_CATEGORY_LABELS[event.category]}
                         </span>
-                        {formatDate(event.publishedAt) ? (
+                        {formatNewsDate(event.publishedAt) ? (
                           <span className="text-brown/45">
-                            {formatDate(event.publishedAt)}
+                            {formatNewsDate(event.publishedAt)}
                           </span>
                         ) : null}
                       </div>

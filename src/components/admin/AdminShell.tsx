@@ -23,134 +23,28 @@ import {
   type LucideIcon,
 } from "lucide-react";
 import { DirtyProvider } from "./dirty";
+import {
+  ADMIN_GROUPS,
+  ADMIN_ROUTES,
+  adminCrumb,
+  adminNavActive,
+} from "@/lib/admin/routes";
 
 type StorageMode = "github" | "local" | "unconfigured";
 
-type NavItem = {
-  href: string;
-  label: string;
-  icon: LucideIcon;
-  match: (pathname: string) => boolean;
+const NAV_ICONS: Record<string, LucideIcon> = {
+  "": LayoutDashboard,
+  trang: PanelsTopLeft,
+  "lien-he": Phone,
+  "gioi-thieu": BookOpen,
+  "ton-chi": ScrollText,
+  "thai-to-su": UserRound,
+  "dia-diem": MapPin,
+  "tap-luyen": Dumbbell,
+  "hoat-dong": Newspaper,
+  "hoat-dong/moi": Plus,
+  "dong-bo": RefreshCw,
 };
-
-type NavGroup = {
-  id: string;
-  label: string;
-  items: NavItem[];
-};
-
-const GROUPS: NavGroup[] = [
-  {
-    id: "overview",
-    label: "Tổng quan",
-    items: [
-      {
-        href: "/admin",
-        label: "Dashboard",
-        icon: LayoutDashboard,
-        match: (pathname) => pathname === "/admin",
-      },
-    ],
-  },
-  {
-    id: "content",
-    label: "Nội dung website",
-    items: [
-      {
-        href: "/admin/trang",
-        label: "Cấu hình trang web",
-        icon: PanelsTopLeft,
-        match: (pathname) => pathname.startsWith("/admin/trang"),
-      },
-      {
-        href: "/admin/lien-he",
-        label: "Thông tin liên hệ",
-        icon: Phone,
-        match: (pathname) => pathname.startsWith("/admin/lien-he"),
-      },
-      {
-        href: "/admin/gioi-thieu",
-        label: "Giới thiệu",
-        icon: BookOpen,
-        match: (pathname) => pathname.startsWith("/admin/gioi-thieu"),
-      },
-      {
-        href: "/admin/ton-chi",
-        label: "Tôn chỉ",
-        icon: ScrollText,
-        match: (pathname) => pathname.startsWith("/admin/ton-chi"),
-      },
-      {
-        href: "/admin/thai-to-su",
-        label: "Thái Tổ Sư",
-        icon: UserRound,
-        match: (pathname) => pathname.startsWith("/admin/thai-to-su"),
-      },
-      {
-        href: "/admin/dia-diem",
-        label: "Địa điểm",
-        icon: MapPin,
-        match: (pathname) => pathname.startsWith("/admin/dia-diem"),
-      },
-      {
-        href: "/admin/tap-luyen",
-        label: "Tập luyện",
-        icon: Dumbbell,
-        match: (pathname) => pathname.startsWith("/admin/tap-luyen"),
-      },
-    ],
-  },
-  {
-    id: "news",
-    label: "Quản lý hoạt động",
-    items: [
-      {
-        href: "/admin/hoat-dong",
-        label: "Danh sách bài viết",
-        icon: Newspaper,
-        match: (pathname) =>
-          pathname === "/admin/hoat-dong" || pathname.startsWith("/admin/hoat-dong/sua"),
-      },
-      {
-        href: "/admin/hoat-dong/moi",
-        label: "Thêm bài viết",
-        icon: Plus,
-        match: (pathname) => pathname.startsWith("/admin/hoat-dong/moi"),
-      },
-    ],
-  },
-  {
-    id: "sync",
-    label: "Đồng bộ Fanpage",
-    items: [
-      {
-        href: "/admin/dong-bo",
-        label: "Đồng bộ Fanpage",
-        icon: RefreshCw,
-        match: (pathname) => pathname.startsWith("/admin/dong-bo"),
-      },
-    ],
-  },
-];
-
-const CRUMBS: { test: (pathname: string) => boolean; title: string; trail: string[] }[] = [
-  { test: (pathname) => pathname === "/admin", title: "Dashboard", trail: ["Tổng quan"] },
-  { test: (pathname) => pathname.startsWith("/admin/trang"), title: "Cấu hình trang web", trail: ["Nội dung website"] },
-  { test: (pathname) => pathname.startsWith("/admin/lien-he"), title: "Thông tin liên hệ", trail: ["Nội dung website"] },
-  { test: (pathname) => pathname.startsWith("/admin/gioi-thieu"), title: "Giới thiệu", trail: ["Nội dung website"] },
-  { test: (pathname) => pathname.startsWith("/admin/ton-chi"), title: "Tôn chỉ", trail: ["Nội dung website"] },
-  { test: (pathname) => pathname.startsWith("/admin/thai-to-su"), title: "Thái Tổ Sư", trail: ["Nội dung website"] },
-  { test: (pathname) => pathname.startsWith("/admin/dia-diem"), title: "Địa điểm", trail: ["Nội dung website"] },
-  { test: (pathname) => pathname.startsWith("/admin/tap-luyen"), title: "Tập luyện", trail: ["Nội dung website"] },
-  { test: (pathname) => pathname === "/admin/hoat-dong", title: "Danh sách bài viết", trail: ["Quản lý hoạt động"] },
-  { test: (pathname) => pathname.startsWith("/admin/hoat-dong/moi"), title: "Thêm bài viết", trail: ["Quản lý hoạt động"] },
-  { test: (pathname) => pathname.startsWith("/admin/hoat-dong/sua"), title: "Sửa bài viết", trail: ["Quản lý hoạt động"] },
-  { test: (pathname) => pathname.startsWith("/admin/dong-bo"), title: "Đồng bộ Fanpage", trail: ["Đồng bộ Fanpage"] },
-];
-
-function pageMeta(pathname: string) {
-  return CRUMBS.find((item) => item.test(pathname)) ?? { title: "Quản trị", trail: [] };
-}
 
 function LogoutButton() {
   return (
@@ -207,7 +101,7 @@ export function AdminShell({
     setMobileOpen(false);
   }, [pathname]);
 
-  const meta = pageMeta(pathname);
+  const meta = adminCrumb(pathname);
 
   function toggleGroup(id: string) {
     setOpenGroups((current) => {
@@ -260,8 +154,11 @@ export function AdminShell({
             </button>
           </div>
           <nav className="adm-nav">
-            {GROUPS.map((group) => {
+            {ADMIN_GROUPS.map((group) => {
               const open = openGroups[group.id] !== false;
+              const items = ADMIN_ROUTES.filter(
+                (route) => route.nav && route.groupId === group.id
+              );
               return (
                 <div key={group.id} className="adm-group">
                   <button
@@ -274,19 +171,19 @@ export function AdminShell({
                     <ChevronDown className="adm-chevron" size={14} />
                   </button>
                   <div className="adm-group-items" hidden={!open}>
-                    {group.items.map((item) => {
-                      const Icon = item.icon;
-                      const active = item.match(pathname);
+                    {items.map((item) => {
+                      const Icon = NAV_ICONS[item.slug] ?? LayoutDashboard;
+                      const active = adminNavActive(item, pathname);
                       return (
                         <Link
                           key={item.href}
                           href={item.href}
-                          data-tip={item.label}
+                          data-tip={item.navLabel}
                           className={`adm-nav-link${active ? " is-active" : ""}`}
                           aria-current={active ? "page" : undefined}
                         >
                           <Icon className="adm-nav-ico" size={18} aria-hidden />
-                          <span className="adm-nav-label">{item.label}</span>
+                          <span className="adm-nav-label">{item.navLabel}</span>
                         </Link>
                       );
                     })}

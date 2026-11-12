@@ -4,6 +4,7 @@ import {
   mapToDisplayCategory,
   type NewsCategory,
 } from "@/domain/news";
+import { parseSimpleYaml } from "@/domain/newsFrontmatter";
 
 const CATEGORIES = new Set<string>([
   ...NEWS_CATEGORIES,
@@ -24,62 +25,6 @@ export type NewsDraft = {
   locked: boolean;
   body: string;
 };
-
-function stripQuotes(s: string): string {
-  if (
-    (s.startsWith('"') && s.endsWith('"')) ||
-    (s.startsWith("'") && s.endsWith("'"))
-  ) {
-    return s.slice(1, -1);
-  }
-  return s;
-}
-
-function coerceScalar(s: string): string | number | boolean {
-  if (s === "true") return true;
-  if (s === "false") return false;
-  if (/^-?\d+(\.\d+)?$/.test(s)) return Number(s);
-  return s;
-}
-
-function parseSimpleYaml(src: string): Record<string, unknown> {
-  const result: Record<string, unknown> = {};
-  const lines = src.split(/\r?\n/);
-  let i = 0;
-  while (i < lines.length) {
-    const line = lines[i];
-    const kv = line.match(/^([A-Za-z0-9_]+):\s*(.*)$/);
-    if (!kv) {
-      i += 1;
-      continue;
-    }
-    const key = kv[1];
-    const rest = kv[2].trim();
-    if (rest === "" || rest === "|" || rest === ">") {
-      const list: string[] = [];
-      i += 1;
-      while (i < lines.length) {
-        const item = lines[i].match(/^\s+-\s+(.*)$/);
-        if (!item) break;
-        list.push(stripQuotes(item[1].trim()));
-        i += 1;
-      }
-      result[key] = list;
-      continue;
-    }
-    if (rest.startsWith("[")) {
-      const inner = rest.replace(/^\[/, "").replace(/\]$/, "");
-      result[key] = inner.trim()
-        ? inner.split(",").map((part) => stripQuotes(part.trim()))
-        : [];
-      i += 1;
-      continue;
-    }
-    result[key] = coerceScalar(stripQuotes(rest));
-    i += 1;
-  }
-  return result;
-}
 
 function asStringList(value: unknown): string[] {
   if (Array.isArray(value)) return value.map(String).map((item) => item.trim()).filter(Boolean);

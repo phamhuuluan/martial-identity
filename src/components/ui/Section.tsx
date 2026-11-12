@@ -110,32 +110,3 @@ export function Section({
   );
 }
 
-export function ChapterCurtain({
-  id,
-  eyebrow,
-  title,
-  dark = true,
-}: {
-  id?: string;
-  eyebrow?: string;
-  title: string;
-  dark?: boolean;
-}) {
-  return (
-    <section
-      id={id}
-      className={`relative flex min-h-[40vh] items-center justify-center overflow-hidden px-6 md:min-h-[48vh] ${
-        dark ? "texture-ink text-ivory" : "texture-sand text-brown-deep"
-      }`}
-    >
-      <div className="grain absolute inset-0" aria-hidden />
-      <div className="relative z-10 mx-auto max-w-3xl text-center">
-        {eyebrow ? (
-          <p className="type-eyebrow mb-4 text-gold-soft/80">{eyebrow}</p>
-        ) : null}
-        <h2 className="h1-page">{title}</h2>
-        <div className="gold-rule mx-auto mt-7" />
-      </div>
-    </section>
-  );
-}

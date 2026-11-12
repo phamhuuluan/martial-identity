@@ -3,10 +3,11 @@
  */
 import fs from "node:fs";
 import path from "node:path";
+import { NEWS_CATEGORIES } from "../src/domain/news";
 
 const ROOT = process.cwd();
 const CONTENT = path.join(ROOT, "content");
-const cats = ["competitions", "charity", "activities"] as const;
+const cats = NEWS_CATEGORIES;
 
 type Issue = {
   file: string;

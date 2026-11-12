@@ -1,8 +1,4 @@
-"use client";
-
 import Image from "next/image";
-import { useRef } from "react";
-import { motion, useScroll, useTransform } from "framer-motion";
 import {
   logoMeaning,
   martialSpirit,
@@ -15,15 +11,9 @@ import {
 } from "@/data/content";
 import { Section, SectionHeading } from "@/components/ui/Section";
 import { Reveal, Stagger, StaggerItem } from "@/components/ui/Reveal";
+import { MartialSpiritBackdrop } from "@/components/sections/MartialSpiritBackdrop";
 
 export function Philosophy() {
-  const spiritRef = useRef<HTMLElement>(null);
-  const { scrollYProgress } = useScroll({
-    target: spiritRef,
-    offset: ["start end", "end start"],
-  });
-  const bgY = useTransform(scrollYProgress, [0, 1], ["0%", "20%"]);
-
   return (
     <>
       <div
@@ -206,50 +196,36 @@ export function Philosophy() {
       </section>
 
       {/* Martial spirit — full-bleed cinematic */}
-      <section
-        id="vo-dao"
-        ref={spiritRef}
-        className="relative min-h-[70svh] scroll-mt-24 overflow-hidden md:min-h-[78svh]"
+      <MartialSpiritBackdrop
+        image={martialSpirit.image}
+        alt={`${memberTerm.ofSchoolTitle} chào tại đài tưởng niệm Tổ quốc ghi công`}
       >
-        <motion.div style={{ y: bgY }} className="absolute inset-[-8%]">
-          <Image
-            src={martialSpirit.image}
-            alt={`${memberTerm.ofSchoolTitle} chào tại đài tưởng niệm Tổ quốc ghi công`}
-            fill
-            className="object-cover object-[center_60%]"
-            sizes="100vw"
-          />
-        </motion.div>
-        <div className="absolute inset-0 bg-gradient-to-r from-brown-dark via-brown-dark/78 to-brown-dark/35" />
-
-        <div className="relative z-10 flex min-h-[70svh] items-center md:min-h-[78svh]">
-          <div className="site-container site-section">
-            <Reveal>
-              <div className="glass-dark max-w-xl p-7 md:p-9">
-                <p className="type-eyebrow text-gold-soft/80">
-                  Tinh thần võ đạo
-                </p>
-                <h3 className="h2-section mt-3 text-ivory">
-                  Giá trị đạo đức làm kim chỉ nam
-                </h3>
-                <div className="gold-rule my-5" />
-                <div className="space-y-3 text-ivory/80">
-                  {martialSpirit.paragraphs.map((p) => (
-                    <p key={p.slice(0, 40)} className="type-body text-[0.95rem]">
-                      {p}
-                    </p>
-                  ))}
-                </div>
-                {site.motto && (
-                  <p className="type-eyebrow mt-6 text-xs text-gold/70">
-                    {site.motto}
+        <div className="site-container site-section">
+          <Reveal>
+            <div className="glass-dark max-w-xl p-7 md:p-9">
+              <p className="type-eyebrow text-gold-soft/80">
+                Tinh thần võ đạo
+              </p>
+              <h3 className="h2-section mt-3 text-ivory">
+                Giá trị đạo đức làm kim chỉ nam
+              </h3>
+              <div className="gold-rule my-5" />
+              <div className="space-y-3 text-ivory/80">
+                {martialSpirit.paragraphs.map((p) => (
+                  <p key={p.slice(0, 40)} className="type-body text-[0.95rem]">
+                    {p}
                   </p>
-                )}
+                ))}
               </div>
-            </Reveal>
-          </div>
+              {site.motto && (
+                <p className="type-eyebrow mt-6 text-xs text-gold/70">
+                  {site.motto}
+                </p>
+              )}
+            </div>
+          </Reveal>
         </div>
-      </section>
+      </MartialSpiritBackdrop>
     </>
   );
 }

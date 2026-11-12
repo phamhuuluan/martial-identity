@@ -200,10 +200,8 @@ function ScheduleBlock({
 }
 
 export function Locations({
-  coverImage,
   showBanner = true,
 }: {
-  coverImage?: string;
   showBanner?: boolean;
 }) {
   const [activeKey, setActiveKey] = useState<RegionKey>("south");
@@ -264,7 +262,7 @@ export function Locations({
       {showBanner ? (
         <div className="relative h-[32vh] min-h-[200px] w-full overflow-hidden clip-diagonal md:h-[40vh]">
           <Image
-            src={coverImage || scaleIntro.image || site.heroFallback}
+            src={scaleIntro.image || site.heroFallback}
             alt="Quy mô hoạt động môn phái"
             fill
             className="object-cover"
